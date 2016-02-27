@@ -17,9 +17,10 @@ class BaseObject(UserDict):
 
 
 class BaseResponseObject(BaseObject):
-    def __init__(self, document, limits, links=None):
+    def __init__(self, client, document, limits, links=None):
         super().__init__(document)
 
+        self._client = client
         self._limits = BaseObject(limits)
         self._links = links
 
@@ -63,4 +64,4 @@ class BaseList(abc.AsyncIterable):
                 self._current_iter = iter(self._current_list)
                 return await self.__anext__()
             raise StopAsyncIteration
-        return self._element_type(value, self._last_raw_limits)
+        return self._element_type(self._client, value, self._last_raw_limits)

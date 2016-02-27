@@ -24,7 +24,7 @@ class GitHub:
                     'remaining': response.headers.get('X-RateLimit-Limit')
                 }
                 link_header_value = response.headers.get('link')
-                links_dict = None
+                links_dict = {}
                 if link_header_value:
                     links = link_header.parse(link_header_value)
                     links_dict = {link.rel: link.href for link in links.links}
@@ -34,10 +34,15 @@ class GitHub:
         return await self.get_absolute_url(self.base_url + '/' + path)
 
     async def get_user(self, user_name):
-        return User(*await self.get_url('user/' + user_name))
+        return User(self, *await self.get_url('users/' + user_name))
 
     async def get_users(self, since=None, max_items=MAX_ITEMS):
         return BaseList(self, User, *await self.get_url('users'),
+                        max_items=max_items)
+
+    async def get_list_absolute_url(self, url, element_type,
+                                    max_items=MAX_ITEMS):
+        return BaseList(self, element_type, *await self.get_absolute_url(url),
                         max_items=max_items)
 
     def close(self):
