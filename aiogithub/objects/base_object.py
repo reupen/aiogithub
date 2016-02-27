@@ -2,6 +2,8 @@ from collections import UserDict, abc
 
 import dateutil.parser
 
+from ..utils import strip_github_url_params
+
 
 class BaseObject(UserDict):
     def __init__(self, document):
@@ -9,8 +11,14 @@ class BaseObject(UserDict):
         for key in document:
             if key[-3:] == '_at':
                 document[key] = dateutil.parser.parse(document[key])
+            elif key in self._get_key_mappings():
+                document[key] = self.key_class_mappings[key](document[key])
 
         super().__init__(document)
+
+    @staticmethod
+    def _get_key_mappings():
+        return {}
 
     def __getattr__(self, attr):
         return self.get(attr)
@@ -23,6 +31,10 @@ class BaseResponseObject(BaseObject):
         self._client = client
         self._limits = BaseObject(limits)
         self._links = links
+
+    async def _get_related_url(self, property_name, element_type):
+        url = strip_github_url_params(self[property_name])
+        return await self._client.get_list_absolute_url(url, element_type)
 
     @property
     def limits(self):

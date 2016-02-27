@@ -1,10 +1,8 @@
-import asyncio
-
 import aiohttp
 import link_header
 
-from .base_object import BaseList
-from .user import User
+from aiogithub.objects.base_object import BaseList
+from aiogithub.objects.user import User
 
 MAX_ITEMS = 200
 
@@ -36,7 +34,11 @@ class GitHub:
     async def get_user(self, user_name):
         return User(self, *await self.get_url('users/' + user_name))
 
+    async def get_current_user(self):
+        return User(self, *await self.get_url('user'))
+
     async def get_users(self, since=None, max_items=MAX_ITEMS):
+        # FIXME: add since support
         return BaseList(self, User, *await self.get_url('users'),
                         max_items=max_items)
 
