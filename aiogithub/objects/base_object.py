@@ -41,15 +41,26 @@ class BaseResponseObject(BaseObject):
 
         super().__init__(document)
 
-    async def _get_related_url(self, property_name, element_type):
+    async def _get_related_url(self, property_name, element_type, **kwargs):
         if property_name in self:
             template = self[property_name]
-            url = uritemplate.expand(template, {})  # FIXME
+            url = uritemplate.expand(template, kwargs)
             return await self._client.get_list_absolute_url(url, element_type)
         else:
             template = self.default_urls[property_name].format(**self)
-            url = uritemplate.expand(template, {})  # FIXME
+            url = uritemplate.expand(template, kwargs)
             return await self._client.get_list_relative_url(url, element_type)
+
+    async def _get_related_object(self, property_name, element_type,
+                                  **kwargs):
+        if property_name in self:
+            template = self[property_name]
+            url = uritemplate.expand(template, kwargs)
+            return await self._client.get_absolute_url(url, element_type)
+        else:
+            template = self.default_urls[property_name].format(**self)
+            url = uritemplate.expand(template, kwargs)
+            return await self._client.get_relative_url(url, element_type)
 
     @property
     def limits(self):

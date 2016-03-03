@@ -63,6 +63,10 @@ class Repo(BaseResponseObject):
     async def get_branches(self):
         return await self._get_related_url('branches_url', objects.Branch)
 
+    async def get_branch(self, branch):
+        return await self._get_related_object('branches_url', objects.Branch,
+                                              branch=branch)
+
     async def get_collaborators(self):
         return await self._get_related_url('collaborators_url', objects.User)
 
