@@ -2,21 +2,37 @@ import aiohttp
 import link_header
 
 from aiogithub.objects.base_object import BaseList
-from aiogithub.objects.user import User
-
-MAX_ITEMS = 200
+from aiogithub.objects import (User, Organization, Repo, Event,
+                               BaseResponseObject, Branch)
 
 
 class GitHub:
-    def __init__(self):
+    def __init__(self, token=None, items_per_page=100, timeout_secs=10,
+                 max_paginated_items=200):
         headers = {'Accept': 'application/vnd.github.v3+json'}
-        self.client = aiohttp.ClientSession(headers=headers)
-        self.timeout = 10
-        self.base_url = 'https://api.github.com'
+        self._client = aiohttp.ClientSession(headers=headers)
+        self._timeout = timeout_secs
+        self._base_url = 'https://api.github.com'
+        self._token = token
+        self._items_per_page = items_per_page
+        self._max_paginated_items = max_paginated_items
+        self._headers = {
+            'User-Agent': 'aiogithub'
+        }
+        if token:
+            self._headers['Authorization'] = 'token ' + token
 
-    async def get_absolute_url(self, url):
-        with aiohttp.Timeout(self.timeout):
-            async with self.client.get(url) as response:
+    @property
+    def base_url(self):
+        return self._base_url
+
+    async def get_absolute_url(self, url, is_paginated=False):
+        with aiohttp.Timeout(self._timeout):
+            params = {}
+            if is_paginated:
+                params['per_page'] = self._items_per_page
+            async with self._client.get(
+                    url, headers=self._headers, params=params) as response:
                 limits = {
                     'limit': response.headers.get('X-RateLimit-Limit'),
                     'remaining': response.headers.get('X-RateLimit-Limit')
@@ -28,27 +44,67 @@ class GitHub:
                     links_dict = {link.rel: link.href for link in links.links}
                 return await response.json(), limits, links_dict
 
-    async def get_url(self, path):
-        return await self.get_absolute_url(self.base_url + '/' + path)
+    async def get_url(self, path, is_paginated=False):
+        return await self.get_absolute_url(self._base_url + '/' + path,
+                                           is_paginated)
 
-    async def get_user(self, user_name):
-        return User(self, *await self.get_url('users/' + user_name))
+    async def get_user(self, user_name, skip_fetch=False):
+        initial_document = {
+            'login': user_name
+        }
+        return await self.get_object_relative_url(
+            'users/' + user_name, User, skip_fetch=skip_fetch,
+            document=initial_document)
+
+    async def get_repo(self, owner_name, repo_name, skip_fetch=False):
+        initial_document = {
+            'name': repo_name,
+            'owner': {
+                'login': owner_name
+            }
+        }
+        path = "repos/{owner}/{repo}".format(owner=owner_name, repo=repo_name)
+        return await self.get_object_relative_url(
+            path, Repo, skip_fetch=skip_fetch, document=initial_document)
 
     async def get_current_user(self):
         return User(self, *await self.get_url('user'))
 
-    async def get_users(self, since=None, max_items=MAX_ITEMS):
+    async def get_users(self, since=None):
         # FIXME: add since support
-        return BaseList(self, User, *await self.get_url('users'),
-                        max_items=max_items)
+        return await self.get_list_relative_url('users', User)
 
-    async def get_list_absolute_url(self, url, element_type,
-                                    max_items=MAX_ITEMS):
-        return BaseList(self, element_type, *await self.get_absolute_url(url),
-                        max_items=max_items)
+    async def get_repos(self, since=None):
+        # FIXME: add since support
+        return await self.get_list_relative_url('repos', Repo)
+
+    async def get_branch(self, owner_name, repo_name, branch_name):
+        path = "repos/{owner}/{repo}/branches/{branch}".format(
+            owner=owner_name,
+            repo=repo_name,
+            branch=branch_name
+        )
+        return await self.get_object_relative_url(path, Branch)
+
+    async def get_object_relative_url(self, path, element_type,
+                                      skip_fetch=False,
+                                      document=None):
+        if skip_fetch:
+            return element_type(self, document, {})
+        else:
+            return element_type(self, *await self.get_url(path))
+
+    async def get_list_relative_url(self, path, element_type):
+        return await self.get_list_absolute_url(self._base_url + '/' + path,
+                                                element_type)
+
+    async def get_list_absolute_url(self, url, element_type):
+        return BaseList(self, element_type,
+                        *await self.get_absolute_url(url, True),
+                        max_items=self._max_paginated_items)
 
     def close(self):
-        self.client.close()
+        self._client.close()
 
     def __enter__(self):
         return self

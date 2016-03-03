@@ -1,5 +1,6 @@
 from collections import UserDict, abc
 
+import uritemplate
 import dateutil.parser
 
 from ..utils import strip_github_url_params
@@ -31,6 +32,8 @@ class BaseObject(UserDict):
 
 
 class BaseResponseObject(BaseObject):
+    default_urls = {}
+
     def __init__(self, client, document, limits, links=None):
         self._client = client
         self._limits = BaseObject(limits)
@@ -39,8 +42,14 @@ class BaseResponseObject(BaseObject):
         super().__init__(document)
 
     async def _get_related_url(self, property_name, element_type):
-        url = strip_github_url_params(self[property_name])
-        return await self._client.get_list_absolute_url(url, element_type)
+        if property_name in self:
+            template = self[property_name]
+            url = uritemplate.expand(template, {})  # FIXME
+            return await self._client.get_list_absolute_url(url, element_type)
+        else:
+            template = self.default_urls[property_name].format(**self)
+            url = uritemplate.expand(template, {})  # FIXME
+            return await self._client.get_list_relative_url(url, element_type)
 
     @property
     def limits(self):
