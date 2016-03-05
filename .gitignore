@@ -1,2 +1,7 @@
 .idea
 *.pyc
+.cache
+.eggs
+aiogithub.egg-info/
+build
+dist
