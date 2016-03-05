@@ -86,14 +86,17 @@ class BaseList(abc.AsyncIterable):
     def limits(self):
         return self._limits
 
+    def _make_element(self, document):
+        return self._element_type(self._client, document, self._last_raw_limits)
+
     async def get_all(self):
         ret = []
         for page in self._pages:
-            ret += page
+            ret += map(self._make_element, page)
         while self._item_counter < self._max_items and 'next' in \
                 self._links:
             await self._get_next_page()
-            ret += self._pages[-1]
+            ret += map(self._make_element, self._pages[-1])
         return ret
 
     async def __aiter__(self):
@@ -129,4 +132,4 @@ class BaseList(abc.AsyncIterable):
                 self._increment_page_number()
                 return await self.__anext__()
             raise StopAsyncIteration
-        return self._element_type(self._client, value, self._last_raw_limits)
+        return self._make_element(value)

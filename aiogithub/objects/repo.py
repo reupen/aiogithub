@@ -5,14 +5,17 @@ from aiogithub import objects
 
 class Repo(BaseResponseObject):
     default_urls = {
-        "archive_url": "repos/{owner[login]}/{name}/{{archive_format}}{{/ref}}",
+        "archive_url": "repos/{owner[login]}/{name}/{{archive_format}}"
+                       "{{/ref}}",
         "assignees_url": "repos/{owner[login]}/{name}/assignees{{/user}}",
         "blobs_url": "repos/{owner[login]}/{name}/git/blobs{{/sha}}",
         "branches_url": "repos/{owner[login]}/{name}/branches{{/branch}}",
-        "collaborators_url": "repos/{owner[login]}/{name}/collaborators{{/collaborator}}",
+        "collaborators_url": "repos/{owner[login]}/{name}/collaborators"
+                             "{{/collaborator}}",
         "comments_url": "repos/{owner[login]}/{name}/comments{{/number}}",
         "commits_url": "repos/{owner[login]}/{name}/commits{{/sha}}",
-        "compare_url": "repos/{owner[login]}/{name}/compare/{{base}}...{{head}}",
+        "compare_url": "repos/{owner[login]}/{name}/compare"
+                       "/{{base}}...{{head}}",
         "contents_url": "repos/{owner[login]}/{name}/contents/{{+path}}",
         "contributors_url": "repos/{owner[login]}/{name}/contributors",
         "deployments_url": "repos/{owner[login]}/{name}/deployments",
@@ -24,15 +27,18 @@ class Repo(BaseResponseObject):
         "git_tags_url": "repos/{owner[login]}/{name}/git/tags{{/sha}}",
         "git_url": "git:github.com/octocat/Hello-World.git",
         "hooks_url": "repos/{owner[login]}/{name}/hooks",
-        "issue_comment_url": "repos/{owner[login]}/{name}/issues/comments{{/number}}",
-        "issue_events_url": "repos/{owner[login]}/{name}/issues/events{{/number}}",
+        "issue_comment_url": "repos/{owner[login]}/{name}/issues"
+                             "/comments{{/number}}",
+        "issue_events_url": "repos/{owner[login]}/{name}/issues"
+                            "/events{{/number}}",
         "issues_url": "repos/{owner[login]}/{name}/issues{{/number}}",
         "keys_url": "repos/{owner[login]}/{name}/keys{{/key_id}}",
         "labels_url": "repos/{owner[login]}/{name}/labels{{/name}}",
         "languages_url": "repos/{owner[login]}/{name}/languages",
         "merges_url": "repos/{owner[login]}/{name}/merges",
         "milestones_url": "repos/{owner[login]}/{name}/milestones{{/number}}",
-        "notifications_url": "repos/{owner[login]}/{name}/notifications{{?since, all, participating}}",
+        "notifications_url": "repos/{owner[login]}/{name}/notifications"
+                             "{{?since, all, participating}}",
         "pulls_url": "repos/{owner[login]}/{name}/pulls{{/number}}",
         "releases_url": "repos/{owner[login]}/{name}/releases{{/id}}",
         "stargazers_url": "repos/{owner[login]}/{name}/stargazers",

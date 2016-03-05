@@ -4,9 +4,10 @@ from .organization import Organization
 from .repo import Repo
 from .user import User
 from .branch import Branch
-from .base_object import BaseResponseObject
+from .base_object import BaseResponseObject, BaseList
 
 __all__ = ("BaseResponseObject",
+           "BaseList",
            "Branch",
            "Event",
            "Gist",
