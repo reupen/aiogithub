@@ -3,8 +3,6 @@ from collections import UserDict, abc
 import uritemplate
 import dateutil.parser
 
-from ..utils import strip_github_url_params
-
 
 class BaseObject(UserDict):
     @staticmethod
@@ -12,17 +10,14 @@ class BaseObject(UserDict):
         return {}
 
     def __init__(self, document):
-        # FIXME: separate class for lists
-        self._set_from_document(document)
-
-        super().__init__(document)
+        super().__init__(self._normalise_document(document))
 
     def __getattr__(self, attr):
         if attr in self:
             return self.get(attr)
         raise AttributeError
 
-    def _set_from_document(self, document):
+    def _normalise_document(self, document):
         for key in document:
             if key[-3:] == '_at':
                 if isinstance(document[key], str):
@@ -33,16 +28,25 @@ class BaseObject(UserDict):
                     document[key] = elem_type(self._client, document[key],
                                               self._limits)
 
+        return document
+
+    def _set_from_document(self, document):
+        self.clear()
+        self.update(self._normalise_document(document))
+
 
 class BaseResponseObject(BaseObject):
     _url = None
     _default_urls = {}
 
-    def __init__(self, client, document, limits=None, links=None):
+    def __init__(self, client, document, limits=None, links=None,
+                 fetch_params=None):
         self._client = client
         self._limits = BaseObject(limits) if limits is not None else None
         self._links = links
+        self._fetch_params = fetch_params if fetch_params is not None else {}
 
+        # Called here for now as needs self._client
         super().__init__(document)
 
     async def fetch_data(self):
@@ -98,7 +102,8 @@ class BaseList(abc.AsyncIterable):
         return self._limits
 
     def _make_element(self, document):
-        return self._element_type(self._client, document, self._last_raw_limits)
+        return self._element_type(self._client, document,
+                                  self._last_raw_limits)
 
     async def get_all(self):
         ret = []
