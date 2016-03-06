@@ -5,7 +5,8 @@ from aiogithub import objects
 
 
 class User(BaseResponseObject):
-    default_urls = {
+    _url = 'users/{login}'
+    _default_urls = {
         'followers_url': 'users/{login}/followers',
         'following_url': 'users/{login}/following{{/other_user}}',
         'gists_url': 'users/{login}/gists{{/gist_id}}',

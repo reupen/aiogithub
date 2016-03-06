@@ -44,28 +44,31 @@ class GitHub:
                     links_dict = {link.rel: link.href for link in links.links}
                 return await response.json(), limits, links_dict
 
+    async def get_relative_url(self, url, is_paginated=False):
+        return await self.get_absolute_url(self._base_url + '/' + url,
+                                           is_paginated=is_paginated)
+
     async def get_url(self, path, is_paginated=False):
         return await self.get_absolute_url(self._base_url + '/' + path,
                                            is_paginated)
 
-    async def get_user(self, user_name, skip_fetch=False):
+    async def get_user(self, user_name, fetch_data=True):
         initial_document = {
             'login': user_name
         }
         return await self.get_object_relative_url(
-            'users/' + user_name, User, skip_fetch=skip_fetch,
+            User, fetch_data=fetch_data,
             document=initial_document)
 
-    async def get_repo(self, owner_name, repo_name, skip_fetch=False):
+    async def get_repo(self, owner_name, repo_name, fetch_data=True):
         initial_document = {
             'name': repo_name,
             'owner': {
                 'login': owner_name
             }
         }
-        path = "repos/{owner}/{repo}".format(owner=owner_name, repo=repo_name)
         return await self.get_object_relative_url(
-            path, Repo, skip_fetch=skip_fetch, document=initial_document)
+            Repo, fetch_data=fetch_data, document=initial_document)
 
     async def get_current_user(self):
         return User(self, *await self.get_url('user'))
@@ -84,15 +87,15 @@ class GitHub:
             repo=repo_name,
             branch=branch_name
         )
-        return await self.get_object_relative_url(path, Branch)
+        return await self.get_object_relative_url(Branch)
 
-    async def get_object_relative_url(self, path, element_type,
-                                      skip_fetch=False,
+    async def get_object_relative_url(self, element_type,
+                                      fetch_data=False,
                                       document=None):
-        if skip_fetch:
-            return element_type(self, document, {})
-        else:
-            return element_type(self, *await self.get_url(path))
+        element = element_type(self, document, {})
+        if fetch_data:
+            await element.fetch_data()
+        return element
 
     async def get_list_relative_url(self, path, element_type):
         return await self.get_list_absolute_url(self._base_url + '/' + path,

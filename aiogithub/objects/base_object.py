@@ -7,8 +7,22 @@ from ..utils import strip_github_url_params
 
 
 class BaseObject(UserDict):
+    @staticmethod
+    def _get_key_mappings():
+        return {}
+
     def __init__(self, document):
         # FIXME: separate class for lists
+        self._set_from_document(document)
+
+        super().__init__(document)
+
+    def __getattr__(self, attr):
+        if attr in self:
+            return self.get(attr)
+        raise AttributeError
+
+    def _set_from_document(self, document):
         for key in document:
             if key[-3:] == '_at':
                 if isinstance(document[key], str):
@@ -19,27 +33,24 @@ class BaseObject(UserDict):
                     document[key] = elem_type(self._client, document[key],
                                               self._limits)
 
-        super().__init__(document)
-
-    @staticmethod
-    def _get_key_mappings():
-        return {}
-
-    def __getattr__(self, attr):
-        if attr in self:
-            return self.get(attr)
-        raise AttributeError
-
 
 class BaseResponseObject(BaseObject):
-    default_urls = {}
+    _url = None
+    _default_urls = {}
 
-    def __init__(self, client, document, limits, links=None):
+    def __init__(self, client, document, limits=None, links=None):
         self._client = client
-        self._limits = BaseObject(limits)
+        self._limits = BaseObject(limits) if limits is not None else None
         self._links = links
 
         super().__init__(document)
+
+    async def fetch_data(self):
+        url = self._url.format(**self)
+        document, limits, links = await self._client.get_relative_url(url)
+        self._set_from_document(document)
+        self._limits = BaseObject(limits)
+        self._links = links
 
     async def _get_related_url(self, property_name, element_type, **kwargs):
         if property_name in self:
@@ -47,7 +58,7 @@ class BaseResponseObject(BaseObject):
             url = uritemplate.expand(template, kwargs)
             return await self._client.get_list_absolute_url(url, element_type)
         else:
-            template = self.default_urls[property_name].format(**self)
+            template = self._default_urls[property_name].format(**self)
             url = uritemplate.expand(template, kwargs)
             return await self._client.get_list_relative_url(url, element_type)
 
@@ -58,7 +69,7 @@ class BaseResponseObject(BaseObject):
             url = uritemplate.expand(template, kwargs)
             return await self._client.get_absolute_url(url, element_type)
         else:
-            template = self.default_urls[property_name].format(**self)
+            template = self._default_urls[property_name].format(**self)
             url = uritemplate.expand(template, kwargs)
             return await self._client.get_relative_url(url, element_type)
 

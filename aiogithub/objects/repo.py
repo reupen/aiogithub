@@ -4,7 +4,8 @@ from aiogithub import objects
 
 
 class Repo(BaseResponseObject):
-    default_urls = {
+    _url = 'repos/{owner[login]}/{name}'
+    _default_urls = {
         "archive_url": "repos/{owner[login]}/{name}/{{archive_format}}"
                        "{{/ref}}",
         "assignees_url": "repos/{owner[login]}/{name}/assignees{{/user}}",
