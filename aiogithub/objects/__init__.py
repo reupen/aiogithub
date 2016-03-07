@@ -6,6 +6,7 @@ from .user import User
 from .issue import Issue
 from .pull_request import PullRequest
 from .branch import Branch
+from .rate_limit import RateLimit
 from .base_object import BaseResponseObject, BaseList
 
 __all__ = ("BaseResponseObject",
@@ -14,6 +15,7 @@ __all__ = ("BaseResponseObject",
            "Event",
            "Gist",
            "Issue",
+           "RateLimit",
            "PullRequest",
            "Organization",
            "Repo",

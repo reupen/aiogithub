@@ -29,8 +29,13 @@ class BaseObject(UserDict):
                 if not isinstance(document[key], elem_type):
                     document[key] = elem_type(self._client, document[key],
                                               self._limits)
+            else:
+                self._normalise_key(document, key)
 
         return document
+
+    def _normalise_key(self, document, key):
+        pass
 
     def _set_from_document(self, document):
         self.clear()
@@ -54,11 +59,10 @@ class BaseResponseObject(BaseObject):
     async def fetch_data(self):
         if 'url' in self:
             url = self['url']
-        elif self._fetch_params:
-            url = self._url.format(**self._fetch_params)
         else:
-            # FIXME: Use proper exception class
-            raise Exception("No known fetch URL for this object")
+            url = self._url.format(**self._fetch_params)
+            # FIXME: catch appropriate exception
+            # raise Exception("No known fetch URL for this object")
         document, limits, links = await self._client.get_relative_url(url)
         self._set_from_document(document)
         self._limits = BaseObject(limits)

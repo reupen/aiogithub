@@ -1,5 +1,9 @@
-import re
+from functools import wraps
 
 
-def strip_github_url_params(url):
-    return re.sub(r'{[^}]*}', '', url)
+def return_key(func):
+    @wraps(func)
+    def wrapper(self):
+        return self[func.__name__]
+
+    return wrapper

@@ -1,5 +1,4 @@
 from aiogithub.objects.base_object import BaseResponseObject
-from aiogithub.utils import strip_github_url_params
 
 from aiogithub import objects
 

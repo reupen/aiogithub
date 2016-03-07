@@ -17,12 +17,12 @@ class GitHub:
         self._headers = {
             'User-Agent': 'aiogithub'
         }
+        self._last_limits = None
         if token:
             self._headers['Authorization'] = 'token ' + token
 
-    @property
-    def base_url(self):
-        return self._base_url
+    def get_last_rate_limit(self):
+        return self._last_limits
 
     async def get_absolute_url(self, url, is_paginated=False):
         with aiohttp.Timeout(self._timeout):
@@ -31,7 +31,7 @@ class GitHub:
                 params['per_page'] = self._items_per_page
             async with self._client.get(
                     url, headers=self._headers, params=params) as response:
-                limits = {
+                self._last_limits = {
                     'limit': response.headers.get('X-RateLimit-Limit'),
                     'remaining': response.headers.get('X-RateLimit-Limit')
                 }
@@ -40,7 +40,7 @@ class GitHub:
                 if link_header_value:
                     links = link_header.parse(link_header_value)
                     links_dict = {link.rel: link.href for link in links.links}
-                return await response.json(), limits, links_dict
+                return await response.json(), self._last_limits, links_dict
 
     async def get_relative_url(self, url, is_paginated=False):
         return await self.get_absolute_url(self._base_url + '/' + url,
@@ -50,63 +50,8 @@ class GitHub:
         return await self.get_absolute_url(self._base_url + '/' + path,
                                            is_paginated)
 
-    async def get_user(self, user_name, should_fetch_data=True):
-        fetch_params = {
-            'user': user_name
-        }
-        return await self.get_object_relative_url(
-            objects.User, should_fetch_data=should_fetch_data,
-            fetch_params=fetch_params)
-
-    async def get_repo(self, owner_name, repo_name, should_fetch_data=True):
-        fetch_params = {
-            'name': repo_name,
-            'user': owner_name
-        }
-        return await self.get_object_relative_url(
-            objects.Repo, should_fetch_data=should_fetch_data,
-            fetch_params=fetch_params)
-
-    async def get_branch(self, owner_name, repo_name, branch_name):
-        fetch_params = {
-            'user': owner_name,
-            'repo': repo_name,
-            'branch': branch_name
-        }
-        return await self.get_object_relative_url(objects.Branch,
-                                                  fetch_params=fetch_params)
-
-    async def get_issue(self, owner_name, repo_name, issue_number):
-        fetch_params = {
-            'user': owner_name,
-            'repo': repo_name,
-            'number': issue_number
-        }
-        return await self.get_object_relative_url(objects.Issue,
-                                                  fetch_params=fetch_params)
-
-    async def get_pull_request(self, owner_name, repo_name, issue_number):
-        fetch_params = {
-            'user': owner_name,
-            'repo': repo_name,
-            'number': issue_number
-        }
-        return await self.get_object_relative_url(objects.PullRequest,
-                                                  fetch_params=fetch_params)
-
-    async def get_current_user(self):
-        return objects.User(self, *await self.get_url('user'))
-
-    async def get_users(self, since=None):
-        # FIXME: add since support
-        return await self.get_list_relative_url('users', objects.User)
-
-    async def get_repos(self, since=None):
-        # FIXME: add since support
-        return await self.get_list_relative_url('repos', objects.Repo)
-
     async def get_object_relative_url(self, element_type,
-                                      should_fetch_data=False,
+                                      should_fetch_data=True,
                                       fetch_params=None):
         element = element_type(self, fetch_params=fetch_params)
         if should_fetch_data:
@@ -121,6 +66,69 @@ class GitHub:
         return objects.BaseList(self, element_type,
                                 *await self.get_absolute_url(url, True),
                                 max_items=self._max_paginated_items)
+
+    async def get_user(self, user_name,
+                       should_fetch_data=True) -> objects.User:
+        fetch_params = {
+            'user': user_name
+        }
+        return await self.get_object_relative_url(
+            objects.User, should_fetch_data=should_fetch_data,
+            fetch_params=fetch_params)
+
+    async def get_repo(self, owner_name, repo_name,
+                       should_fetch_data=True) -> objects.Repo:
+        fetch_params = {
+            'name': repo_name,
+            'user': owner_name
+        }
+        return await self.get_object_relative_url(
+            objects.Repo, should_fetch_data=should_fetch_data,
+            fetch_params=fetch_params)
+
+    async def get_branch(self, owner_name, repo_name,
+                         branch_name) -> objects.Branch:
+        fetch_params = {
+            'user': owner_name,
+            'repo': repo_name,
+            'branch': branch_name
+        }
+        return await self.get_object_relative_url(objects.Branch,
+                                                  fetch_params=fetch_params)
+
+    async def get_issue(self, owner_name, repo_name,
+                        issue_number) -> objects.Issue:
+        fetch_params = {
+            'user': owner_name,
+            'repo': repo_name,
+            'number': issue_number
+        }
+        return await self.get_object_relative_url(objects.Issue,
+                                                  fetch_params=fetch_params)
+
+    async def get_pull_request(self, owner_name, repo_name,
+                               issue_number) -> objects.PullRequest:
+        fetch_params = {
+            'user': owner_name,
+            'repo': repo_name,
+            'number': issue_number
+        }
+        return await self.get_object_relative_url(objects.PullRequest,
+                                                  fetch_params=fetch_params)
+
+    async def get_rate_limit(self) -> objects.RateLimit:
+        return await self.get_object_relative_url(objects.RateLimit)
+
+    async def get_current_user(self) -> objects.User:
+        return objects.User(self, *await self.get_url('user'))
+
+    async def get_users(self, since=None):
+        # FIXME: add since support
+        return await self.get_list_relative_url('users', objects.User)
+
+    async def get_repos(self, since=None):
+        # FIXME: add since support
+        return await self.get_list_relative_url('repos', objects.Repo)
 
     def close(self):
         self._client.close()
