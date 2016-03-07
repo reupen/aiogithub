@@ -10,6 +10,8 @@ class BaseObject(UserDict):
         return {}
 
     def __init__(self, document):
+        if document is None:
+            document = {}
         super().__init__(self._normalise_document(document))
 
     def __getattr__(self, attr):
@@ -39,7 +41,7 @@ class BaseResponseObject(BaseObject):
     _url = None
     _default_urls = {}
 
-    def __init__(self, client, document, limits=None, links=None,
+    def __init__(self, client, document=None, limits=None, links=None,
                  fetch_params=None):
         self._client = client
         self._limits = BaseObject(limits) if limits is not None else None
@@ -50,7 +52,13 @@ class BaseResponseObject(BaseObject):
         super().__init__(document)
 
     async def fetch_data(self):
-        url = self._url.format(**self)
+        if 'url' in self:
+            url = self['url']
+        elif self._fetch_params:
+            url = self._url.format(**self._fetch_params)
+        else:
+            # FIXME: Use proper exception class
+            raise Exception("No known fetch URL for this object")
         document, limits, links = await self._client.get_relative_url(url)
         self._set_from_document(document)
         self._limits = BaseObject(limits)

@@ -1,9 +1,7 @@
 import aiohttp
 import link_header
 
-from aiogithub.objects.base_object import BaseList
-from aiogithub.objects import (User, Organization, Repo, Event,
-                               BaseResponseObject, Branch)
+from aiogithub import objects
 
 
 class GitHub:
@@ -52,48 +50,66 @@ class GitHub:
         return await self.get_absolute_url(self._base_url + '/' + path,
                                            is_paginated)
 
-    async def get_user(self, user_name, fetch_data=True):
-        initial_document = {
-            'login': user_name
+    async def get_user(self, user_name, should_fetch_data=True):
+        fetch_params = {
+            'user': user_name
         }
         return await self.get_object_relative_url(
-            User, fetch_data=fetch_data,
-            document=initial_document)
+            objects.User, should_fetch_data=should_fetch_data,
+            fetch_params=fetch_params)
 
-    async def get_repo(self, owner_name, repo_name, fetch_data=True):
-        initial_document = {
+    async def get_repo(self, owner_name, repo_name, should_fetch_data=True):
+        fetch_params = {
             'name': repo_name,
-            'owner': {
-                'login': owner_name
-            }
+            'user': owner_name
         }
         return await self.get_object_relative_url(
-            Repo, fetch_data=fetch_data, document=initial_document)
+            objects.Repo, should_fetch_data=should_fetch_data,
+            fetch_params=fetch_params)
+
+    async def get_branch(self, owner_name, repo_name, branch_name):
+        fetch_params = {
+            'user': owner_name,
+            'repo': repo_name,
+            'branch': branch_name
+        }
+        return await self.get_object_relative_url(objects.Branch,
+                                                  fetch_params=fetch_params)
+
+    async def get_issue(self, owner_name, repo_name, issue_number):
+        fetch_params = {
+            'user': owner_name,
+            'repo': repo_name,
+            'number': issue_number
+        }
+        return await self.get_object_relative_url(objects.Issue,
+                                                  fetch_params=fetch_params)
+
+    async def get_pull_request(self, owner_name, repo_name, issue_number):
+        fetch_params = {
+            'user': owner_name,
+            'repo': repo_name,
+            'number': issue_number
+        }
+        return await self.get_object_relative_url(objects.PullRequest,
+                                                  fetch_params=fetch_params)
 
     async def get_current_user(self):
-        return User(self, *await self.get_url('user'))
+        return objects.User(self, *await self.get_url('user'))
 
     async def get_users(self, since=None):
         # FIXME: add since support
-        return await self.get_list_relative_url('users', User)
+        return await self.get_list_relative_url('users', objects.User)
 
     async def get_repos(self, since=None):
         # FIXME: add since support
-        return await self.get_list_relative_url('repos', Repo)
-
-    async def get_branch(self, owner_name, repo_name, branch_name):
-        path = "repos/{owner}/{repo}/branches/{branch}".format(
-            owner=owner_name,
-            repo=repo_name,
-            branch=branch_name
-        )
-        return await self.get_object_relative_url(Branch)
+        return await self.get_list_relative_url('repos', objects.Repo)
 
     async def get_object_relative_url(self, element_type,
-                                      fetch_data=False,
-                                      document=None):
-        element = element_type(self, document, {})
-        if fetch_data:
+                                      should_fetch_data=False,
+                                      fetch_params=None):
+        element = element_type(self, fetch_params=fetch_params)
+        if should_fetch_data:
             await element.fetch_data()
         return element
 
@@ -102,9 +118,9 @@ class GitHub:
                                                 element_type)
 
     async def get_list_absolute_url(self, url, element_type):
-        return BaseList(self, element_type,
-                        *await self.get_absolute_url(url, True),
-                        max_items=self._max_paginated_items)
+        return objects.BaseList(self, element_type,
+                                *await self.get_absolute_url(url, True),
+                                max_items=self._max_paginated_items)
 
     def close(self):
         self._client.close()

@@ -33,8 +33,8 @@ def get_mock(session, url, headers=None, params=None):
     url_parts = urllib.parse.urlsplit(url)
     assert url_parts.path in FAKE_RESPONSES
 
-    path = os.path.join(os.path.dirname(__file__), FAKE_RESPONSES[
-        url_parts.path])
+    path = os.path.join(os.path.dirname(__file__), '..', 'mock_data',
+                        FAKE_RESPONSES[url_parts.path])
 
     with open(path) as f:
         data = json.load(f)
