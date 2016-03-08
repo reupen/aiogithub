@@ -1,6 +1,8 @@
 # aiogithub
 
-asyncio- and aiohttp-based Python 3.5 GitHub API client
+asyncio- and aiohttp-based Python 3.5 GitHub API client.
+
+Note: This library is a work in progress.
 
 ## A simple example
 
@@ -13,8 +15,8 @@ TOKEN = None  # Set this to your OAuth token
 async def main():
     with GitHub(TOKEN) as api:
         user = await api.get_user('reupen')
-        print(user['login'])
-        # print(user.login) also works
+        print(user.login)
+        # user is also a dict, so sou can see the underlying data via print(user) 
 
         # Get this user's repos
         repos = await user.get_repos()

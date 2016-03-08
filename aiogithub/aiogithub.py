@@ -6,7 +6,17 @@ from aiogithub import objects
 
 class GitHub:
     def __init__(self, token=None, items_per_page=100, timeout_secs=10,
-                 max_paginated_items=200):
+                 max_paginated_items=1000):
+        """
+        :param token:                 GitHub personal access token
+        :param items_per_page:        Items to request per page, must be
+                                      between 1 and 100
+        :param max_paginated_items:   Safety limit for when iterating
+                                      through list results to avoid
+                                      inadvertently making a huge number of
+                                      requests
+
+        """
         headers = {'Accept': 'application/vnd.github.v3+json'}
         self._client = aiohttp.ClientSession(headers=headers)
         self._timeout = timeout_secs
@@ -21,10 +31,10 @@ class GitHub:
         if token:
             self._headers['Authorization'] = 'token ' + token
 
-    def get_last_rate_limit(self):
+    def get_last_rate_limit(self) -> dict:
         return self._last_limits
 
-    async def get_absolute_url(self, url, is_paginated=False):
+    async def get_absolute_url(self, url, is_paginated=False) -> tuple:
         with aiohttp.Timeout(self._timeout):
             params = {}
             if is_paginated:
@@ -42,11 +52,11 @@ class GitHub:
                     links_dict = {link.rel: link.href for link in links.links}
                 return await response.json(), self._last_limits, links_dict
 
-    async def get_relative_url(self, url, is_paginated=False):
+    async def get_relative_url(self, url, is_paginated=False) -> tuple:
         return await self.get_absolute_url(self._base_url + '/' + url,
                                            is_paginated=is_paginated)
 
-    async def get_url(self, path, is_paginated=False):
+    async def get_url(self, path, is_paginated=False) -> tuple:
         return await self.get_absolute_url(self._base_url + '/' + path,
                                            is_paginated)
 
@@ -68,7 +78,10 @@ class GitHub:
                                 max_items=self._max_paginated_items)
 
     async def get_user(self, user_name,
-                       should_fetch_data=True) -> objects.AuthenticatedUser:
+                       should_fetch_data=True) -> objects.User:
+        """
+        Gets a single user.
+        """
         fetch_params = {
             'user': user_name
         }
@@ -78,6 +91,9 @@ class GitHub:
 
     async def get_repo(self, owner_name, repo_name,
                        should_fetch_data=True) -> objects.Repo:
+        """
+        Gets a single repository.
+        """
         fetch_params = {
             'name': repo_name,
             'user': owner_name
@@ -88,6 +104,9 @@ class GitHub:
 
     async def get_branch(self, owner_name, repo_name,
                          branch_name) -> objects.Branch:
+        """
+        Gets a single branch of a repository.
+        """
         fetch_params = {
             'user': owner_name,
             'repo': repo_name,
@@ -98,6 +117,9 @@ class GitHub:
 
     async def get_issue(self, owner_name, repo_name,
                         issue_number) -> objects.Issue:
+        """
+        Gets a single issue of a repository.
+        """
         fetch_params = {
             'user': owner_name,
             'repo': repo_name,
@@ -108,6 +130,9 @@ class GitHub:
 
     async def get_pull_request(self, owner_name, repo_name,
                                issue_number) -> objects.PullRequest:
+        """
+        Gets a single pull request of a repository.
+        """
         fetch_params = {
             'user': owner_name,
             'repo': repo_name,
@@ -117,16 +142,28 @@ class GitHub:
                                                   fetch_params=fetch_params)
 
     async def get_rate_limit(self) -> objects.RateLimit:
+        """
+        Gets the current rate limit values.
+        """
         return await self.get_object_relative_url(objects.RateLimit)
 
-    async def get_current_user(self) -> objects.User:
+    async def get_current_user(self) -> objects.AuthenticatedUser:
+        """
+        Gets the current authenticated user.
+        """
         return objects.User(self, *await self.get_url('user'))
 
     async def get_users(self, since=None):
+        """
+        Gets all users.
+        """
         # FIXME: add since support
         return await self.get_list_relative_url('users', objects.User)
 
     async def get_repos(self, since=None):
+        """
+        Gets all repos.
+        """
         # FIXME: add since support
         return await self.get_list_relative_url('repos', objects.Repo)
 

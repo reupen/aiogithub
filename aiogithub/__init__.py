@@ -1,1 +1,1 @@
-from .base import GitHub
+from .aiogithub import GitHub
