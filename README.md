@@ -2,7 +2,7 @@
 
 asyncio- and aiohttp-based Python 3.5 GitHub API client.
 
-Note: This library is a work in progress.
+Note: This library is a work in progress. So far, select read operations have been implemented.
 
 ## A simple example
 
@@ -10,7 +10,8 @@ Note: This library is a work in progress.
 import asyncio
 from aiogithub import GitHub
 
-TOKEN = None  # Set this to your OAuth token
+TOKEN = None  # Set this a personal access token (or leave as None to 
+              # use the API unauthenticated) 
 
 async def main():
     with GitHub(TOKEN) as api:

@@ -2,6 +2,7 @@ import aiohttp
 import link_header
 
 from aiogithub import objects
+from aiogithub.exceptions import HttpException
 
 
 class GitHub:
@@ -41,6 +42,8 @@ class GitHub:
                 params['per_page'] = self._items_per_page
             async with self._client.get(
                     url, headers=self._headers, params=params) as response:
+                if response.status >= 400:
+                    raise HttpException(response.status)
                 self._last_limits = {
                     'limit': response.headers.get('X-RateLimit-Limit'),
                     'remaining': response.headers.get('X-RateLimit-Limit')
