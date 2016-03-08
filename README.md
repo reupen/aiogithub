@@ -16,12 +16,12 @@ async def main():
     with GitHub(TOKEN) as api:
         user = await api.get_user('reupen')
         print(user.login)
-        # user is also a dict, so sou can see the underlying data via print(user) 
+        # user is also a dict, so you can see the underlying data via print(user) 
 
         # Get this user's repos
         repos = await user.get_repos()
-        # There's no need to worry about pagination
-        # Simply iterate over list objects like this and pages will be retrieved as needed:
+        # There's no need to worry about pagination – you can simply iterate 
+        # over list objects like this and pages will be retrieved as needed:
         async for repo in repos:
             pass # Do something with each repo here
 
