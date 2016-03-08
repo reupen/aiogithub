@@ -61,12 +61,10 @@ class PartialUser(BaseResponseObject):
     def html_url(self) -> str:
         pass
 
-
     @property
     @return_key
     def type(self) -> str:
         pass
-
 
     @property
     @return_key

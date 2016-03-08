@@ -159,7 +159,7 @@ class PartialRepo(BaseResponseObject):
         return await self._get_related_url('commits_url',
                                            objects.BaseResponseObject)
 
-    # compare, contents
+    # TODO: compare, contents
 
     async def get_contributors(self):
         return await self._get_related_url('contributors_url', objects.User)
