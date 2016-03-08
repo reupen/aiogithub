@@ -1,6 +1,7 @@
 from functools import wraps
 
-from aiogithub.exceptions import FieldNotLoaded
+
+# from aiogithub.exceptions import FieldNotLoaded
 
 def return_key(func):
     @wraps(func)
@@ -8,6 +9,7 @@ def return_key(func):
         try:
             return self[func.__name__]
         except KeyError:
-            raise FieldNotLoaded
+            # raise FieldNotLoaded
+            return None
 
     return wrapper

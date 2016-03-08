@@ -9,6 +9,13 @@ from aiogithub.objects.user import User
 
 class PullRequest(BaseResponseObject):
     _url = 'repos/{user}/{repo}/pulls/{number}'
+    _default_urls = {
+        'issue_url': 'repos/{user}/{repo}/issues/{number}',
+        'commits_url': 'repos/{user}/{repo}/pulls/{number}/commits',
+        'review_comments_url': 'repos/{user}/{repo}/pulls/{number}/comments',
+        'review_comment_url': 'repos/{user}/{repo}/pulls/comments/{number}',
+        'comments_url': 'repos/{user}/{repo}/issues/{number}/comments'
+    }
 
     @staticmethod
     def _get_key_mappings():
@@ -20,6 +27,25 @@ class PullRequest(BaseResponseObject):
             'head': objects.Head,
             'base': objects.Base
         }
+
+    async def get_issue(self):
+        return await self._get_related_object('issue_url', objects.Issue)
+
+    async def get_commits(self):
+        return await self._get_related_url('commits_url',
+                                           objects.BaseResponseObject)
+
+    async def get_review_comments(self):
+        return await self._get_related_url('review_comments_url',
+                                           objects.BaseResponseObject)
+
+    async def get_review_comment(self):
+        return await self._get_related_object('review_comment_url',
+                                              objects.BaseResponseObject)
+
+    async def get_comments(self):
+        return await self._get_related_url('comments_url',
+                                           objects.BaseResponseObject)
 
     @property
     @return_key
