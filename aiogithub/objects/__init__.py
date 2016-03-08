@@ -2,7 +2,7 @@ from .event import Event
 from .gist import Gist
 from .organization import Organization
 from .repo import Repo, PartialRepo
-from .user import User
+from .user import User, AuthenticatedUser
 from .milestone import Milestone
 from .issue import Issue
 from .pull_request import PullRequest
@@ -26,4 +26,5 @@ __all__ = ("BaseObject",
            "Organization",
            "Repo",
            "PartialRepo",
-           "User")
+           "User",
+           "AuthenticatedUser")

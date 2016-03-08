@@ -5,7 +5,7 @@ from aiogithub import objects
 from aiogithub.utils import return_key
 
 
-class User(BaseResponseObject):
+class PartialUser(BaseResponseObject):
     _url = 'users/{user}'
     _default_urls = {
         'followers_url': 'users/{login}/followers',
@@ -61,15 +61,32 @@ class User(BaseResponseObject):
     def html_url(self) -> str:
         pass
 
+
     @property
     @return_key
     def type(self) -> str:
         pass
 
+
     @property
     @return_key
     def site_admin(self) -> str:
         pass
+
+
+class User(PartialUser):
+    _url = 'users/{user}'
+    _default_urls = {
+        'followers_url': 'users/{login}/followers',
+        'following_url': 'users/{login}/following{{/other_user}}',
+        'gists_url': 'users/{login}/gists{{/gist_id}}',
+        'starred_url': 'users/{login}/starred{{/owner}}{{/repo}}',
+        'subscriptions_url': 'users/{login}/subscriptions',
+        'organizations_url': 'users/{login}/orgs',
+        'repos_url': 'users/{login}/repos',
+        'events_url': 'users/{login}/events{{/privacy}}',
+        'received_events_url': 'users/{login}/received_events',
+    }
 
     @property
     @return_key
@@ -129,4 +146,36 @@ class User(BaseResponseObject):
     @property
     @return_key
     def updated_at(self) -> datetime:
+        pass
+
+
+class AuthenticatedUser(User):
+    @property
+    @return_key
+    def total_private_repos(self) -> int:
+        pass
+
+    @property
+    @return_key
+    def owned_private_repos(self) -> int:
+        pass
+
+    @property
+    @return_key
+    def private_gists(self) -> int:
+        pass
+
+    @property
+    @return_key
+    def disk_usage(self) -> int:
+        pass
+
+    @property
+    @return_key
+    def collaborators(self) -> int:
+        pass
+
+    @property
+    @return_key
+    def plan(self) -> dict:
         pass

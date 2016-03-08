@@ -99,6 +99,41 @@ class PartialRepo(BaseResponseObject):
     def fork(self) -> bool:
         pass
 
+    @property
+    @return_key
+    def html_url(self) -> str:
+        pass
+
+    @property
+    @return_key
+    def clone_url(self) -> str:
+        pass
+
+    @property
+    @return_key
+    def git_url(self) -> str:
+        pass
+
+    @property
+    @return_key
+    def ssh_url(self) -> str:
+        pass
+
+    @property
+    @return_key
+    def mirror_url(self) -> str:
+        pass
+
+    @property
+    @return_key
+    def svn_url(self) -> str:
+        pass
+
+    @property
+    @return_key
+    def homepage(self) -> str:
+        pass
+
     async def get_assignees(self):
         return await self._get_related_url('assignees_url', objects.User)
 

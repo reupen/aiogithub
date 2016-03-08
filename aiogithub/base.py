@@ -68,12 +68,12 @@ class GitHub:
                                 max_items=self._max_paginated_items)
 
     async def get_user(self, user_name,
-                       should_fetch_data=True) -> objects.User:
+                       should_fetch_data=True) -> objects.AuthenticatedUser:
         fetch_params = {
             'user': user_name
         }
         return await self.get_object_relative_url(
-            objects.User, should_fetch_data=should_fetch_data,
+            objects.AuthenticatedUser, should_fetch_data=should_fetch_data,
             fetch_params=fetch_params)
 
     async def get_repo(self, owner_name, repo_name,
@@ -128,7 +128,7 @@ class GitHub:
 
     async def get_repos(self, since=None):
         # FIXME: add since support
-        return await self.get_list_relative_url('repos', objects.PartialRepo)
+        return await self.get_list_relative_url('repos', objects.Repo)
 
     def close(self):
         self._client.close()
