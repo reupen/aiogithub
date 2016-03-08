@@ -19,7 +19,7 @@ setup(
     description="asyncio-based GitHub API client",
     license="BSD",
     keywords="github api client asyncio",
-    url="https://github.com/aiogithub",
+    url="https://github.com/reupen/aiogithub",
 
     classifiers=[
         'Programming Language :: Python :: 3.5',
