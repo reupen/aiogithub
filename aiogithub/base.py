@@ -128,7 +128,7 @@ class GitHub:
 
     async def get_repos(self, since=None):
         # FIXME: add since support
-        return await self.get_list_relative_url('repos', objects.Repo)
+        return await self.get_list_relative_url('repos', objects.PartialRepo)
 
     def close(self):
         self._client.close()

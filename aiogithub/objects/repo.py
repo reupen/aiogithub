@@ -1,9 +1,13 @@
-from aiogithub.objects.base_object import BaseResponseObject
+from datetime import datetime
 
 from aiogithub import objects
+from aiogithub.objects.user import User
+from aiogithub.objects.organization import Organization
+from aiogithub.objects.base_object import BaseResponseObject
+from aiogithub.utils import return_key
 
 
-class Repo(BaseResponseObject):
+class PartialRepo(BaseResponseObject):
     _url = 'repos/{user}/{repo}'
     _default_urls = {
         "archive_url": "repos/{owner[login]}/{name}/{{archive_format}}"
@@ -60,6 +64,41 @@ class Repo(BaseResponseObject):
             'source': Repo
         }
 
+    @property
+    @return_key
+    def id(self) -> int:
+        pass
+
+    @property
+    @return_key
+    def owner(self) -> User:
+        pass
+
+    @property
+    @return_key
+    def name(self) -> str:
+        pass
+
+    @property
+    @return_key
+    def full_name(self) -> str:
+        pass
+
+    @property
+    @return_key
+    def description(self) -> str:
+        pass
+
+    @property
+    @return_key
+    def private(self) -> bool:
+        pass
+
+    @property
+    @return_key
+    def fork(self) -> bool:
+        pass
+
     async def get_assignees(self):
         return await self._get_related_url('assignees_url', objects.User)
 
@@ -102,3 +141,80 @@ class Repo(BaseResponseObject):
 
     async def get_stargazers(self):
         return await self._get_related_url('stargazers_url', objects.User)
+
+
+class Repo(PartialRepo):
+    @property
+    @return_key
+    def language(self) -> str:
+        pass
+
+    @property
+    @return_key
+    def forks_count(self) -> int:
+        pass
+
+    @property
+    @return_key
+    def stargazers_count(self) -> int:
+        pass
+
+    @property
+    @return_key
+    def watchers_count(self) -> int:
+        pass
+
+    @property
+    @return_key
+    def size(self) -> int:
+        pass
+
+    @property
+    @return_key
+    def default_branch(self) -> str:
+        pass
+
+    @property
+    @return_key
+    def open_issues_count(self) -> int:
+        pass
+
+    @property
+    @return_key
+    def has_issues(self) -> bool:
+        pass
+
+    @property
+    @return_key
+    def has_wiki(self) -> bool:
+        pass
+
+    @property
+    @return_key
+    def has_pages(self) -> bool:
+        pass
+
+    @property
+    @return_key
+    def has_downloads(self) -> bool:
+        pass
+
+    @property
+    @return_key
+    def pushed_at(self) -> datetime:
+        pass
+
+    @property
+    @return_key
+    def created_at(self) -> datetime:
+        pass
+
+    @property
+    @return_key
+    def updated_at(self) -> datetime:
+        pass
+
+    @property
+    @return_key
+    def permissions(self) -> dict:
+        pass
