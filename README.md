@@ -1,5 +1,7 @@
 # aiogithub
 
+[![Build Status](https://travis-ci.org/reupen/aiogithub.svg?branch=master)](https://travis-ci.org/reupen/aiogithub)
+
 asyncio- and aiohttp-based Python 3.5 GitHub API client.
 
 Note: This library is a work in progress. So far, select read operations have been implemented.
