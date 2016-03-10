@@ -156,25 +156,25 @@ class GitHub:
         """
         return objects.User(self, *await self.get_url('user'))
 
-    async def get_users(self, since=None):
+    async def get_users(self, since=None) -> objects.BaseList[objects.User]:
         """
         Gets all users.
         """
         # FIXME: add since support
         return await self.get_list_relative_url('users', objects.User)
 
-    async def get_repos(self, since=None):
+    async def get_repos(self, since=None) -> objects.BaseList[objects.Repo]:
         """
         Gets all repos.
         """
         # FIXME: add since support
         return await self.get_list_relative_url('repos', objects.Repo)
 
-    def close(self):
+    def close(self) -> None:
         self._client.close()
 
-    def __enter__(self):
+    def __enter__(self) -> 'GitHub':
         return self
 
-    def __exit__(self, exc_type, exc_val, exc_tb):
+    def __exit__(self, exc_type, exc_val, exc_tb) -> None:
         self.close()

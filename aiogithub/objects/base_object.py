@@ -1,7 +1,10 @@
 from collections import UserDict, abc
+from typing import Iterator, TypeVar, List
 
 import uritemplate
 import dateutil.parser
+
+T = TypeVar('T')
 
 
 class BaseObject(UserDict):
@@ -94,7 +97,7 @@ class BaseResponseObject(BaseObject):
         return self._limits
 
 
-class BaseList(abc.AsyncIterable):
+class BaseList(Iterator[T], extra=abc.AsyncIterator):
     def __init__(self, client, element_type, initial_document, limits, links,
                  max_items=None):
         self._client = client
@@ -113,11 +116,11 @@ class BaseList(abc.AsyncIterable):
     def limits(self):
         return self._limits
 
-    def _make_element(self, document):
+    def _make_element(self, document) -> T:
         return self._element_type(self._client, document,
                                   self._last_raw_limits)
 
-    async def get_all(self):
+    async def get_all(self) -> List[T]:
         ret = []
         for page in self._pages:
             ret += map(self._make_element, page)
@@ -127,18 +130,18 @@ class BaseList(abc.AsyncIterable):
             ret += map(self._make_element, self._pages[-1])
         return ret
 
-    async def __aiter__(self):
+    async def __aiter__(self) -> 'BaseList[T]':
         self._current_page_number = 0
         self._current_iter = iter(self._pages[self._current_page_number])
         return self
 
-    def _increment_page_number(self):
+    def _increment_page_number(self) -> None:
         self._current_page_number += 1
         self._current_iter = iter(
             self._pages[self._current_page_number]
         )
 
-    async def _get_next_page(self):
+    async def _get_next_page(self) -> None:
         assert 'next' in self._links
         document, limits, links = await self._client.get_absolute_url(
             self._links['next'])
@@ -147,7 +150,7 @@ class BaseList(abc.AsyncIterable):
         self._links = links
         self._item_counter += len(document)
 
-    async def __anext__(self):
+    async def __anext__(self) -> T:
         try:
             value = next(self._current_iter)
         except StopIteration:
