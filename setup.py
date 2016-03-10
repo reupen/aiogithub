@@ -8,12 +8,13 @@ setup(
     name="aiogithub",
     version="0.1.dev0",
     packages=find_packages(),
-    install_requires=['aiohttp', 'LinkHeader', 'uritemplate'],
+    install_requires=['aiohttp', 'LinkHeader', 'uritemplate',
+                      'python-dateutil'],
 
     include_package_data=True,
 
-    setup_requires=['pytest-runner'],
-    tests_require=['pytest', 'pytest-asyncio'],
+    setup_requires=['pytest-runner', 'pytest'],
+    tests_require=['pytest-asyncio'],
 
     author="Reupen Shah",
     description="asyncio-based GitHub API client",
