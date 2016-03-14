@@ -4,7 +4,7 @@ from aiogithub.utils import return_key
 
 
 class Branch(BaseResponseObject):
-    _url = 'repos/{user}/{repo}/branches/{number}'
+    _url = 'repos/{user}/{repo}/branches/{branch}'
 
     @staticmethod
     def _get_key_mappings():

@@ -46,10 +46,8 @@ class PullRequest(BaseResponseObject):
         return await self._get_related_object('review_comment_url',
                                               objects.BaseResponseObject)
 
-    async def get_comments(self) \
-            -> 'objects.BaseList[objects.BaseResponseObject]':
-        return await self._get_related_url('comments_url',
-                                           objects.BaseResponseObject)
+    async def get_comments(self) -> 'objects.BaseList[objects.Comment]':
+        return await self._get_related_url('comments_url', objects.Comment)
 
     @property
     @return_key

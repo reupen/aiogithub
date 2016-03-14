@@ -136,7 +136,8 @@ class PartialRepo(BaseResponseObject):
     async def get_assignees(self) -> 'objects.BaseList[objects.User]':
         return await self._get_related_url('assignees_url', objects.User)
 
-    async def get_blobs(self) -> 'objects.BaseList[objects.BaseResponseObject]':
+    async def get_blobs(
+            self) -> 'objects.BaseList[objects.BaseResponseObject]':
         return await self._get_related_url('blobs_url',
                                            objects.BaseResponseObject)
 
@@ -150,10 +151,8 @@ class PartialRepo(BaseResponseObject):
     async def get_collaborators(self) -> 'objects.BaseList[objects.User]':
         return await self._get_related_url('collaborators_url', objects.User)
 
-    async def get_comments(self) \
-            -> 'objects.BaseList[objects.BaseResponseObject]':
-        return await self._get_related_url('comments_url',
-                                           objects.BaseResponseObject)
+    async def get_comments(self) -> 'objects.BaseList[objects.Comment]':
+        return await self._get_related_url('comments_url', objects.Comment)
 
     async def get_commits(self) \
             -> 'objects.BaseList[objects.BaseResponseObject]':
