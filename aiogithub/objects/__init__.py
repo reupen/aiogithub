@@ -2,6 +2,7 @@ from .event import Event
 from .gist import Gist
 from .organization import Organization
 from .repo import Repo, PartialRepo
+from .commit import Commit
 from .user import User, AuthenticatedUser
 from .milestone import Milestone
 from .issue import Issue
@@ -15,6 +16,7 @@ __all__ = ("BaseObject",
            "BaseResponseObject",
            "BaseList",
            "Branch",
+           "Commit",
            "Event",
            "Gist",
            "Issue",

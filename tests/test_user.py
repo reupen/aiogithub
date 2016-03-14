@@ -10,7 +10,7 @@ from .mocks import fake_response
 async def test_get_user():
     with aiogithub.GitHub() as gh:
         user = await gh.get_user('reupen')
-    assert user['login'] == 'reupen'
+    assert user.login == 'reupen'
 
 
 @pytest.mark.asyncio

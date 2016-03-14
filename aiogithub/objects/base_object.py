@@ -62,6 +62,8 @@ class BaseResponseObject(BaseObject):
     async def fetch_data(self):
         if 'url' in self:
             url = self['url']
+        elif '_links' in self and 'self' in self['_links']:
+            url = self['_links']['self']
         else:
             url = self._url.format(**self._fetch_params)
             # FIXME: catch appropriate exception

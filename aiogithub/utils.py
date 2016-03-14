@@ -6,10 +6,6 @@ from functools import wraps
 def return_key(func):
     @wraps(func)
     def wrapper(self):
-        try:
-            return self[func.__name__]
-        except KeyError:
-            # raise FieldNotLoaded
-            return None
+        return self.get(func.__name__)
 
     return wrapper
