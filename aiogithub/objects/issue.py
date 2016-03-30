@@ -32,8 +32,8 @@ class Issue(BaseResponseObject):
         return await self._get_related_url('labels_url',
                                            objects.BaseResponseObject)
 
-    async def get_events(self) -> 'objects.BaseList[objects.Event]':
-        return await self._get_related_url('events_url', objects.Event)
+    async def get_events(self) -> 'objects.BaseList[objects.IssueEvent]':
+        return await self._get_related_url('events_url', objects.IssueEvent)
 
     async def get_comments(self) -> 'objects.BaseList[objects.Comment]':
         return await self._get_related_url('comments_url', objects.Comment)

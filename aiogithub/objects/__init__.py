@@ -1,4 +1,4 @@
-from .event import Event
+from .event import Event, IssueEvent
 from .gist import Gist
 from .organization import Organization
 from .repo import Repo, PartialRepo
@@ -20,6 +20,7 @@ __all__ = ("BaseObject",
            "Commit",
            "Comment",
            "Event",
+           "IssueEvent",
            "Gist",
            "Issue",
            "Head",
