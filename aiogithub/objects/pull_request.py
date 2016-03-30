@@ -28,21 +28,18 @@ class PullRequest(BaseResponseObject):
             'base': objects.Base
         }
 
-    async def get_issue(self) -> 'objects.BaseList[objects.Issue]':
+    async def get_issue(self) -> 'objects.Issue':
         return await self._get_related_object('issue_url', objects.Issue)
 
-    async def get_commits(self) \
-            -> 'objects.BaseList[objects.BaseResponseObject]':
-        return await self._get_related_url('commits_url',
-                                           objects.BaseResponseObject)
+    async def get_commits(self) -> 'objects.BaseList[objects.Commit]':
+        return await self._get_related_url('commits_url', objects.Commit)
 
     async def get_review_comments(self) \
-            -> 'objects.BaseList[objects.BaseResponseObject]':
+            -> 'objects.BaseList[objects.ReviewComment]':
         return await self._get_related_url('review_comments_url',
-                                           objects.BaseResponseObject)
+                                           objects.ReviewComment)
 
-    async def get_review_comment(self) \
-            -> 'objects.BaseList[objects.BaseResponseObject]':
+    async def get_review_comment(self) -> 'objects.ReviewComment':
         return await self._get_related_object('review_comment_url',
                                               objects.BaseResponseObject)
 

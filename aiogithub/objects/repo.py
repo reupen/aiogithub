@@ -144,7 +144,7 @@ class PartialRepo(BaseResponseObject):
     async def get_branches(self) -> 'objects.BaseList[objects.Branch]':
         return await self._get_related_url('branches_url', objects.Branch)
 
-    async def get_branch(self, branch) -> 'objects.BaseList[objects.Branch]':
+    async def get_branch(self, branch) -> 'objects.Branch':
         return await self._get_related_object('branches_url', objects.Branch,
                                               branch=branch)
 
@@ -154,10 +154,8 @@ class PartialRepo(BaseResponseObject):
     async def get_comments(self) -> 'objects.BaseList[objects.Comment]':
         return await self._get_related_url('comments_url', objects.Comment)
 
-    async def get_commits(self) \
-            -> 'objects.BaseList[objects.BaseResponseObject]':
-        return await self._get_related_url('commits_url',
-                                           objects.BaseResponseObject)
+    async def get_commits(self) -> 'objects.BaseList[objects.Commit]':
+        return await self._get_related_url('commits_url', objects.Commit)
 
     # TODO: compare, contents
 
@@ -170,10 +168,8 @@ class PartialRepo(BaseResponseObject):
     async def get_forks(self) -> 'objects.BaseList[objects.Repo]':
         return await self._get_related_url('forks_url', objects.Repo)
 
-    async def get_issues(self) \
-            -> 'objects.BaseList[objects.BaseResponseObject]':
-        return await self._get_related_url('issues_url',
-                                           objects.BaseResponseObject)
+    async def get_issues(self) -> 'objects.BaseList[objects.Issue]':
+        return await self._get_related_url('issues_url', objects.Issue)
 
     async def get_stargazers(self) -> 'objects.BaseList[objects.User]':
         return await self._get_related_url('stargazers_url', objects.User)

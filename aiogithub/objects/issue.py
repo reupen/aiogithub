@@ -24,7 +24,7 @@ class Issue(BaseResponseObject):
             'milestone': objects.Milestone
         }
 
-    async def get_repo(self) -> 'objects.BaseList[objects.Repo]':
+    async def get_repo(self) -> 'objects.Repo':
         return await self._get_related_object('repository_url', objects.Repo)
 
     async def get_labels(self) \

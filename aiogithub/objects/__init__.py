@@ -3,7 +3,7 @@ from .gist import Gist
 from .organization import Organization
 from .repo import Repo, PartialRepo
 from .commit import Commit
-from .comment import Comment
+from .comment import Comment, ReviewComment
 from .user import User, AuthenticatedUser
 from .milestone import Milestone
 from .issue import Issue
@@ -30,6 +30,7 @@ __all__ = ("BaseObject",
            "PullRequest",
            "Organization",
            "Repo",
+           "ReviewComment",
            "PartialRepo",
            "User",
            "AuthenticatedUser")
