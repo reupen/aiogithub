@@ -35,3 +35,12 @@ async def main():
 
 asyncio.get_event_loop().run_until_complete(main())
 ```
+
+## Installation
+
+Currently, only development versions are available. You can install the current development version by running:
+
+```
+pip3.5 install -U setuptools
+pip3.5 install git+https://github.com/reupen/aiogithub.git#egg=aiogithub
+```
