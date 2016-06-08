@@ -1,6 +1,6 @@
 import ez_setup
 
-ez_setup.use_setuptools("20")
+ez_setup.use_setuptools()
 
 from setuptools import setup, find_packages
 
