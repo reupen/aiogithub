@@ -6,7 +6,7 @@ from aiogithub import objects
 
 
 class PartialOrganization(BaseResponseObject):
-    _url = 'orgs/{user}'
+    _url = 'orgs/{login}'
 
     _default_urls = {
         'followers_url': 'users/{login}/followers',

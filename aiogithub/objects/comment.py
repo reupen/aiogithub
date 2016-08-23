@@ -6,7 +6,7 @@ from aiogithub.utils import return_key
 
 
 class Comment(BaseResponseObject):
-    _url = 'repos/{user}/{repo}/issues/comments/{id}'
+    _url = 'repos/{login}/{repo}/issues/comments/{id}'
 
     @staticmethod
     def _get_key_mappings():
@@ -46,7 +46,7 @@ class Comment(BaseResponseObject):
 
 
 class ReviewComment(BaseResponseObject):
-    _url = 'repos/{user}/{repo}/pulls/comments/{id}'
+    _url = 'repos/{login}/{repo}/pulls/comments/{id}'
 
     @staticmethod
     def _get_key_mappings():

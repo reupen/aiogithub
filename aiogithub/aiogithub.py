@@ -86,7 +86,7 @@ class GitHub:
         Gets a single user.
         """
         fetch_params = {
-            'user': user_name
+            'login': user_name
         }
         return await self.get_object_relative_url(
             objects.AuthenticatedUser, should_fetch_data=should_fetch_data,
@@ -99,7 +99,7 @@ class GitHub:
         """
         fetch_params = {
             'name': repo_name,
-            'user': owner_name
+            'login': owner_name
         }
         return await self.get_object_relative_url(
             objects.Repo, should_fetch_data=should_fetch_data,
@@ -111,7 +111,7 @@ class GitHub:
         Gets a single branch of a repository.
         """
         fetch_params = {
-            'user': owner_name,
+            'login': owner_name,
             'repo': repo_name,
             'branch': branch_name
         }
@@ -124,7 +124,7 @@ class GitHub:
         Gets a single issue of a repository.
         """
         fetch_params = {
-            'user': owner_name,
+            'login': owner_name,
             'repo': repo_name,
             'number': issue_number
         }
@@ -137,7 +137,7 @@ class GitHub:
         Gets a single pull request of a repository.
         """
         fetch_params = {
-            'user': owner_name,
+            'login': owner_name,
             'repo': repo_name,
             'number': issue_number
         }

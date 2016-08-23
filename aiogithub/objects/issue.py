@@ -7,12 +7,12 @@ from aiogithub.objects.user import User
 
 
 class Issue(BaseResponseObject):
-    _url = 'repos/{user}/{repo}/issues/{number}'
+    _url = 'repos/{login}/{repo}/issues/{number}'
     _default_urls = {
-        'repository_url': 'repos/{user}/{repo}',
-        'labels_url': 'repos/{user}/{repo}/issues/{number}/labels{/name}',
-        'comments_url': 'repos/{user}/{repo}/issues/{number}/comments',
-        'events_url': 'repos/{user}/{repo}/issues/{number}/events'
+        'repository_url': 'repos/{login}/{repo}',
+        'labels_url': 'repos/{login}/{repo}/issues/{number}/labels{/name}',
+        'comments_url': 'repos/{login}/{repo}/issues/{number}/comments',
+        'events_url': 'repos/{login}/{repo}/issues/{number}/events'
     }
 
     @staticmethod

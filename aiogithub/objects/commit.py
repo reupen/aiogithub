@@ -4,7 +4,7 @@ from aiogithub.utils import return_key
 
 
 class Commit(BaseResponseObject):
-    _url = 'repos/{user}/{repo}/commits/{sha}'
+    _url = 'repos/{login}/{repo}/commits/{sha}'
 
     @staticmethod
     def _get_key_mappings():

@@ -55,7 +55,7 @@ class Event(BaseResponseObject):
 
 
 class IssueEvent(BaseResponseObject):
-    _url = 'repos/{user}/{repo}/issues/events/{id}'
+    _url = 'repos/{login}/{repo}/issues/events/{id}'
 
     @staticmethod
     def _get_key_mappings():

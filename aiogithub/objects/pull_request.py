@@ -8,13 +8,13 @@ from aiogithub.objects.user import User
 
 
 class PullRequest(BaseResponseObject):
-    _url = 'repos/{user}/{repo}/pulls/{number}'
+    _url = 'repos/{login}/{repo}/pulls/{number}'
     _default_urls = {
-        'issue_url': 'repos/{user}/{repo}/issues/{number}',
-        'commits_url': 'repos/{user}/{repo}/pulls/{number}/commits',
-        'review_comments_url': 'repos/{user}/{repo}/pulls/{number}/comments',
-        'review_comment_url': 'repos/{user}/{repo}/pulls/comments/{number}',
-        'comments_url': 'repos/{user}/{repo}/issues/{number}/comments'
+        'issue_url': 'repos/{login}/{repo}/issues/{number}',
+        'commits_url': 'repos/{login}/{repo}/pulls/{number}/commits',
+        'review_comments_url': 'repos/{login}/{repo}/pulls/{number}/comments',
+        'review_comment_url': 'repos/{login}/{repo}/pulls/comments/{number}',
+        'comments_url': 'repos/{login}/{repo}/issues/{number}/comments'
     }
 
     @staticmethod

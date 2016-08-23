@@ -6,7 +6,7 @@ from aiogithub.utils import return_key
 
 
 class PartialUser(BaseResponseObject):
-    _url = 'users/{user}'
+    _url = 'users/{login}'
     _default_urls = {
         'followers_url': 'users/{login}/followers',
         'following_url': 'users/{login}/following{{/other_user}}',
@@ -73,7 +73,7 @@ class PartialUser(BaseResponseObject):
 
 
 class User(PartialUser):
-    _url = 'users/{user}'
+    _url = 'users/{login}'
     _default_urls = {
         'followers_url': 'users/{login}/followers',
         'following_url': 'users/{login}/following{{/other_user}}',

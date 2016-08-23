@@ -1,4 +1,4 @@
-from collections import UserDict, abc
+from collections import abc
 from typing import Iterator, TypeVar, List
 
 import uritemplate
@@ -7,7 +7,7 @@ import dateutil.parser
 T = TypeVar('T')
 
 
-class BaseObject(UserDict):
+class BaseObject(dict):
     @staticmethod
     def _get_key_mappings():
         return {}
@@ -79,7 +79,9 @@ class BaseResponseObject(BaseObject):
             url = uritemplate.expand(template, kwargs)
             return await self._client.get_list_absolute_url(url, element_type)
         else:
-            template = self._default_urls[property_name].format(**self)
+            template = self._default_urls[property_name].format(
+                **self._fetch_params
+            )
             url = uritemplate.expand(template, kwargs)
             return await self._client.get_list_relative_url(url, element_type)
 
@@ -90,7 +92,9 @@ class BaseResponseObject(BaseObject):
             url = uritemplate.expand(template, kwargs)
             return await self._client.get_absolute_url(url, element_type)
         else:
-            template = self._default_urls[property_name].format(**self)
+            template = self._default_urls[property_name].format(
+                **self._fetch_params
+            )
             url = uritemplate.expand(template, kwargs)
             return await self._client.get_relative_url(url, element_type)
 

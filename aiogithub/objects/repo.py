@@ -7,7 +7,7 @@ from aiogithub.utils import return_key
 
 
 class PartialRepo(BaseResponseObject):
-    _url = 'repos/{user}/{repo}'
+    _url = 'repos/{login}/{repo}'
     _default_urls = {
         "archive_url": "repos/{owner[login]}/{name}/{{archive_format}}"
                        "{{/ref}}",
