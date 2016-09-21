@@ -60,15 +60,17 @@ class BaseResponseObject(BaseObject):
         super().__init__(document)
 
     async def fetch_data(self):
+        relative = False
         if 'url' in self:
             url = self['url']
         elif '_links' in self and 'self' in self['_links']:
             url = self['_links']['self']
         else:
+            relative = True
             url = self._url.format(**self._fetch_params)
             # FIXME: catch appropriate exception
             # raise Exception("No known fetch URL for this object")
-        document, limits, links = await self._client.get_relative_url(url)
+        document, limits, links = await self._client.get_url(url, relative)
         self._set_from_document(document)
         self._limits = BaseObject(limits)
         self._links = links

@@ -31,6 +31,9 @@ async def test_get_user():
     assert user.created_at == dateutil.parser.parse('2015-06-01T09:04:54Z')
     assert user.updated_at == dateutil.parser.parse('2016-03-05T11:37:45Z')
 
+    # Check that refetching works
+    await user.fetch_data()
+
 
 @pytest.mark.asyncio
 async def test_get_user_repos():

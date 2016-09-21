@@ -59,9 +59,12 @@ class GitHub:
         return await self.get_absolute_url(self._base_url + '/' + url,
                                            is_paginated=is_paginated)
 
-    async def get_url(self, path, is_paginated=False) -> tuple:
-        return await self.get_absolute_url(self._base_url + '/' + path,
-                                           is_paginated)
+    async def get_url(self, url: str, relative: bool, is_paginated=False) -> \
+            tuple:
+        if relative:
+            return await self.get_relative_url(url, is_paginated)
+        else:
+            return await self.get_absolute_url(url, is_paginated)
 
     async def get_object_relative_url(self, element_type,
                                       should_fetch_data=True,
@@ -99,7 +102,9 @@ class GitHub:
         """
         fetch_params = {
             'name': repo_name,
-            'login': owner_name
+            'owner': {
+                'login': owner_name
+            }
         }
         return await self.get_object_relative_url(
             objects.Repo, should_fetch_data=should_fetch_data,
@@ -154,7 +159,7 @@ class GitHub:
         """
         Gets the current authenticated user.
         """
-        return objects.User(self, *await self.get_url('user'))
+        return objects.User(self, *await self.get_relative_url('user'))
 
     async def get_users(self, since=None) -> objects.BaseList[objects.User]:
         """
