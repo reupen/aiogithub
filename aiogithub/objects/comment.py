@@ -117,6 +117,3 @@ class ReviewComment(BaseResponseObject):
     async def get_pull_request(self) -> 'objects.PullRequest':
         return await self._get_related_object('pull_request_url',
                                               objects.PullRequest)
-
-
-
