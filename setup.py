@@ -7,18 +7,21 @@ setup_requires = []
 is_test = {'pytest', 'test'} & set(sys.argv)
 
 if is_test:
-    setup_requires=[
+    setup_requires = [
         'pytest-runner~=2.9',
         'pytest~=3.0'
     ]
-
 
 setup(
     name="aiogithub",
     version="0.1.dev0",
     packages=find_packages(),
-    install_requires=['aiohttp', 'LinkHeader', 'uritemplate',
-                      'python-dateutil'],
+    install_requires=[
+        'aiohttp~=1.0',
+        'LinkHeader~=0.4',
+        'uritemplate~=3.0',
+        'python-dateutil~=2.5'
+    ],
 
     include_package_data=True,
 
