@@ -10,10 +10,14 @@ Note: This library is a work in progress. So far, select read operations have be
 
 ```python
 import asyncio
+
 from aiogithub import GitHub
 
-TOKEN = None  # Set this a personal access token (or leave as None to 
-              # use the API unauthenticated) 
+# To use the GitHub API authenticated, you can either set the 
+# GITHUB_TOKEN environment variable with a personal access token 
+# as the value, or explicitly set the token here. Leave as None to 
+# use the API unauthenticated. 
+TOKEN = None
 
 async def main():
     with GitHub(TOKEN) as api:

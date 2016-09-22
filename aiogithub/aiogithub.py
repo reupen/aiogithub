@@ -1,3 +1,5 @@
+import os
+
 import aiohttp
 import link_header
 
@@ -6,9 +8,16 @@ from aiogithub.exceptions import HttpException
 
 
 class GitHub:
-    def __init__(self, token=None, items_per_page=100, timeout_secs=10,
+    def __init__(self, token: str = None, items_per_page=100, timeout_secs=10,
                  max_paginated_items=1000):
         """
+        Initialises a GitHub API client.
+
+        If no personal access token is provided, the client will check the
+        GITHUB_TOKEN environment variable for a token and use that if
+        present. If still without a token, the GitHub API will be used
+        unauthenticated.
+
         :param token:                 GitHub personal access token
         :param items_per_page:        Items to request per page, must be
                                       between 1 and 100
@@ -18,6 +27,9 @@ class GitHub:
                                       requests
 
         """
+        if not token:
+            token = os.environ.get('GITHUB_TOKEN')
+
         headers = {'Accept': 'application/vnd.github.v3+json'}
         self._client = aiohttp.ClientSession(headers=headers)
         self._timeout = timeout_secs
