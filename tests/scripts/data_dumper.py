@@ -27,7 +27,7 @@ async def main():
                 data = await response.text()
                 out_path = os.path.abspath(
                     os.path.join(os.path.dirname(__file__), '..', 'mocks',
-                                 url_parts.path[1:]+'.json'))
+                                 url_parts.path[1:] + '.json'))
 
                 os.makedirs(os.path.dirname(out_path), exist_ok=True)
 
