@@ -1,0 +1,13 @@
+name: readthedocs-py35
+dependencies:
+- python=3.5
+- pip
+- setuptools
+- wheel
+- pip:
+  - sphinx-rtd-theme
+  - sphinxcontrib-asyncio
+  - aiohttp=1.*
+  - LinkHeader=0.*
+  - uritemplate=3.*
+  - python-dateutil=2.*
