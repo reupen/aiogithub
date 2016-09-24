@@ -1,20 +1,33 @@
 #!/usr/bin/env python3
 import sys
+import os
 
 from setuptools import setup, find_packages
 
-setup_requires = []
-is_test = {'pytest', 'test'} & set(sys.argv)
+setup_requires = ['setuptools_scm']
+args = set(sys.argv)
+
+is_test = {'pytest', 'test'} & args
+is_sphinx = 'build_sphinx' in args
 
 if is_test:
-    setup_requires = [
+    setup_requires += (
         'pytest-runner~=2.9',
         'pytest~=3.0'
+    )
+
+if is_sphinx:
+    setup_requires += [
+        'sphinx-rtd-theme',
+        'sphinxcontrib-asyncio',
+        'Sphinx~=1.4.6'
     ]
 
 setup(
     name="aiogithub",
-    version="0.1.dev0",
+    use_scm_version={
+        'write_to': os.path.join('aiogithub', 'version.py')
+    },
     packages=find_packages(),
     install_requires=[
         'aiohttp~=1.0',
@@ -25,6 +38,7 @@ setup(
 
     include_package_data=True,
 
+    python_requires='~=3.5',
     setup_requires=setup_requires,
     tests_require=['pytest-asyncio~=0.5.0'],
 
@@ -36,6 +50,7 @@ setup(
 
     classifiers=[
         'Programming Language :: Python :: 3.5',
+        'Programming Language :: Python :: 3.6',
         'Development Status :: 2 - Pre-Alpha'
     ]
 )

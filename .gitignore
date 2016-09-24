@@ -5,3 +5,5 @@
 aiogithub.egg-info/
 build
 dist
+/docs/_build
+/aiogithub/version.py

@@ -4,7 +4,7 @@ from .organization import Organization
 from .repo import Repo, PartialRepo
 from .commit import Commit
 from .comment import Comment, ReviewComment
-from .user import User, AuthenticatedUser
+from .user import PartialUser, User, AuthenticatedUser
 from .milestone import Milestone
 from .issue import Issue
 from .pull_request import PullRequest
@@ -32,5 +32,6 @@ __all__ = ("BaseObject",
            "Repo",
            "ReviewComment",
            "PartialRepo",
+           "PartialUser",
            "User",
            "AuthenticatedUser")
