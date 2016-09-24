@@ -1,6 +1,7 @@
 from datetime import datetime
+from typing import Optional
 
-from aiogithub.objects.base_object import BaseResponseObject
+from aiogithub.objects.response import BaseResponseObject
 from aiogithub import objects
 from aiogithub.utils import return_key
 
@@ -44,31 +45,49 @@ class PartialUser(BaseResponseObject):
     @property
     @return_key
     def login(self) -> str:
+        """
+        :type: str
+        """
         pass
 
     @property
     @return_key
-    def id(self) -> int:
+    def id(self) -> Optional[int]:
+        """
+        :type: Optional[int]
+        """
         pass
 
     @property
     @return_key
-    def gravatar_id(self) -> str:
+    def gravatar_id(self) -> Optional[str]:
+        """
+        :type: Optional[str]
+        """
         pass
 
     @property
     @return_key
-    def html_url(self) -> str:
+    def html_url(self) -> Optional[str]:
+        """
+        :type: Optional[str]
+        """
         pass
 
     @property
     @return_key
-    def type(self) -> str:
+    def type(self) -> Optional[str]:
+        """
+        :type: Optional[str]
+        """
         pass
 
     @property
     @return_key
-    def site_admin(self) -> str:
+    def site_admin(self) -> Optional[str]:
+        """
+        :type: Optional[str]
+        """
         pass
 
 
@@ -88,62 +107,98 @@ class User(PartialUser):
 
     @property
     @return_key
-    def company(self) -> str:
+    def company(self) -> Optional[str]:
+        """
+        :type: Optional[str]
+        """
         pass
 
     @property
     @return_key
-    def blog(self) -> str:
+    def blog(self) -> Optional[str]:
+        """
+        :type: Optional[str]
+        """
         pass
 
     @property
     @return_key
-    def location(self) -> str:
+    def location(self) -> Optional[str]:
+        """
+        :type: Optional[str]
+        """
         pass
 
     @property
     @return_key
-    def email(self) -> str:
+    def email(self) -> Optional[str]:
+        """
+        :type: Optional[str]
+        """
         pass
 
     @property
     @return_key
-    def hireable(self) -> bool:
+    def hireable(self) -> Optional[bool]:
+        """
+        :type: Optional[bool]
+        """
         pass
 
     @property
     @return_key
-    def bio(self) -> str:
+    def bio(self) -> Optional[str]:
+        """
+        :type: Optional[str]
+        """
         pass
 
     @property
     @return_key
-    def public_repos(self) -> int:
+    def public_repos(self) -> Optional[int]:
+        """
+        :type: Optional[int]
+        """
         pass
 
     @property
     @return_key
-    def public_gists(self) -> int:
+    def public_gists(self) -> Optional[int]:
+        """
+        :type: Optional[int]
+        """
         pass
 
     @property
     @return_key
-    def followers(self) -> int:
+    def followers(self) -> Optional[int]:
+        """
+        :type: Optional[int]
+        """
         pass
 
     @property
     @return_key
-    def following(self) -> int:
+    def following(self) -> Optional[int]:
+        """
+        :type: Optional[int]
+        """
         pass
 
     @property
     @return_key
-    def created_at(self) -> datetime:
+    def created_at(self) -> Optional[datetime]:
+        """
+        :type: Optional[datetime]
+        """
         pass
 
     @property
     @return_key
-    def updated_at(self) -> datetime:
+    def updated_at(self) -> Optional[datetime]:
+        """
+        :type: Optional[datetime]
+        """
         pass
 
 
@@ -151,29 +206,47 @@ class AuthenticatedUser(User):
     @property
     @return_key
     def total_private_repos(self) -> int:
+        """
+        :type: int
+        """
         pass
 
     @property
     @return_key
     def owned_private_repos(self) -> int:
+        """
+        :type: int
+        """
         pass
 
     @property
     @return_key
     def private_gists(self) -> int:
+        """
+        :type: int
+        """
         pass
 
     @property
     @return_key
     def disk_usage(self) -> int:
+        """
+        :type: int
+        """
         pass
 
     @property
     @return_key
     def collaborators(self) -> int:
+        """
+        :type: int
+        """
         pass
 
     @property
     @return_key
     def plan(self) -> dict:
+        """
+        :type: dict
+        """
         pass

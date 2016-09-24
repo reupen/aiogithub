@@ -1,4 +1,4 @@
-from aiogithub.objects.base_object import BaseResponseObject
+from aiogithub.objects.response import BaseResponseObject
 
 
 class PublicKey(BaseResponseObject):

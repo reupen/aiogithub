@@ -1,8 +1,10 @@
 import os
+from typing import Optional
 
 import aiohttp
 import link_header
 
+import aiogithub
 from aiogithub import objects
 from aiogithub.exceptions import HttpException
 
@@ -38,14 +40,132 @@ class GitHub:
         self._items_per_page = items_per_page
         self._max_paginated_items = max_paginated_items
         self._headers = {
-            'User-Agent': 'aiogithub'
+            'User-Agent': 'aiogithub/{}'.format(aiogithub.__version__)
         }
         self._last_limits = None
         if token:
             self._headers['Authorization'] = 'token ' + token
 
-    def get_last_rate_limit(self) -> dict:
+    @property
+    def last_rate_limit(self) -> Optional[dict]:
+        """
+        The rate limits that were sent by GitHub in the most recent
+        request.
+
+        :type: Optional[dict]
+        """
         return self._last_limits
+
+    async def get_user(self, username, defer_fetch=True) -> objects.User:
+        """
+        Gets a single user.
+
+        :param username:    The name of the user to fetch the details of.
+        :param defer_fetch: Whether to defer fetching of data about this user.
+        :return:            An object representing the user.
+        """
+        fetch_params = {
+            'login': username
+        }
+        return await self._get_object_relative_url(
+            objects.AuthenticatedUser, defer_fetch=defer_fetch,
+            fetch_params=fetch_params)
+
+    async def get_repo(self, owner_name, repo_name,
+                       defer_fetch=True) -> objects.Repo:
+        """
+        Gets a single repository.
+
+        :param owner_name:  The name of the user or organisation that owns
+                            the repository.
+        :param repo_name:   The name of the repository.
+        :param defer_fetch: Whether to defer fetching of data about this
+                            repository.
+        :return:            An object representing the repository.
+        """
+        fetch_params = {
+            'name': repo_name,
+            'owner': {
+                'login': owner_name
+            }
+        }
+        return await self._get_object_relative_url(
+            objects.Repo, defer_fetch=defer_fetch,
+            fetch_params=fetch_params)
+
+    async def get_branch(self, owner_name, repo_name,
+                         branch_name) -> objects.Branch:
+        """
+        Gets a single branch of a repository.
+        """
+        fetch_params = {
+            'login': owner_name,
+            'repo': repo_name,
+            'branch': branch_name
+        }
+        return await self._get_object_relative_url(objects.Branch,
+                                                   fetch_params=fetch_params)
+
+    async def get_issue(self, owner_name, repo_name,
+                        issue_number) -> objects.Issue:
+        """
+        Gets a single issue of a repository.
+        """
+        fetch_params = {
+            'login': owner_name,
+            'repo': repo_name,
+            'number': issue_number
+        }
+        return await self._get_object_relative_url(objects.Issue,
+                                                   fetch_params=fetch_params)
+
+    async def get_pull_request(self, owner_name, repo_name,
+                               issue_number) -> objects.PullRequest:
+        """
+        Gets a single pull request of a repository.
+        """
+        fetch_params = {
+            'login': owner_name,
+            'repo': repo_name,
+            'number': issue_number
+        }
+        return await self._get_object_relative_url(objects.PullRequest,
+                                                   fetch_params=fetch_params)
+
+    async def get_rate_limit(self) -> objects.RateLimit:
+        """
+        Gets the current rate limit values.
+        """
+        return await self._get_object_relative_url(objects.RateLimit)
+
+    async def get_current_user(self) -> objects.AuthenticatedUser:
+        """
+        Gets the current authenticated user.
+        """
+        return objects.User(self, *await self.get_relative_url('user'))
+
+    async def get_users(self, since=None) -> objects.BaseList[objects.User]:
+        """
+        Gets all users.
+        """
+        # FIXME: add since support
+        return await self.get_list_relative_url('users', objects.User)
+
+    async def get_repos(self, since=None) -> objects.BaseList[objects.Repo]:
+        """
+        Gets all repos.
+        """
+        # FIXME: add since support
+        return await self.get_list_relative_url('repos', objects.Repo)
+
+    def close(self) -> None:
+        self._client.close()
+
+    def __enter__(self) -> 'GitHub':
+        return self
+
+    def __exit__(self, exc_type, exc_val, exc_tb) -> None:
+        self.close()
 
     async def get_absolute_url(self, url, is_paginated=False) -> tuple:
         with aiohttp.Timeout(self._timeout):
@@ -78,14 +198,6 @@ class GitHub:
         else:
             return await self.get_absolute_url(url, is_paginated)
 
-    async def get_object_relative_url(self, element_type,
-                                      should_fetch_data=True,
-                                      fetch_params=None):
-        element = element_type(self, fetch_params=fetch_params)
-        if should_fetch_data:
-            await element.fetch_data()
-        return element
-
     async def get_list_relative_url(self, path, element_type):
         return await self.get_list_absolute_url(self._base_url + '/' + path,
                                                 element_type)
@@ -95,103 +207,10 @@ class GitHub:
                                 *await self.get_absolute_url(url, True),
                                 max_items=self._max_paginated_items)
 
-    async def get_user(self, user_name,
-                       should_fetch_data=True) -> objects.User:
-        """
-        Gets a single user.
-        """
-        fetch_params = {
-            'login': user_name
-        }
-        return await self.get_object_relative_url(
-            objects.AuthenticatedUser, should_fetch_data=should_fetch_data,
-            fetch_params=fetch_params)
-
-    async def get_repo(self, owner_name, repo_name,
-                       should_fetch_data=True) -> objects.Repo:
-        """
-        Gets a single repository.
-        """
-        fetch_params = {
-            'name': repo_name,
-            'owner': {
-                'login': owner_name
-            }
-        }
-        return await self.get_object_relative_url(
-            objects.Repo, should_fetch_data=should_fetch_data,
-            fetch_params=fetch_params)
-
-    async def get_branch(self, owner_name, repo_name,
-                         branch_name) -> objects.Branch:
-        """
-        Gets a single branch of a repository.
-        """
-        fetch_params = {
-            'login': owner_name,
-            'repo': repo_name,
-            'branch': branch_name
-        }
-        return await self.get_object_relative_url(objects.Branch,
-                                                  fetch_params=fetch_params)
-
-    async def get_issue(self, owner_name, repo_name,
-                        issue_number) -> objects.Issue:
-        """
-        Gets a single issue of a repository.
-        """
-        fetch_params = {
-            'login': owner_name,
-            'repo': repo_name,
-            'number': issue_number
-        }
-        return await self.get_object_relative_url(objects.Issue,
-                                                  fetch_params=fetch_params)
-
-    async def get_pull_request(self, owner_name, repo_name,
-                               issue_number) -> objects.PullRequest:
-        """
-        Gets a single pull request of a repository.
-        """
-        fetch_params = {
-            'login': owner_name,
-            'repo': repo_name,
-            'number': issue_number
-        }
-        return await self.get_object_relative_url(objects.PullRequest,
-                                                  fetch_params=fetch_params)
-
-    async def get_rate_limit(self) -> objects.RateLimit:
-        """
-        Gets the current rate limit values.
-        """
-        return await self.get_object_relative_url(objects.RateLimit)
-
-    async def get_current_user(self) -> objects.AuthenticatedUser:
-        """
-        Gets the current authenticated user.
-        """
-        return objects.User(self, *await self.get_relative_url('user'))
-
-    async def get_users(self, since=None) -> objects.BaseList[objects.User]:
-        """
-        Gets all users.
-        """
-        # FIXME: add since support
-        return await self.get_list_relative_url('users', objects.User)
-
-    async def get_repos(self, since=None) -> objects.BaseList[objects.Repo]:
-        """
-        Gets all repos.
-        """
-        # FIXME: add since support
-        return await self.get_list_relative_url('repos', objects.Repo)
-
-    def close(self) -> None:
-        self._client.close()
-
-    def __enter__(self) -> 'GitHub':
-        return self
-
-    def __exit__(self, exc_type, exc_val, exc_tb) -> None:
-        self.close()
+    async def _get_object_relative_url(self, element_type,
+                                       defer_fetch=True,
+                                       fetch_params=None):
+        element = element_type(self, fetch_params=fetch_params)
+        if defer_fetch:
+            await element.fetch_data()
+        return element

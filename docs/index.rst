@@ -22,12 +22,13 @@ Contents:
    api/client
    api/response
    api/user
-
+   api/organization
+   api/repo
+   api/pull_request
+   api/issue
 
 
 Indexes and tables
 ==================
 
-* :ref:`genindex`
 * :ref:`modindex`
-* :ref:`search`

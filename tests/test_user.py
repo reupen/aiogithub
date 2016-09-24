@@ -38,7 +38,7 @@ async def test_get_user():
 @pytest.mark.asyncio
 async def test_get_user_repos():
     with aiogithub.GitHub() as gh:
-        user = await gh.get_user('reupen', should_fetch_data=False)
+        user = await gh.get_user('reupen', defer_fetch=False)
         repos = await user.get_repos()
     assert isinstance(repos, aiogithub.objects.BaseList)
     repo_list = await repos.get_all()

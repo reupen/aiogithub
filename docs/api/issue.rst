@@ -1,17 +1,17 @@
-Response classes
-================
+Issue classes
+=============
 
-.. autoclass:: aiogithub.objects.BaseObject
+.. autoclass:: aiogithub.objects.Issue
     :members:
     :undoc-members:
     :show-inheritance:
 
-.. autoclass:: aiogithub.objects.BaseResponseObject
+.. autoclass:: aiogithub.objects.IssueEvent
     :members:
     :undoc-members:
     :show-inheritance:
 
-.. autoclass:: aiogithub.objects.BaseList
+.. autoclass:: aiogithub.objects.Comment
     :members:
     :undoc-members:
     :show-inheritance:

@@ -350,3 +350,4 @@ texinfo_documents = [
 
 # Added config variables
 highlight_language = 'python3'
+autoclass_content = 'both'

@@ -1,13 +1,20 @@
+.. currentmodule:: aiogithub
+
 Usage
 =====
+
+Development status
+------------------
+This library is a work in progress. So far, select read operations have been implemented.
 
 A note about asyncio
 --------------------
 
 aiogithub is written on top of asyncio and aiohttp. You should have a basic grasp of asynchronous programming using
-asyncio in Python 3.5+ before using this library.
+asyncio in Python 3 before using this library.
 
-In particular, using of the library generally occurs in an ``async def`` function. Calls to coroutine functions must be preceded with ``await``, and ``async for`` must be used with async iterables.
+In particular, using of the library generally occurs in an ``async def`` function. Calls to coroutine functions would normally
+be preceded with ``await``, and ``async for`` would normally be used with asynchronous iterables.
 
 A simple example
 ----------------
@@ -41,7 +48,7 @@ A simple example
 The GitHub class
 ----------------
 
-The GitHub class is the main entry point into aiogithub functionality. It is a wrapper around an aiohttp ClientSession object, which means that
+The :class:`GitHub` class is the main entry point into aiogithub functionality. It is a wrapper around an aiohttp ClientSession object, which means that
 you automatically benefit from connection pooling. You should use the object as a context manager to make sure the session is closed as soon
 as you are done with it.
 
@@ -51,7 +58,7 @@ Authentication
 You can make a limited number of requests to the GitHub API unauthenticated, but for most purposes you will want to be authenticated. To authenticate
 with GitHub using aiogithub, you should use a personal access token. You can generate a personal access token in `your GitHub settings <https://github.com/settings/tokens>`_.
 
-aiogithub will use the value of the the GITHUB_TOKEN environment variable to authenticate with GitHub if it is set. You can also pass a token to ``GitHub.__init__()`` (which will
+aiogithub will use the value of the the GITHUB_TOKEN environment variable to authenticate with GitHub if it is set. You can also pass a token to :class:`GitHub` (which will
 override any value in the GITHUB_TOKEN environment variable):::
 
    with GitHub(token='a_personal_access_token') as api:

@@ -17,11 +17,11 @@ if is_test:
     )
 
 if is_sphinx:
-    setup_requires += [
+    setup_requires += (
         'sphinx-rtd-theme',
         'sphinxcontrib-asyncio',
         'Sphinx~=1.4.6'
-    ]
+    )
 
 setup(
     name="aiogithub",

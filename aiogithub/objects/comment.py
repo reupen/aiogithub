@@ -1,7 +1,7 @@
 from datetime import datetime
 
 from aiogithub import objects
-from aiogithub.objects.base_object import BaseResponseObject
+from aiogithub.objects.response import BaseResponseObject
 from aiogithub.utils import return_key
 
 

@@ -1,5 +1,7 @@
-User objects
+User classes
 ============
+
+.. currentmodule:: aiogithub.objects
 
 .. autoclass:: aiogithub.objects.PartialUser
     :members:
