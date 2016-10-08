@@ -10,14 +10,14 @@ class PartialOrganization(BaseResponseObject):
 
     _default_urls = {
         'followers_url': 'users/{login}/followers',
-        'following_url': 'users/{login}/following{{/other_user}}',
-        'gists_url': 'users/{login}/gists{{/gist_id}}',
-        'starred_url': 'users/{login}/starred{{/owner}}{{/repo}}',
-        'subscriptions_url': 'users/{login}/subscriptions',
-        'organizations_url': 'users/{login}/orgs',
-        'repos_url': 'users/{login}/repos',
-        'events_url': 'users/{login}/events{{/privacy}}',
-        'received_events_url': 'users/{login}/received_events',
+        'following_url': 'users/{login}/following{/other_user}',
+        'gists_url': 'users/{login}/gists{/gist_id}',
+        'repos_url': 'orgs/{login}/repos',
+        'events_url': 'orgs/{login}/events',
+        'hooks_url': 'orgs/{login}/hooks',
+        'issues_url': 'orgs/{login}/issues',
+        'members_url': 'orgs/{login}/members{/member}',
+        'public_members_url': 'orgs/{login}/public_members{/member}'
     }
 
     async def get_followers(self) -> 'objects.BaseList[objects.User]':
@@ -26,11 +26,8 @@ class PartialOrganization(BaseResponseObject):
     async def get_following(self) -> 'objects.BaseList[objects.User]':
         return await self._get_related_url('following_url', objects.User)
 
-    async def get_starred(self) -> 'objects.BaseList[objects.Repo]':
-        return await self._get_related_url('starred_url', objects.Repo)
-
-    async def get_subscriptions(self) -> 'objects.BaseList[objects.Repo]':
-        return await self._get_related_url('subscriptions_url', objects.Repo)
+    async def get_gists(self) -> 'objects.BaseList[objects.Gist]':
+        return await self._get_related_url('gists_url', objects.Gist)
 
     async def get_repos(self) -> 'objects.BaseList[objects.Repo]':
         return await self._get_related_url('repos_url', objects.Repo)
@@ -38,9 +35,22 @@ class PartialOrganization(BaseResponseObject):
     async def get_events(self) -> 'objects.BaseList[objects.Event]':
         return await self._get_related_url('events_url', objects.Event)
 
-    async def get_received_events(self) -> 'objects.BaseList[objects.Event]':
-        return await self._get_related_url('received_events_url',
-                                           objects.Event)
+    async def get_hooks(self) -> 'objects.BaseList[objects.BaseObject]':
+        return await self._get_related_url(
+            'hooks_url', objects.BaseObject
+        )
+
+    async def get_issues(self) -> 'objects.BaseList[objects.Issue]':
+        return await self._get_related_url('issues_url', objects.Issue)
+
+    async def get_members(self) -> 'objects.BaseList[objects.PartialUser]':
+        return await self._get_related_url('members_url', objects.PartialUser)
+
+    async def get_public_members(self) -> \
+            'objects.BaseList[objects.PartialUser]':
+        return await self._get_related_url(
+            'public_members_url', objects.PartialUser
+        )
 
     @property
     @return_key

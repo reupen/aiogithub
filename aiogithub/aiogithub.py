@@ -56,7 +56,7 @@ class GitHub:
         """
         return self._last_limits
 
-    async def get_user(self, username, defer_fetch=True) -> objects.User:
+    async def get_user(self, username, defer_fetch=False) -> objects.User:
         """
         Gets a single user.
 
@@ -68,11 +68,29 @@ class GitHub:
             'login': username
         }
         return await self._get_object_relative_url(
-            objects.AuthenticatedUser, defer_fetch=defer_fetch,
+            objects.User, defer_fetch=defer_fetch,
+            fetch_params=fetch_params)
+
+    async def get_organization(self, username, defer_fetch=False) -> \
+            objects.Organization:
+        """
+        Gets a single organization.
+
+        :param username:    The username/login of the organization to fetch the
+                            details of.
+        :param defer_fetch: Whether to defer fetching of data about this
+                            organization.
+        :return:            An object representing the organization.
+        """
+        fetch_params = {
+            'login': username
+        }
+        return await self._get_object_relative_url(
+            objects.Organization, defer_fetch=defer_fetch,
             fetch_params=fetch_params)
 
     async def get_repo(self, owner_name, repo_name,
-                       defer_fetch=True) -> objects.Repo:
+                       defer_fetch=False) -> objects.Repo:
         """
         Gets a single repository.
 
@@ -208,9 +226,9 @@ class GitHub:
                                 max_items=self._max_paginated_items)
 
     async def _get_object_relative_url(self, element_type,
-                                       defer_fetch=True,
+                                       defer_fetch=False,
                                        fetch_params=None):
         element = element_type(self, fetch_params=fetch_params)
-        if defer_fetch:
+        if not defer_fetch:
             await element.fetch_data()
         return element
