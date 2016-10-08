@@ -1,6 +1,6 @@
 # aiogithub
 
-[![Build Status](https://travis-ci.org/reupen/aiogithub.svg?branch=master)](https://travis-ci.org/reupen/aiogithub) [![Requirements Status](https://requires.io/github/reupen/aiogithub/requirements.svg?branch=master)](https://requires.io/github/reupen/aiogithub/requirements/?branch=master)
+[![Build Status](https://travis-ci.org/reupen/aiogithub.svg?branch=master)](https://travis-ci.org/reupen/aiogithub) [![Requirements Status](https://requires.io/github/reupen/aiogithub/requirements.svg?branch=master)](https://requires.io/github/reupen/aiogithub/requirements/?branch=master) [![Documentation Status](https://readthedocs.org/projects/aiogithub/badge/?version=latest)](http://aiogithub.readthedocs.io/en/latest/?badge=latest)
 
 asyncio- and aiohttp-based Python 3.5 GitHub API client.
 
