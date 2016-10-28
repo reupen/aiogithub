@@ -10,13 +10,13 @@ class PartialUser(BaseResponseObject):
     _url = 'users/{login}'
     _default_urls = {
         'followers_url': 'users/{login}/followers',
-        'following_url': 'users/{login}/following{/other_user}',
-        'gists_url': 'users/{login}/gists{/gist_id}',
-        'starred_url': 'users/{login}/starred{/owner}{/repo}',
+        'following_url': 'users/{login}/following{{/other_user}}',
+        'gists_url': 'users/{login}/gists{{/gist_id}}',
+        'starred_url': 'users/{login}/starred{{/owner}}{{/repo}}',
         'subscriptions_url': 'users/{login}/subscriptions',
         'organizations_url': 'users/{login}/orgs',
         'repos_url': 'users/{login}/repos',
-        'events_url': 'users/{login}/events{/privacy}',
+        'events_url': 'users/{login}/events{{/privacy}}',
         'received_events_url': 'users/{login}/received_events',
     }
 

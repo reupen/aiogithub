@@ -10,14 +10,14 @@ class PartialOrganization(BaseResponseObject):
 
     _default_urls = {
         'followers_url': 'users/{login}/followers',
-        'following_url': 'users/{login}/following{/other_user}',
-        'gists_url': 'users/{login}/gists{/gist_id}',
+        'following_url': 'users/{login}/following({/other_user})',
+        'gists_url': 'users/{login}/gists({/gist_id})',
         'repos_url': 'orgs/{login}/repos',
         'events_url': 'orgs/{login}/events',
         'hooks_url': 'orgs/{login}/hooks',
         'issues_url': 'orgs/{login}/issues',
-        'members_url': 'orgs/{login}/members{/member}',
-        'public_members_url': 'orgs/{login}/public_members{/member}'
+        'members_url': 'orgs/{login}/members{(/member})',
+        'public_members_url': 'orgs/{login}/public_members{(/member)}'
     }
 
     async def get_followers(self) -> 'objects.BaseList[objects.User]':

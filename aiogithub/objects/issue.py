@@ -1,4 +1,5 @@
 from datetime import datetime
+from typing import List
 
 from aiogithub.objects.response import BaseResponseObject
 from aiogithub.utils import return_key
@@ -7,12 +8,15 @@ from aiogithub.objects.user import User
 
 
 class Issue(BaseResponseObject):
-    _url = 'repos/{login}/{repo}/issues/{number}'
+    _url = 'repos/{repo[owner][login]}/{repo[name]}/issues/{number}'
     _default_urls = {
-        'repository_url': 'repos/{login}/{repo}',
-        'labels_url': 'repos/{login}/{repo}/issues/{number}/labels{/name}',
-        'comments_url': 'repos/{login}/{repo}/issues/{number}/comments',
-        'events_url': 'repos/{login}/{repo}/issues/{number}/events'
+        'repository_url': 'repos/{repo[owner][login]}/{repo[name]}',
+        'labels_url': 'repos/{repo[owner][login]}/{repo[name]}/issues'
+                      '/{number}/labels{{/name}}',
+        'comments_url': 'repos/{repo[owner][login]}/{repo[name]}/issues'
+                        '/{number}/comments',
+        'events_url': 'repos/{repo[owner][login]}/{repo[name]}/issues'
+                      '/{number}/events'
     }
 
     @staticmethod
@@ -20,7 +24,8 @@ class Issue(BaseResponseObject):
         return {
             'user': objects.User,
             'repo': objects.Repo,
-            'assignee': objects.User,
+            'assignee': objects.PartialUser,
+            'assignees': List[objects.PartialUser],
             'milestone': objects.Milestone
         }
 
@@ -70,7 +75,12 @@ class Issue(BaseResponseObject):
 
     @property
     @return_key
-    def assignee(self) -> objects.User:
+    def assignee(self) -> objects.PartialUser:
+        pass
+
+    @property
+    @return_key
+    def assignees(self) -> List[objects.PartialUser]:
         pass
 
     @property

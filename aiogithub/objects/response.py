@@ -1,8 +1,10 @@
 from collections import abc
-from typing import AsyncIterator, TypeVar, List
+from typing import AsyncIterator, TypeVar, List, GenericMeta
 
 import uritemplate
 import dateutil.parser
+
+from aiogithub.helpers.typing import is_list_type_hint, get_list_element_hint
 
 T = TypeVar('T')
 
@@ -24,13 +26,23 @@ class BaseObject(dict):
 
     def _normalise_document(self, document):
         for key in document:
+            value = document[key]
+
             if key[-3:] == '_at':
-                if isinstance(document[key], str):
-                    document[key] = dateutil.parser.parse(document[key])
+                if isinstance(value, str):
+                    document[key] = dateutil.parser.parse(value)
             elif key in self._get_key_mappings():
                 elem_type = self._get_key_mappings()[key]
-                if not isinstance(document[key], elem_type):
-                    document[key] = elem_type(self._client, document[key],
+                if is_list_type_hint(elem_type):
+                    elem_subtype = get_list_element_hint(elem_type)
+                    for n, sub_elem in enumerate(value):
+                        if not isinstance(sub_elem, elem_subtype):
+                            document[key][n] = elem_subtype(
+                                self._client, sub_elem, self._limits
+                            )
+
+                elif not isinstance(document[key], elem_type):
+                    document[key] = elem_type(self._client, value,
                                               self._limits)
             else:
                 self._normalise_key(document, key)
@@ -75,17 +87,26 @@ class BaseResponseObject(BaseObject):
         self._limits = BaseObject(limits)
         self._links = links
 
+    def _get_related_fetch_params(self):
+        return None
+
     async def _get_related_url(self, property_name, element_type, **kwargs):
         if property_name in self:
             template = self[property_name]
             url = uritemplate.expand(template, kwargs)
-            return await self._client.get_list_absolute_url(url, element_type)
+            return await self._client.get_list_absolute_url(
+                url, element_type,
+                fetch_params=self._get_related_fetch_params()
+            )
         else:
             template = self._default_urls[property_name].format(
                 **self._fetch_params
             )
             url = uritemplate.expand(template, kwargs)
-            return await self._client.get_list_relative_url(url, element_type)
+            return await self._client.get_list_relative_url(
+                url, element_type,
+                fetch_params=self._get_related_fetch_params()
+            )
 
     async def _get_related_object(self, property_name, element_type,
                                   **kwargs):
@@ -107,11 +128,12 @@ class BaseResponseObject(BaseObject):
 
 class BaseList(AsyncIterator[T], abc.AsyncIterator):
     def __init__(self, client, element_type, initial_document, limits, links,
-                 max_items=None):
+                 max_items=None, fetch_params=None):
         self._client = client
         self._element_type = element_type
         self._pages = [initial_document]
         self._current_page_number = 0
+        self._fetch_params = fetch_params
 
         self._current_iter = None
         self._limits = BaseObject(limits)
@@ -126,7 +148,8 @@ class BaseList(AsyncIterator[T], abc.AsyncIterator):
 
     def _make_element(self, document) -> T:
         return self._element_type(self._client, document,
-                                  self._last_raw_limits)
+                                  self._last_raw_limits,
+                                  fetch_params=self._fetch_params)
 
     async def get_all(self) -> List[T]:
         ret = []

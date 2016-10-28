@@ -7,5 +7,6 @@ class FieldNotLoaded(GitHubException):
 
 
 class HttpException(GitHubException):
-    def __init__(self, status):
+    def __init__(self, status, url):
         self.status = status
+        self.url = url

@@ -193,7 +193,7 @@ class GitHub:
             async with self._client.get(
                     url, headers=self._headers, params=params) as response:
                 if response.status >= 400:
-                    raise HttpException(response.status)
+                    raise HttpException(response.status, url)
                 self._last_limits = {
                     'limit': response.headers.get('X-RateLimit-Limit'),
                     'remaining': response.headers.get('X-RateLimit-Limit')
@@ -216,14 +216,18 @@ class GitHub:
         else:
             return await self.get_absolute_url(url, is_paginated)
 
-    async def get_list_relative_url(self, path, element_type):
+    async def get_list_relative_url(self, path, element_type,
+                                    fetch_params=None):
         return await self.get_list_absolute_url(self._base_url + '/' + path,
-                                                element_type)
+                                                element_type,
+                                                fetch_params=fetch_params)
 
-    async def get_list_absolute_url(self, url, element_type):
+    async def get_list_absolute_url(self, url, element_type,
+                                    fetch_params=None):
         return objects.BaseList(self, element_type,
                                 *await self.get_absolute_url(url, True),
-                                max_items=self._max_paginated_items)
+                                max_items=self._max_paginated_items,
+                                fetch_params=fetch_params)
 
     async def _get_object_relative_url(self, element_type,
                                        defer_fetch=False,
