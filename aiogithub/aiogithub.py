@@ -8,10 +8,13 @@ import aiogithub
 from aiogithub import objects
 from aiogithub.exceptions import HttpException
 
+GITHUB_DEFAULT_CONTENT_TYPE = 'application/vnd.github.v3+json'
+GITHUB_PREVIEW_CONTENT_TYPE = 'application/vnd.github.black-cat-preview+json'
+
 
 class GitHub:
     def __init__(self, token: str = None, items_per_page=100, timeout_secs=10,
-                 max_paginated_items=1000):
+                 max_paginated_items=1000, enable_preview_api=False):
         """
         Initialises a GitHub API client.
 
@@ -23,6 +26,7 @@ class GitHub:
         :param token:                 GitHub personal access token
         :param items_per_page:        Items to request per page, must be
                                       between 1 and 100
+        :param timeout_secs:          Timeout in seconds for HTTP requests
         :param max_paginated_items:   Safety limit for when iterating
                                       through list results to avoid
                                       inadvertently making a huge number of
@@ -32,19 +36,22 @@ class GitHub:
         if not token:
             token = os.environ.get('GITHUB_TOKEN')
 
-        headers = {'Accept': 'application/vnd.github.v3+json'}
+        content_type = GITHUB_PREVIEW_CONTENT_TYPE if enable_preview_api \
+            else GITHUB_DEFAULT_CONTENT_TYPE
+
+        headers = {
+            'Accept': content_type,
+            'User-Agent': 'aiogithub/{}'.format(aiogithub.__version__)
+        }
+        if token:
+            headers['Authorization'] = 'token ' + token
         self._client = aiohttp.ClientSession(headers=headers)
         self._timeout = timeout_secs
         self._base_url = 'https://api.github.com'
         self._token = token
         self._items_per_page = items_per_page
         self._max_paginated_items = max_paginated_items
-        self._headers = {
-            'User-Agent': 'aiogithub/{}'.format(aiogithub.__version__)
-        }
         self._last_limits = None
-        if token:
-            self._headers['Authorization'] = 'token ' + token
 
     @property
     def last_rate_limit(self) -> Optional[dict]:
@@ -160,7 +167,9 @@ class GitHub:
         """
         Gets the current authenticated user.
         """
-        return objects.User(self, *await self.get_relative_url('user'))
+        return objects.AuthenticatedUser(
+            self, *await self.get_relative_url('user')
+        )
 
     async def get_users(self, since=None) -> objects.BaseList[objects.User]:
         """
@@ -185,13 +194,17 @@ class GitHub:
     def __exit__(self, exc_type, exc_val, exc_tb) -> None:
         self.close()
 
-    async def get_absolute_url(self, url, is_paginated=False) -> tuple:
+    async def get_absolute_url(self, url, is_paginated=False,
+                               max_items_limit=None) -> tuple:
         with aiohttp.Timeout(self._timeout):
             params = {}
             if is_paginated:
-                params['per_page'] = self._items_per_page
+                items_per_page = self._items_per_page
+                if max_items_limit:
+                    items_per_page = min(max_items_limit, items_per_page)
+                params['per_page'] = items_per_page
             async with self._client.get(
-                    url, headers=self._headers, params=params) as response:
+                    url, params=params) as response:
                 if response.status >= 400:
                     raise HttpException(response.status, url)
                 self._last_limits = {
@@ -224,8 +237,12 @@ class GitHub:
 
     async def get_list_absolute_url(self, url, element_type,
                                     fetch_params=None):
+        response_tuple = await self.get_absolute_url(
+            url, True,
+            max_items_limit=element_type._per_page_max_limit
+        )
         return objects.BaseList(self, element_type,
-                                *await self.get_absolute_url(url, True),
+                                *response_tuple,
                                 max_items=self._max_paginated_items,
                                 fetch_params=fetch_params)
 

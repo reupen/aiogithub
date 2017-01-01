@@ -8,13 +8,21 @@ from aiogithub.objects.user import User
 
 
 class PullRequest(BaseResponseObject):
-    _url = 'repos/{login}/{repo}/pulls/{number}'
+    _url = 'repos/{repo[owner][login]}/{repo[name]}/pulls/{number}'
     _default_urls = {
-        'issue_url': 'repos/{login}/{repo}/issues/{number}',
-        'commits_url': 'repos/{login}/{repo}/pulls/{number}/commits',
-        'review_comments_url': 'repos/{login}/{repo}/pulls/{number}/comments',
-        'review_comment_url': 'repos/{login}/{repo}/pulls/comments/{number}',
-        'comments_url': 'repos/{login}/{repo}/issues/{number}/comments'
+        'issue_url': 'repos/{repo[owner][login]}/{repo[name]}/issues/{number}',
+        'commits_url': 'repos/{repo[owner][login]}/{repo[name]}'
+                       '/pulls/{number}/commits',
+        'requested_reviewers_url': 'repos/{repo[owner][login]}/{repo[name]}'
+                                   '/pulls/{number}/requested_reviewers',
+        'reviews_url': 'repos/{repo[owner][login]}/{repo[name]}'
+                       '/pulls/{number}/reviews',
+        'review_comments_url': 'repos/{repo[owner][login]}/{repo[name]}'
+                               '/pulls/{number}/comments',
+        'review_comment_url': 'repos/{repo[owner][login]}/{repo[name]}'
+                              '/pulls/comments/{number}',
+        'comments_url': 'repos/{repo[owner][login]}/{repo[name]}'
+                        '/issues/{number}/comments'
     }
 
     @staticmethod
@@ -34,10 +42,18 @@ class PullRequest(BaseResponseObject):
     async def get_commits(self) -> 'objects.BaseList[objects.Commit]':
         return await self._get_related_url('commits_url', objects.Commit)
 
+    async def get_requested_reviewers(self) \
+            -> 'objects.BaseList[objects.PartialUser]':
+        return await self._get_related_url('requested_reviewers_url',
+                                           objects.PartialUser)
+
     async def get_review_comments(self) \
             -> 'objects.BaseList[objects.ReviewComment]':
         return await self._get_related_url('review_comments_url',
                                            objects.ReviewComment)
+
+    async def get_reviews(self) -> 'objects.BaseList[objects.Review]':
+        return await self._get_related_url('reviews_url', objects.Review)
 
     async def get_review_comment(self) -> 'objects.ReviewComment':
         return await self._get_related_object('review_comment_url',
@@ -69,6 +85,11 @@ class PullRequest(BaseResponseObject):
     @property
     @return_key
     def number(self) -> int:
+        pass
+
+    @property
+    @return_key
+    def requested_reviewers(self) -> 'objects.BaseList[objects.PartialUser]':
         pass
 
     @property
@@ -140,3 +161,8 @@ class PullRequest(BaseResponseObject):
     @return_key
     def _links(self) -> dict:
         pass
+
+    def _get_related_fetch_params(self):
+        return {
+            'pull_request': self._fetch_params
+        }

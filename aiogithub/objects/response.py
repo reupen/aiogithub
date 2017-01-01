@@ -10,6 +10,8 @@ T = TypeVar('T')
 
 
 class BaseObject(dict):
+    _per_page_max_limit = 100
+
     @staticmethod
     def _get_key_mappings():
         return {}
@@ -65,7 +67,7 @@ class BaseResponseObject(BaseObject):
                  fetch_params=None):
         self._client = client
         self._limits = BaseObject(limits) if limits is not None else None
-        self._links = links
+        self._header_links = links
         self._fetch_params = fetch_params if fetch_params is not None else {}
 
         # Called here for now as needs self._client
@@ -85,7 +87,7 @@ class BaseResponseObject(BaseObject):
         document, limits, links = await self._client.get_url(url, relative)
         self._set_from_document(document)
         self._limits = BaseObject(limits)
-        self._links = links
+        self._header_links = links
 
     def _get_related_fetch_params(self):
         return None
@@ -100,7 +102,7 @@ class BaseResponseObject(BaseObject):
             )
         else:
             template = self._default_urls[property_name].format(
-                **self._fetch_params
+                **self._fetch_params, **self
             )
             url = uritemplate.expand(template, kwargs)
             return await self._client.get_list_relative_url(
@@ -139,7 +141,7 @@ class BaseList(AsyncIterator[T], abc.AsyncIterator):
         self._limits = BaseObject(limits)
         self._last_raw_limits = limits
         self._max_items = max_items
-        self._links = links
+        self._header_links = links
         self._item_counter = len(initial_document)
 
     @property
@@ -156,7 +158,7 @@ class BaseList(AsyncIterator[T], abc.AsyncIterator):
         for page in self._pages:
             ret += map(self._make_element, page)
         while self._item_counter < self._max_items and 'next' in \
-                self._links:
+                self._header_links:
             await self._get_next_page()
             ret += map(self._make_element, self._pages[-1])
         return ret
@@ -173,12 +175,14 @@ class BaseList(AsyncIterator[T], abc.AsyncIterator):
         )
 
     async def _get_next_page(self) -> None:
-        assert 'next' in self._links
+        assert 'next' in self._header_links
         document, limits, links = await self._client.get_absolute_url(
-            self._links['next'])
+            self._header_links['next'],
+            max_items_limit=self._element_type._per_page_max_limit
+        )
         self._pages.append(document)
         self._last_raw_limits = limits
-        self._links = links
+        self._header_links = links
         self._item_counter += len(document)
 
     async def __anext__(self) -> T:
@@ -189,7 +193,7 @@ class BaseList(AsyncIterator[T], abc.AsyncIterator):
                 self._increment_page_number()
                 return await self.__anext__()
             elif self._item_counter < self._max_items and 'next' in \
-                    self._links:
+                    self._header_links:
                 await self._get_next_page()
                 self._increment_page_number()
                 return await self.__anext__()

@@ -171,6 +171,10 @@ class PartialRepo(BaseResponseObject):
     async def get_issues(self) -> 'objects.BaseList[objects.Issue]':
         return await self._get_related_url('issues_url', objects.Issue)
 
+    async def get_pull_requests(self) \
+            -> 'objects.BaseList[objects.PullRequest]':
+        return await self._get_related_url('pulls_url', objects.PullRequest)
+
     async def get_stargazers(self) -> 'objects.BaseList[objects.User]':
         return await self._get_related_url('stargazers_url', objects.User)
 
