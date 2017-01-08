@@ -194,15 +194,11 @@ class GitHub:
     def __exit__(self, exc_type, exc_val, exc_tb) -> None:
         self.close()
 
-    async def get_absolute_url(self, url, is_paginated=False,
-                               max_items_limit=None) -> tuple:
+    async def get_absolute_url(self, url, is_paginated=False) -> tuple:
         with aiohttp.Timeout(self._timeout):
             params = {}
             if is_paginated:
-                items_per_page = self._items_per_page
-                if max_items_limit:
-                    items_per_page = min(max_items_limit, items_per_page)
-                params['per_page'] = items_per_page
+                params['per_page'] = self._items_per_page
             async with self._client.get(
                     url, params=params) as response:
                 if response.status >= 400:
@@ -237,10 +233,7 @@ class GitHub:
 
     async def get_list_absolute_url(self, url, element_type,
                                     fetch_params=None):
-        response_tuple = await self.get_absolute_url(
-            url, True,
-            max_items_limit=element_type._per_page_max_limit
-        )
+        response_tuple = await self.get_absolute_url(url, True)
         return objects.BaseList(self, element_type,
                                 *response_tuple,
                                 max_items=self._max_paginated_items,

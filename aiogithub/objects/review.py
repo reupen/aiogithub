@@ -6,8 +6,6 @@ from aiogithub.utils import return_key
 
 
 class Review(BaseResponseObject):
-    _per_page_max_limit = 30
-
     _url = ('repos/{pull_request[repo][owner][login]}'
             '/{pull_request[repo][name]}/pulls/{pull_request[number]}'
             '/reviews/{id}')

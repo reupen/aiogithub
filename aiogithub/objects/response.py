@@ -10,8 +10,6 @@ T = TypeVar('T')
 
 
 class BaseObject(dict):
-    _per_page_max_limit = 100
-
     @staticmethod
     def _get_key_mappings():
         return {}
@@ -177,8 +175,7 @@ class BaseList(AsyncIterator[T], abc.AsyncIterator):
     async def _get_next_page(self) -> None:
         assert 'next' in self._header_links
         document, limits, links = await self._client.get_absolute_url(
-            self._header_links['next'],
-            max_items_limit=self._element_type._per_page_max_limit
+            self._header_links['next']
         )
         self._pages.append(document)
         self._last_raw_limits = limits
