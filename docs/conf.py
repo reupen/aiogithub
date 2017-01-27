@@ -59,7 +59,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'aiogithub'
-copyright = '2016, Reupen Shah'
+copyright = 'Reupen Shah 2017'
 author = 'Reupen Shah'
 
 # The version info for the project you're documenting, acts as replacement for
