@@ -1,0 +1,2102 @@
+[
+  {
+    "sha": "b38f387cca973a9e35d674ecf2e5bf7dcaa5db61",
+    "commit": {
+      "author": {
+        "name": "Reupen Shah",
+        "email": "reupen@users.noreply.github.com",
+        "date": "2017-02-07T20:20:56Z"
+      },
+      "committer": {
+        "name": "Reupen Shah",
+        "email": "reupen@users.noreply.github.com",
+        "date": "2017-02-07T20:20:56Z"
+      },
+      "message": "Fix VS2017 compilation",
+      "tree": {
+        "sha": "2ffa613156ad172af584f0b2d71136b0f61d4861",
+        "url": "https://api.github.com/repos/reupen/columns_ui/git/trees/2ffa613156ad172af584f0b2d71136b0f61d4861"
+      },
+      "url": "https://api.github.com/repos/reupen/columns_ui/git/commits/b38f387cca973a9e35d674ecf2e5bf7dcaa5db61",
+      "comment_count": 0
+    },
+    "url": "https://api.github.com/repos/reupen/columns_ui/commits/b38f387cca973a9e35d674ecf2e5bf7dcaa5db61",
+    "html_url": "https://github.com/reupen/columns_ui/commit/b38f387cca973a9e35d674ecf2e5bf7dcaa5db61",
+    "comments_url": "https://api.github.com/repos/reupen/columns_ui/commits/b38f387cca973a9e35d674ecf2e5bf7dcaa5db61/comments",
+    "author": {
+      "login": "reupen",
+      "id": 12693549,
+      "avatar_url": "https://avatars.githubusercontent.com/u/12693549?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/reupen",
+      "html_url": "https://github.com/reupen",
+      "followers_url": "https://api.github.com/users/reupen/followers",
+      "following_url": "https://api.github.com/users/reupen/following{/other_user}",
+      "gists_url": "https://api.github.com/users/reupen/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/reupen/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/reupen/subscriptions",
+      "organizations_url": "https://api.github.com/users/reupen/orgs",
+      "repos_url": "https://api.github.com/users/reupen/repos",
+      "events_url": "https://api.github.com/users/reupen/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/reupen/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "reupen",
+      "id": 12693549,
+      "avatar_url": "https://avatars.githubusercontent.com/u/12693549?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/reupen",
+      "html_url": "https://github.com/reupen",
+      "followers_url": "https://api.github.com/users/reupen/followers",
+      "following_url": "https://api.github.com/users/reupen/following{/other_user}",
+      "gists_url": "https://api.github.com/users/reupen/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/reupen/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/reupen/subscriptions",
+      "organizations_url": "https://api.github.com/users/reupen/orgs",
+      "repos_url": "https://api.github.com/users/reupen/repos",
+      "events_url": "https://api.github.com/users/reupen/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/reupen/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "04b14230b77f2ae08242a5f4ff27337a445827b2",
+        "url": "https://api.github.com/repos/reupen/columns_ui/commits/04b14230b77f2ae08242a5f4ff27337a445827b2",
+        "html_url": "https://github.com/reupen/columns_ui/commit/04b14230b77f2ae08242a5f4ff27337a445827b2"
+      }
+    ]
+  },
+  {
+    "sha": "04b14230b77f2ae08242a5f4ff27337a445827b2",
+    "commit": {
+      "author": {
+        "name": "Reupen Shah",
+        "email": "reupen@users.noreply.github.com",
+        "date": "2016-11-15T19:52:41Z"
+      },
+      "committer": {
+        "name": "Reupen Shah",
+        "email": "reupen@users.noreply.github.com",
+        "date": "2016-11-15T19:52:41Z"
+      },
+      "message": "Rearrange groups prefs page for consistency with other pages and fix styles",
+      "tree": {
+        "sha": "971af75dfa0d18572a0cd9e0a6de0e2642092c60",
+        "url": "https://api.github.com/repos/reupen/columns_ui/git/trees/971af75dfa0d18572a0cd9e0a6de0e2642092c60"
+      },
+      "url": "https://api.github.com/repos/reupen/columns_ui/git/commits/04b14230b77f2ae08242a5f4ff27337a445827b2",
+      "comment_count": 0
+    },
+    "url": "https://api.github.com/repos/reupen/columns_ui/commits/04b14230b77f2ae08242a5f4ff27337a445827b2",
+    "html_url": "https://github.com/reupen/columns_ui/commit/04b14230b77f2ae08242a5f4ff27337a445827b2",
+    "comments_url": "https://api.github.com/repos/reupen/columns_ui/commits/04b14230b77f2ae08242a5f4ff27337a445827b2/comments",
+    "author": {
+      "login": "reupen",
+      "id": 12693549,
+      "avatar_url": "https://avatars.githubusercontent.com/u/12693549?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/reupen",
+      "html_url": "https://github.com/reupen",
+      "followers_url": "https://api.github.com/users/reupen/followers",
+      "following_url": "https://api.github.com/users/reupen/following{/other_user}",
+      "gists_url": "https://api.github.com/users/reupen/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/reupen/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/reupen/subscriptions",
+      "organizations_url": "https://api.github.com/users/reupen/orgs",
+      "repos_url": "https://api.github.com/users/reupen/repos",
+      "events_url": "https://api.github.com/users/reupen/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/reupen/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "reupen",
+      "id": 12693549,
+      "avatar_url": "https://avatars.githubusercontent.com/u/12693549?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/reupen",
+      "html_url": "https://github.com/reupen",
+      "followers_url": "https://api.github.com/users/reupen/followers",
+      "following_url": "https://api.github.com/users/reupen/following{/other_user}",
+      "gists_url": "https://api.github.com/users/reupen/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/reupen/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/reupen/subscriptions",
+      "organizations_url": "https://api.github.com/users/reupen/orgs",
+      "repos_url": "https://api.github.com/users/reupen/repos",
+      "events_url": "https://api.github.com/users/reupen/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/reupen/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "4d052465bd8216454e2bc21c1dbbc9cc686aab39",
+        "url": "https://api.github.com/repos/reupen/columns_ui/commits/4d052465bd8216454e2bc21c1dbbc9cc686aab39",
+        "html_url": "https://github.com/reupen/columns_ui/commit/4d052465bd8216454e2bc21c1dbbc9cc686aab39"
+      }
+    ]
+  },
+  {
+    "sha": "4d052465bd8216454e2bc21c1dbbc9cc686aab39",
+    "commit": {
+      "author": {
+        "name": "Reupen Shah",
+        "email": "reupen@users.noreply.github.com",
+        "date": "2016-11-11T20:27:06Z"
+      },
+      "committer": {
+        "name": "Reupen Shah",
+        "email": "reupen@users.noreply.github.com",
+        "date": "2016-11-11T20:27:06Z"
+      },
+      "message": "New/edit group dialog fixes\nFixes #48",
+      "tree": {
+        "sha": "9ae9a9d4ea2eae4ae67f30e8f9e83b084fcbc1fe",
+        "url": "https://api.github.com/repos/reupen/columns_ui/git/trees/9ae9a9d4ea2eae4ae67f30e8f9e83b084fcbc1fe"
+      },
+      "url": "https://api.github.com/repos/reupen/columns_ui/git/commits/4d052465bd8216454e2bc21c1dbbc9cc686aab39",
+      "comment_count": 0
+    },
+    "url": "https://api.github.com/repos/reupen/columns_ui/commits/4d052465bd8216454e2bc21c1dbbc9cc686aab39",
+    "html_url": "https://github.com/reupen/columns_ui/commit/4d052465bd8216454e2bc21c1dbbc9cc686aab39",
+    "comments_url": "https://api.github.com/repos/reupen/columns_ui/commits/4d052465bd8216454e2bc21c1dbbc9cc686aab39/comments",
+    "author": {
+      "login": "reupen",
+      "id": 12693549,
+      "avatar_url": "https://avatars.githubusercontent.com/u/12693549?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/reupen",
+      "html_url": "https://github.com/reupen",
+      "followers_url": "https://api.github.com/users/reupen/followers",
+      "following_url": "https://api.github.com/users/reupen/following{/other_user}",
+      "gists_url": "https://api.github.com/users/reupen/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/reupen/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/reupen/subscriptions",
+      "organizations_url": "https://api.github.com/users/reupen/orgs",
+      "repos_url": "https://api.github.com/users/reupen/repos",
+      "events_url": "https://api.github.com/users/reupen/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/reupen/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "reupen",
+      "id": 12693549,
+      "avatar_url": "https://avatars.githubusercontent.com/u/12693549?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/reupen",
+      "html_url": "https://github.com/reupen",
+      "followers_url": "https://api.github.com/users/reupen/followers",
+      "following_url": "https://api.github.com/users/reupen/following{/other_user}",
+      "gists_url": "https://api.github.com/users/reupen/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/reupen/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/reupen/subscriptions",
+      "organizations_url": "https://api.github.com/users/reupen/orgs",
+      "repos_url": "https://api.github.com/users/reupen/repos",
+      "events_url": "https://api.github.com/users/reupen/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/reupen/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "939531e427eba7980ed9173f2b12d4a43d5da23c",
+        "url": "https://api.github.com/repos/reupen/columns_ui/commits/939531e427eba7980ed9173f2b12d4a43d5da23c",
+        "html_url": "https://github.com/reupen/columns_ui/commit/939531e427eba7980ed9173f2b12d4a43d5da23c"
+      }
+    ]
+  },
+  {
+    "sha": "939531e427eba7980ed9173f2b12d4a43d5da23c",
+    "commit": {
+      "author": {
+        "name": "Reupen Shah",
+        "email": "reupen@users.noreply.github.com",
+        "date": "2016-11-11T20:14:25Z"
+      },
+      "committer": {
+        "name": "Reupen Shah",
+        "email": "reupen@users.noreply.github.com",
+        "date": "2016-11-11T20:14:25Z"
+      },
+      "message": "bump version: 0.5.2-dev",
+      "tree": {
+        "sha": "276cb087d1bf5075d23aabd083778936be5e19fa",
+        "url": "https://api.github.com/repos/reupen/columns_ui/git/trees/276cb087d1bf5075d23aabd083778936be5e19fa"
+      },
+      "url": "https://api.github.com/repos/reupen/columns_ui/git/commits/939531e427eba7980ed9173f2b12d4a43d5da23c",
+      "comment_count": 0
+    },
+    "url": "https://api.github.com/repos/reupen/columns_ui/commits/939531e427eba7980ed9173f2b12d4a43d5da23c",
+    "html_url": "https://github.com/reupen/columns_ui/commit/939531e427eba7980ed9173f2b12d4a43d5da23c",
+    "comments_url": "https://api.github.com/repos/reupen/columns_ui/commits/939531e427eba7980ed9173f2b12d4a43d5da23c/comments",
+    "author": {
+      "login": "reupen",
+      "id": 12693549,
+      "avatar_url": "https://avatars.githubusercontent.com/u/12693549?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/reupen",
+      "html_url": "https://github.com/reupen",
+      "followers_url": "https://api.github.com/users/reupen/followers",
+      "following_url": "https://api.github.com/users/reupen/following{/other_user}",
+      "gists_url": "https://api.github.com/users/reupen/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/reupen/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/reupen/subscriptions",
+      "organizations_url": "https://api.github.com/users/reupen/orgs",
+      "repos_url": "https://api.github.com/users/reupen/repos",
+      "events_url": "https://api.github.com/users/reupen/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/reupen/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "reupen",
+      "id": 12693549,
+      "avatar_url": "https://avatars.githubusercontent.com/u/12693549?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/reupen",
+      "html_url": "https://github.com/reupen",
+      "followers_url": "https://api.github.com/users/reupen/followers",
+      "following_url": "https://api.github.com/users/reupen/following{/other_user}",
+      "gists_url": "https://api.github.com/users/reupen/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/reupen/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/reupen/subscriptions",
+      "organizations_url": "https://api.github.com/users/reupen/orgs",
+      "repos_url": "https://api.github.com/users/reupen/repos",
+      "events_url": "https://api.github.com/users/reupen/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/reupen/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "bfdca01657b891d112c1aee906ad3f223cdcaee4",
+        "url": "https://api.github.com/repos/reupen/columns_ui/commits/bfdca01657b891d112c1aee906ad3f223cdcaee4",
+        "html_url": "https://github.com/reupen/columns_ui/commit/bfdca01657b891d112c1aee906ad3f223cdcaee4"
+      }
+    ]
+  },
+  {
+    "sha": "bfdca01657b891d112c1aee906ad3f223cdcaee4",
+    "commit": {
+      "author": {
+        "name": "Reupen Shah",
+        "email": "reupen@users.noreply.github.com",
+        "date": "2016-10-31T20:12:39Z"
+      },
+      "committer": {
+        "name": "Reupen Shah",
+        "email": "reupen@users.noreply.github.com",
+        "date": "2016-10-31T20:12:39Z"
+      },
+      "message": "Add link to #45 to change log",
+      "tree": {
+        "sha": "8a53bf705d350e70db2b792b283a67da955015db",
+        "url": "https://api.github.com/repos/reupen/columns_ui/git/trees/8a53bf705d350e70db2b792b283a67da955015db"
+      },
+      "url": "https://api.github.com/repos/reupen/columns_ui/git/commits/bfdca01657b891d112c1aee906ad3f223cdcaee4",
+      "comment_count": 0
+    },
+    "url": "https://api.github.com/repos/reupen/columns_ui/commits/bfdca01657b891d112c1aee906ad3f223cdcaee4",
+    "html_url": "https://github.com/reupen/columns_ui/commit/bfdca01657b891d112c1aee906ad3f223cdcaee4",
+    "comments_url": "https://api.github.com/repos/reupen/columns_ui/commits/bfdca01657b891d112c1aee906ad3f223cdcaee4/comments",
+    "author": {
+      "login": "reupen",
+      "id": 12693549,
+      "avatar_url": "https://avatars.githubusercontent.com/u/12693549?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/reupen",
+      "html_url": "https://github.com/reupen",
+      "followers_url": "https://api.github.com/users/reupen/followers",
+      "following_url": "https://api.github.com/users/reupen/following{/other_user}",
+      "gists_url": "https://api.github.com/users/reupen/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/reupen/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/reupen/subscriptions",
+      "organizations_url": "https://api.github.com/users/reupen/orgs",
+      "repos_url": "https://api.github.com/users/reupen/repos",
+      "events_url": "https://api.github.com/users/reupen/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/reupen/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "reupen",
+      "id": 12693549,
+      "avatar_url": "https://avatars.githubusercontent.com/u/12693549?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/reupen",
+      "html_url": "https://github.com/reupen",
+      "followers_url": "https://api.github.com/users/reupen/followers",
+      "following_url": "https://api.github.com/users/reupen/following{/other_user}",
+      "gists_url": "https://api.github.com/users/reupen/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/reupen/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/reupen/subscriptions",
+      "organizations_url": "https://api.github.com/users/reupen/orgs",
+      "repos_url": "https://api.github.com/users/reupen/repos",
+      "events_url": "https://api.github.com/users/reupen/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/reupen/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "658f14aa4750a7803b910bc44de6120c29fc15b1",
+        "url": "https://api.github.com/repos/reupen/columns_ui/commits/658f14aa4750a7803b910bc44de6120c29fc15b1",
+        "html_url": "https://github.com/reupen/columns_ui/commit/658f14aa4750a7803b910bc44de6120c29fc15b1"
+      }
+    ]
+  },
+  {
+    "sha": "658f14aa4750a7803b910bc44de6120c29fc15b1",
+    "commit": {
+      "author": {
+        "name": "Reupen Shah",
+        "email": "reupen@users.noreply.github.com",
+        "date": "2016-10-31T19:50:20Z"
+      },
+      "committer": {
+        "name": "Reupen Shah",
+        "email": "reupen@users.noreply.github.com",
+        "date": "2016-10-31T19:50:20Z"
+      },
+      "message": "update version: 0.5.1",
+      "tree": {
+        "sha": "9446b080500d84f375b1d14f899f88e0a866e8e3",
+        "url": "https://api.github.com/repos/reupen/columns_ui/git/trees/9446b080500d84f375b1d14f899f88e0a866e8e3"
+      },
+      "url": "https://api.github.com/repos/reupen/columns_ui/git/commits/658f14aa4750a7803b910bc44de6120c29fc15b1",
+      "comment_count": 0
+    },
+    "url": "https://api.github.com/repos/reupen/columns_ui/commits/658f14aa4750a7803b910bc44de6120c29fc15b1",
+    "html_url": "https://github.com/reupen/columns_ui/commit/658f14aa4750a7803b910bc44de6120c29fc15b1",
+    "comments_url": "https://api.github.com/repos/reupen/columns_ui/commits/658f14aa4750a7803b910bc44de6120c29fc15b1/comments",
+    "author": {
+      "login": "reupen",
+      "id": 12693549,
+      "avatar_url": "https://avatars.githubusercontent.com/u/12693549?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/reupen",
+      "html_url": "https://github.com/reupen",
+      "followers_url": "https://api.github.com/users/reupen/followers",
+      "following_url": "https://api.github.com/users/reupen/following{/other_user}",
+      "gists_url": "https://api.github.com/users/reupen/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/reupen/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/reupen/subscriptions",
+      "organizations_url": "https://api.github.com/users/reupen/orgs",
+      "repos_url": "https://api.github.com/users/reupen/repos",
+      "events_url": "https://api.github.com/users/reupen/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/reupen/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "reupen",
+      "id": 12693549,
+      "avatar_url": "https://avatars.githubusercontent.com/u/12693549?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/reupen",
+      "html_url": "https://github.com/reupen",
+      "followers_url": "https://api.github.com/users/reupen/followers",
+      "following_url": "https://api.github.com/users/reupen/following{/other_user}",
+      "gists_url": "https://api.github.com/users/reupen/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/reupen/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/reupen/subscriptions",
+      "organizations_url": "https://api.github.com/users/reupen/orgs",
+      "repos_url": "https://api.github.com/users/reupen/repos",
+      "events_url": "https://api.github.com/users/reupen/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/reupen/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "757b380adcc1729727b483069ff526b18a223e0f",
+        "url": "https://api.github.com/repos/reupen/columns_ui/commits/757b380adcc1729727b483069ff526b18a223e0f",
+        "html_url": "https://github.com/reupen/columns_ui/commit/757b380adcc1729727b483069ff526b18a223e0f"
+      }
+    ]
+  },
+  {
+    "sha": "757b380adcc1729727b483069ff526b18a223e0f",
+    "commit": {
+      "author": {
+        "name": "Reupen Shah",
+        "email": "reupen@users.noreply.github.com",
+        "date": "2016-10-08T20:16:58Z"
+      },
+      "committer": {
+        "name": "Reupen Shah",
+        "email": "reupen@users.noreply.github.com",
+        "date": "2016-10-08T20:16:58Z"
+      },
+      "message": "update version: 0.5.1-rc.1",
+      "tree": {
+        "sha": "214f9c03d6e9097879e4c516f415ea3e5fa6272b",
+        "url": "https://api.github.com/repos/reupen/columns_ui/git/trees/214f9c03d6e9097879e4c516f415ea3e5fa6272b"
+      },
+      "url": "https://api.github.com/repos/reupen/columns_ui/git/commits/757b380adcc1729727b483069ff526b18a223e0f",
+      "comment_count": 0
+    },
+    "url": "https://api.github.com/repos/reupen/columns_ui/commits/757b380adcc1729727b483069ff526b18a223e0f",
+    "html_url": "https://github.com/reupen/columns_ui/commit/757b380adcc1729727b483069ff526b18a223e0f",
+    "comments_url": "https://api.github.com/repos/reupen/columns_ui/commits/757b380adcc1729727b483069ff526b18a223e0f/comments",
+    "author": {
+      "login": "reupen",
+      "id": 12693549,
+      "avatar_url": "https://avatars.githubusercontent.com/u/12693549?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/reupen",
+      "html_url": "https://github.com/reupen",
+      "followers_url": "https://api.github.com/users/reupen/followers",
+      "following_url": "https://api.github.com/users/reupen/following{/other_user}",
+      "gists_url": "https://api.github.com/users/reupen/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/reupen/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/reupen/subscriptions",
+      "organizations_url": "https://api.github.com/users/reupen/orgs",
+      "repos_url": "https://api.github.com/users/reupen/repos",
+      "events_url": "https://api.github.com/users/reupen/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/reupen/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "reupen",
+      "id": 12693549,
+      "avatar_url": "https://avatars.githubusercontent.com/u/12693549?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/reupen",
+      "html_url": "https://github.com/reupen",
+      "followers_url": "https://api.github.com/users/reupen/followers",
+      "following_url": "https://api.github.com/users/reupen/following{/other_user}",
+      "gists_url": "https://api.github.com/users/reupen/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/reupen/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/reupen/subscriptions",
+      "organizations_url": "https://api.github.com/users/reupen/orgs",
+      "repos_url": "https://api.github.com/users/reupen/repos",
+      "events_url": "https://api.github.com/users/reupen/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/reupen/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "688824743c8d981beb8ce42e6a95d14cbb35a17d",
+        "url": "https://api.github.com/repos/reupen/columns_ui/commits/688824743c8d981beb8ce42e6a95d14cbb35a17d",
+        "html_url": "https://github.com/reupen/columns_ui/commit/688824743c8d981beb8ce42e6a95d14cbb35a17d"
+      }
+    ]
+  },
+  {
+    "sha": "688824743c8d981beb8ce42e6a95d14cbb35a17d",
+    "commit": {
+      "author": {
+        "name": "Reupen Shah",
+        "email": "reupen@users.noreply.github.com",
+        "date": "2016-10-08T20:15:59Z"
+      },
+      "committer": {
+        "name": "Reupen Shah",
+        "email": "reupen@users.noreply.github.com",
+        "date": "2016-10-08T20:15:59Z"
+      },
+      "message": "update change log",
+      "tree": {
+        "sha": "e73a323245991f90a2bdb43fdef22087cea4d0ba",
+        "url": "https://api.github.com/repos/reupen/columns_ui/git/trees/e73a323245991f90a2bdb43fdef22087cea4d0ba"
+      },
+      "url": "https://api.github.com/repos/reupen/columns_ui/git/commits/688824743c8d981beb8ce42e6a95d14cbb35a17d",
+      "comment_count": 0
+    },
+    "url": "https://api.github.com/repos/reupen/columns_ui/commits/688824743c8d981beb8ce42e6a95d14cbb35a17d",
+    "html_url": "https://github.com/reupen/columns_ui/commit/688824743c8d981beb8ce42e6a95d14cbb35a17d",
+    "comments_url": "https://api.github.com/repos/reupen/columns_ui/commits/688824743c8d981beb8ce42e6a95d14cbb35a17d/comments",
+    "author": {
+      "login": "reupen",
+      "id": 12693549,
+      "avatar_url": "https://avatars.githubusercontent.com/u/12693549?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/reupen",
+      "html_url": "https://github.com/reupen",
+      "followers_url": "https://api.github.com/users/reupen/followers",
+      "following_url": "https://api.github.com/users/reupen/following{/other_user}",
+      "gists_url": "https://api.github.com/users/reupen/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/reupen/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/reupen/subscriptions",
+      "organizations_url": "https://api.github.com/users/reupen/orgs",
+      "repos_url": "https://api.github.com/users/reupen/repos",
+      "events_url": "https://api.github.com/users/reupen/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/reupen/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "reupen",
+      "id": 12693549,
+      "avatar_url": "https://avatars.githubusercontent.com/u/12693549?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/reupen",
+      "html_url": "https://github.com/reupen",
+      "followers_url": "https://api.github.com/users/reupen/followers",
+      "following_url": "https://api.github.com/users/reupen/following{/other_user}",
+      "gists_url": "https://api.github.com/users/reupen/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/reupen/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/reupen/subscriptions",
+      "organizations_url": "https://api.github.com/users/reupen/orgs",
+      "repos_url": "https://api.github.com/users/reupen/repos",
+      "events_url": "https://api.github.com/users/reupen/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/reupen/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "27b29e071db8208031b16bb008f4e8ee339317d2",
+        "url": "https://api.github.com/repos/reupen/columns_ui/commits/27b29e071db8208031b16bb008f4e8ee339317d2",
+        "html_url": "https://github.com/reupen/columns_ui/commit/27b29e071db8208031b16bb008f4e8ee339317d2"
+      }
+    ]
+  },
+  {
+    "sha": "27b29e071db8208031b16bb008f4e8ee339317d2",
+    "commit": {
+      "author": {
+        "name": "Reupen Shah",
+        "email": "reupen@users.noreply.github.com",
+        "date": "2016-09-26T19:42:52Z"
+      },
+      "committer": {
+        "name": "Reupen Shah",
+        "email": "reupen@users.noreply.github.com",
+        "date": "2016-09-26T19:42:52Z"
+      },
+      "message": "Bump version to 0.5.1-beta.2",
+      "tree": {
+        "sha": "0dff47570c24ac5dc47aad3c85c1421433a4656e",
+        "url": "https://api.github.com/repos/reupen/columns_ui/git/trees/0dff47570c24ac5dc47aad3c85c1421433a4656e"
+      },
+      "url": "https://api.github.com/repos/reupen/columns_ui/git/commits/27b29e071db8208031b16bb008f4e8ee339317d2",
+      "comment_count": 0
+    },
+    "url": "https://api.github.com/repos/reupen/columns_ui/commits/27b29e071db8208031b16bb008f4e8ee339317d2",
+    "html_url": "https://github.com/reupen/columns_ui/commit/27b29e071db8208031b16bb008f4e8ee339317d2",
+    "comments_url": "https://api.github.com/repos/reupen/columns_ui/commits/27b29e071db8208031b16bb008f4e8ee339317d2/comments",
+    "author": {
+      "login": "reupen",
+      "id": 12693549,
+      "avatar_url": "https://avatars.githubusercontent.com/u/12693549?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/reupen",
+      "html_url": "https://github.com/reupen",
+      "followers_url": "https://api.github.com/users/reupen/followers",
+      "following_url": "https://api.github.com/users/reupen/following{/other_user}",
+      "gists_url": "https://api.github.com/users/reupen/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/reupen/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/reupen/subscriptions",
+      "organizations_url": "https://api.github.com/users/reupen/orgs",
+      "repos_url": "https://api.github.com/users/reupen/repos",
+      "events_url": "https://api.github.com/users/reupen/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/reupen/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "reupen",
+      "id": 12693549,
+      "avatar_url": "https://avatars.githubusercontent.com/u/12693549?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/reupen",
+      "html_url": "https://github.com/reupen",
+      "followers_url": "https://api.github.com/users/reupen/followers",
+      "following_url": "https://api.github.com/users/reupen/following{/other_user}",
+      "gists_url": "https://api.github.com/users/reupen/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/reupen/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/reupen/subscriptions",
+      "organizations_url": "https://api.github.com/users/reupen/orgs",
+      "repos_url": "https://api.github.com/users/reupen/repos",
+      "events_url": "https://api.github.com/users/reupen/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/reupen/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "d4836262821decee8e4681813f3c6f4beae46aff",
+        "url": "https://api.github.com/repos/reupen/columns_ui/commits/d4836262821decee8e4681813f3c6f4beae46aff",
+        "html_url": "https://github.com/reupen/columns_ui/commit/d4836262821decee8e4681813f3c6f4beae46aff"
+      }
+    ]
+  },
+  {
+    "sha": "d4836262821decee8e4681813f3c6f4beae46aff",
+    "commit": {
+      "author": {
+        "name": "Reupen Shah",
+        "email": "reupen@users.noreply.github.com",
+        "date": "2016-09-26T19:38:20Z"
+      },
+      "committer": {
+        "name": "Reupen Shah",
+        "email": "reupen@users.noreply.github.com",
+        "date": "2016-09-26T19:38:20Z"
+      },
+      "message": "Update ui_helpers\nResolved reupen/columns_ui#45",
+      "tree": {
+        "sha": "02e7d2df7eb776ca79e66d488b0f2abc020b6ae3",
+        "url": "https://api.github.com/repos/reupen/columns_ui/git/trees/02e7d2df7eb776ca79e66d488b0f2abc020b6ae3"
+      },
+      "url": "https://api.github.com/repos/reupen/columns_ui/git/commits/d4836262821decee8e4681813f3c6f4beae46aff",
+      "comment_count": 0
+    },
+    "url": "https://api.github.com/repos/reupen/columns_ui/commits/d4836262821decee8e4681813f3c6f4beae46aff",
+    "html_url": "https://github.com/reupen/columns_ui/commit/d4836262821decee8e4681813f3c6f4beae46aff",
+    "comments_url": "https://api.github.com/repos/reupen/columns_ui/commits/d4836262821decee8e4681813f3c6f4beae46aff/comments",
+    "author": {
+      "login": "reupen",
+      "id": 12693549,
+      "avatar_url": "https://avatars.githubusercontent.com/u/12693549?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/reupen",
+      "html_url": "https://github.com/reupen",
+      "followers_url": "https://api.github.com/users/reupen/followers",
+      "following_url": "https://api.github.com/users/reupen/following{/other_user}",
+      "gists_url": "https://api.github.com/users/reupen/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/reupen/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/reupen/subscriptions",
+      "organizations_url": "https://api.github.com/users/reupen/orgs",
+      "repos_url": "https://api.github.com/users/reupen/repos",
+      "events_url": "https://api.github.com/users/reupen/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/reupen/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "reupen",
+      "id": 12693549,
+      "avatar_url": "https://avatars.githubusercontent.com/u/12693549?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/reupen",
+      "html_url": "https://github.com/reupen",
+      "followers_url": "https://api.github.com/users/reupen/followers",
+      "following_url": "https://api.github.com/users/reupen/following{/other_user}",
+      "gists_url": "https://api.github.com/users/reupen/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/reupen/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/reupen/subscriptions",
+      "organizations_url": "https://api.github.com/users/reupen/orgs",
+      "repos_url": "https://api.github.com/users/reupen/repos",
+      "events_url": "https://api.github.com/users/reupen/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/reupen/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "d8688ce51b1f34f822d187440acbb21d018e08fb",
+        "url": "https://api.github.com/repos/reupen/columns_ui/commits/d8688ce51b1f34f822d187440acbb21d018e08fb",
+        "html_url": "https://github.com/reupen/columns_ui/commit/d8688ce51b1f34f822d187440acbb21d018e08fb"
+      }
+    ]
+  },
+  {
+    "sha": "d8688ce51b1f34f822d187440acbb21d018e08fb",
+    "commit": {
+      "author": {
+        "name": "Reupen Shah",
+        "email": "reupen@users.noreply.github.com",
+        "date": "2016-09-18T18:59:11Z"
+      },
+      "committer": {
+        "name": "Reupen Shah",
+        "email": "reupen@users.noreply.github.com",
+        "date": "2016-09-18T18:59:11Z"
+      },
+      "message": "Update change log",
+      "tree": {
+        "sha": "044edbe9df90f6e8430546191c7801372059b8d5",
+        "url": "https://api.github.com/repos/reupen/columns_ui/git/trees/044edbe9df90f6e8430546191c7801372059b8d5"
+      },
+      "url": "https://api.github.com/repos/reupen/columns_ui/git/commits/d8688ce51b1f34f822d187440acbb21d018e08fb",
+      "comment_count": 0
+    },
+    "url": "https://api.github.com/repos/reupen/columns_ui/commits/d8688ce51b1f34f822d187440acbb21d018e08fb",
+    "html_url": "https://github.com/reupen/columns_ui/commit/d8688ce51b1f34f822d187440acbb21d018e08fb",
+    "comments_url": "https://api.github.com/repos/reupen/columns_ui/commits/d8688ce51b1f34f822d187440acbb21d018e08fb/comments",
+    "author": {
+      "login": "reupen",
+      "id": 12693549,
+      "avatar_url": "https://avatars.githubusercontent.com/u/12693549?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/reupen",
+      "html_url": "https://github.com/reupen",
+      "followers_url": "https://api.github.com/users/reupen/followers",
+      "following_url": "https://api.github.com/users/reupen/following{/other_user}",
+      "gists_url": "https://api.github.com/users/reupen/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/reupen/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/reupen/subscriptions",
+      "organizations_url": "https://api.github.com/users/reupen/orgs",
+      "repos_url": "https://api.github.com/users/reupen/repos",
+      "events_url": "https://api.github.com/users/reupen/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/reupen/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "reupen",
+      "id": 12693549,
+      "avatar_url": "https://avatars.githubusercontent.com/u/12693549?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/reupen",
+      "html_url": "https://github.com/reupen",
+      "followers_url": "https://api.github.com/users/reupen/followers",
+      "following_url": "https://api.github.com/users/reupen/following{/other_user}",
+      "gists_url": "https://api.github.com/users/reupen/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/reupen/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/reupen/subscriptions",
+      "organizations_url": "https://api.github.com/users/reupen/orgs",
+      "repos_url": "https://api.github.com/users/reupen/repos",
+      "events_url": "https://api.github.com/users/reupen/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/reupen/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "387032755113af4303f28cd9a7714314e1eefe42",
+        "url": "https://api.github.com/repos/reupen/columns_ui/commits/387032755113af4303f28cd9a7714314e1eefe42",
+        "html_url": "https://github.com/reupen/columns_ui/commit/387032755113af4303f28cd9a7714314e1eefe42"
+      }
+    ]
+  },
+  {
+    "sha": "387032755113af4303f28cd9a7714314e1eefe42",
+    "commit": {
+      "author": {
+        "name": "Reupen Shah",
+        "email": "reupen@users.noreply.github.com",
+        "date": "2016-09-14T19:33:42Z"
+      },
+      "committer": {
+        "name": "Reupen Shah",
+        "email": "reupen@users.noreply.github.com",
+        "date": "2016-09-14T19:33:42Z"
+      },
+      "message": "update change log and version for 0.5.1-beta.1; update readme",
+      "tree": {
+        "sha": "297937a527b8c89c3bd94cb086603eb34e02fcfe",
+        "url": "https://api.github.com/repos/reupen/columns_ui/git/trees/297937a527b8c89c3bd94cb086603eb34e02fcfe"
+      },
+      "url": "https://api.github.com/repos/reupen/columns_ui/git/commits/387032755113af4303f28cd9a7714314e1eefe42",
+      "comment_count": 0
+    },
+    "url": "https://api.github.com/repos/reupen/columns_ui/commits/387032755113af4303f28cd9a7714314e1eefe42",
+    "html_url": "https://github.com/reupen/columns_ui/commit/387032755113af4303f28cd9a7714314e1eefe42",
+    "comments_url": "https://api.github.com/repos/reupen/columns_ui/commits/387032755113af4303f28cd9a7714314e1eefe42/comments",
+    "author": {
+      "login": "reupen",
+      "id": 12693549,
+      "avatar_url": "https://avatars.githubusercontent.com/u/12693549?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/reupen",
+      "html_url": "https://github.com/reupen",
+      "followers_url": "https://api.github.com/users/reupen/followers",
+      "following_url": "https://api.github.com/users/reupen/following{/other_user}",
+      "gists_url": "https://api.github.com/users/reupen/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/reupen/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/reupen/subscriptions",
+      "organizations_url": "https://api.github.com/users/reupen/orgs",
+      "repos_url": "https://api.github.com/users/reupen/repos",
+      "events_url": "https://api.github.com/users/reupen/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/reupen/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "reupen",
+      "id": 12693549,
+      "avatar_url": "https://avatars.githubusercontent.com/u/12693549?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/reupen",
+      "html_url": "https://github.com/reupen",
+      "followers_url": "https://api.github.com/users/reupen/followers",
+      "following_url": "https://api.github.com/users/reupen/following{/other_user}",
+      "gists_url": "https://api.github.com/users/reupen/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/reupen/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/reupen/subscriptions",
+      "organizations_url": "https://api.github.com/users/reupen/orgs",
+      "repos_url": "https://api.github.com/users/reupen/repos",
+      "events_url": "https://api.github.com/users/reupen/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/reupen/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "9250f4a65f23c72af540d18514f46f588bb58915",
+        "url": "https://api.github.com/repos/reupen/columns_ui/commits/9250f4a65f23c72af540d18514f46f588bb58915",
+        "html_url": "https://github.com/reupen/columns_ui/commit/9250f4a65f23c72af540d18514f46f588bb58915"
+      }
+    ]
+  },
+  {
+    "sha": "9250f4a65f23c72af540d18514f46f588bb58915",
+    "commit": {
+      "author": {
+        "name": "Reupen Shah",
+        "email": "reupen@users.noreply.github.com",
+        "date": "2016-08-25T19:48:22Z"
+      },
+      "committer": {
+        "name": "Reupen Shah",
+        "email": "reupen@users.noreply.github.com",
+        "date": "2016-08-25T19:48:22Z"
+      },
+      "message": "[#39] update ui_helpers",
+      "tree": {
+        "sha": "2d2aafb501b4b62e6e889d197646ed8e8e6fa16a",
+        "url": "https://api.github.com/repos/reupen/columns_ui/git/trees/2d2aafb501b4b62e6e889d197646ed8e8e6fa16a"
+      },
+      "url": "https://api.github.com/repos/reupen/columns_ui/git/commits/9250f4a65f23c72af540d18514f46f588bb58915",
+      "comment_count": 0
+    },
+    "url": "https://api.github.com/repos/reupen/columns_ui/commits/9250f4a65f23c72af540d18514f46f588bb58915",
+    "html_url": "https://github.com/reupen/columns_ui/commit/9250f4a65f23c72af540d18514f46f588bb58915",
+    "comments_url": "https://api.github.com/repos/reupen/columns_ui/commits/9250f4a65f23c72af540d18514f46f588bb58915/comments",
+    "author": {
+      "login": "reupen",
+      "id": 12693549,
+      "avatar_url": "https://avatars.githubusercontent.com/u/12693549?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/reupen",
+      "html_url": "https://github.com/reupen",
+      "followers_url": "https://api.github.com/users/reupen/followers",
+      "following_url": "https://api.github.com/users/reupen/following{/other_user}",
+      "gists_url": "https://api.github.com/users/reupen/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/reupen/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/reupen/subscriptions",
+      "organizations_url": "https://api.github.com/users/reupen/orgs",
+      "repos_url": "https://api.github.com/users/reupen/repos",
+      "events_url": "https://api.github.com/users/reupen/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/reupen/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "reupen",
+      "id": 12693549,
+      "avatar_url": "https://avatars.githubusercontent.com/u/12693549?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/reupen",
+      "html_url": "https://github.com/reupen",
+      "followers_url": "https://api.github.com/users/reupen/followers",
+      "following_url": "https://api.github.com/users/reupen/following{/other_user}",
+      "gists_url": "https://api.github.com/users/reupen/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/reupen/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/reupen/subscriptions",
+      "organizations_url": "https://api.github.com/users/reupen/orgs",
+      "repos_url": "https://api.github.com/users/reupen/repos",
+      "events_url": "https://api.github.com/users/reupen/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/reupen/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "d23bbe7c7737533328c33086d0ad29083e6f8ca1",
+        "url": "https://api.github.com/repos/reupen/columns_ui/commits/d23bbe7c7737533328c33086d0ad29083e6f8ca1",
+        "html_url": "https://github.com/reupen/columns_ui/commit/d23bbe7c7737533328c33086d0ad29083e6f8ca1"
+      }
+    ]
+  },
+  {
+    "sha": "d23bbe7c7737533328c33086d0ad29083e6f8ca1",
+    "commit": {
+      "author": {
+        "name": "Reupen Shah",
+        "email": "reupen@users.noreply.github.com",
+        "date": "2016-08-23T19:01:50Z"
+      },
+      "committer": {
+        "name": "Reupen Shah",
+        "email": "reupen@users.noreply.github.com",
+        "date": "2016-08-23T19:01:50Z"
+      },
+      "message": "Update readme and change log",
+      "tree": {
+        "sha": "2a9ab72933be7eff6e55ff40deb07ea98c4dee1d",
+        "url": "https://api.github.com/repos/reupen/columns_ui/git/trees/2a9ab72933be7eff6e55ff40deb07ea98c4dee1d"
+      },
+      "url": "https://api.github.com/repos/reupen/columns_ui/git/commits/d23bbe7c7737533328c33086d0ad29083e6f8ca1",
+      "comment_count": 0
+    },
+    "url": "https://api.github.com/repos/reupen/columns_ui/commits/d23bbe7c7737533328c33086d0ad29083e6f8ca1",
+    "html_url": "https://github.com/reupen/columns_ui/commit/d23bbe7c7737533328c33086d0ad29083e6f8ca1",
+    "comments_url": "https://api.github.com/repos/reupen/columns_ui/commits/d23bbe7c7737533328c33086d0ad29083e6f8ca1/comments",
+    "author": {
+      "login": "reupen",
+      "id": 12693549,
+      "avatar_url": "https://avatars.githubusercontent.com/u/12693549?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/reupen",
+      "html_url": "https://github.com/reupen",
+      "followers_url": "https://api.github.com/users/reupen/followers",
+      "following_url": "https://api.github.com/users/reupen/following{/other_user}",
+      "gists_url": "https://api.github.com/users/reupen/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/reupen/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/reupen/subscriptions",
+      "organizations_url": "https://api.github.com/users/reupen/orgs",
+      "repos_url": "https://api.github.com/users/reupen/repos",
+      "events_url": "https://api.github.com/users/reupen/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/reupen/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "reupen",
+      "id": 12693549,
+      "avatar_url": "https://avatars.githubusercontent.com/u/12693549?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/reupen",
+      "html_url": "https://github.com/reupen",
+      "followers_url": "https://api.github.com/users/reupen/followers",
+      "following_url": "https://api.github.com/users/reupen/following{/other_user}",
+      "gists_url": "https://api.github.com/users/reupen/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/reupen/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/reupen/subscriptions",
+      "organizations_url": "https://api.github.com/users/reupen/orgs",
+      "repos_url": "https://api.github.com/users/reupen/repos",
+      "events_url": "https://api.github.com/users/reupen/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/reupen/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "7c4848f22f91bf41ba0792c33a401fcb455e018c",
+        "url": "https://api.github.com/repos/reupen/columns_ui/commits/7c4848f22f91bf41ba0792c33a401fcb455e018c",
+        "html_url": "https://github.com/reupen/columns_ui/commit/7c4848f22f91bf41ba0792c33a401fcb455e018c"
+      }
+    ]
+  },
+  {
+    "sha": "7c4848f22f91bf41ba0792c33a401fcb455e018c",
+    "commit": {
+      "author": {
+        "name": "Reupen Shah",
+        "email": "reupen@users.noreply.github.com",
+        "date": "2016-08-23T18:48:49Z"
+      },
+      "committer": {
+        "name": "Reupen Shah",
+        "email": "reupen@users.noreply.github.com",
+        "date": "2016-08-23T18:48:49Z"
+      },
+      "message": "Fix rendering of NG Playlist group lines when horizontally scrolled; related to comment in reupen/columns_ui#38",
+      "tree": {
+        "sha": "de3a867d0598ae18ad6e18a5a8724ce4496b4871",
+        "url": "https://api.github.com/repos/reupen/columns_ui/git/trees/de3a867d0598ae18ad6e18a5a8724ce4496b4871"
+      },
+      "url": "https://api.github.com/repos/reupen/columns_ui/git/commits/7c4848f22f91bf41ba0792c33a401fcb455e018c",
+      "comment_count": 0
+    },
+    "url": "https://api.github.com/repos/reupen/columns_ui/commits/7c4848f22f91bf41ba0792c33a401fcb455e018c",
+    "html_url": "https://github.com/reupen/columns_ui/commit/7c4848f22f91bf41ba0792c33a401fcb455e018c",
+    "comments_url": "https://api.github.com/repos/reupen/columns_ui/commits/7c4848f22f91bf41ba0792c33a401fcb455e018c/comments",
+    "author": {
+      "login": "reupen",
+      "id": 12693549,
+      "avatar_url": "https://avatars.githubusercontent.com/u/12693549?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/reupen",
+      "html_url": "https://github.com/reupen",
+      "followers_url": "https://api.github.com/users/reupen/followers",
+      "following_url": "https://api.github.com/users/reupen/following{/other_user}",
+      "gists_url": "https://api.github.com/users/reupen/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/reupen/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/reupen/subscriptions",
+      "organizations_url": "https://api.github.com/users/reupen/orgs",
+      "repos_url": "https://api.github.com/users/reupen/repos",
+      "events_url": "https://api.github.com/users/reupen/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/reupen/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "reupen",
+      "id": 12693549,
+      "avatar_url": "https://avatars.githubusercontent.com/u/12693549?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/reupen",
+      "html_url": "https://github.com/reupen",
+      "followers_url": "https://api.github.com/users/reupen/followers",
+      "following_url": "https://api.github.com/users/reupen/following{/other_user}",
+      "gists_url": "https://api.github.com/users/reupen/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/reupen/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/reupen/subscriptions",
+      "organizations_url": "https://api.github.com/users/reupen/orgs",
+      "repos_url": "https://api.github.com/users/reupen/repos",
+      "events_url": "https://api.github.com/users/reupen/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/reupen/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "329f5c432b9a6ec77adeb84f5a69ca69d07e17b2",
+        "url": "https://api.github.com/repos/reupen/columns_ui/commits/329f5c432b9a6ec77adeb84f5a69ca69d07e17b2",
+        "html_url": "https://github.com/reupen/columns_ui/commit/329f5c432b9a6ec77adeb84f5a69ca69d07e17b2"
+      }
+    ]
+  },
+  {
+    "sha": "329f5c432b9a6ec77adeb84f5a69ca69d07e17b2",
+    "commit": {
+      "author": {
+        "name": "Reupen Shah",
+        "email": "reupen@users.noreply.github.com",
+        "date": "2016-08-22T18:52:40Z"
+      },
+      "committer": {
+        "name": "Reupen Shah",
+        "email": "reupen@users.noreply.github.com",
+        "date": "2016-08-22T18:52:40Z"
+      },
+      "message": "update ui_helpers; fix #38",
+      "tree": {
+        "sha": "df3fee9e1fbcda1fb8ba21bed6f8c79d816cc1db",
+        "url": "https://api.github.com/repos/reupen/columns_ui/git/trees/df3fee9e1fbcda1fb8ba21bed6f8c79d816cc1db"
+      },
+      "url": "https://api.github.com/repos/reupen/columns_ui/git/commits/329f5c432b9a6ec77adeb84f5a69ca69d07e17b2",
+      "comment_count": 0
+    },
+    "url": "https://api.github.com/repos/reupen/columns_ui/commits/329f5c432b9a6ec77adeb84f5a69ca69d07e17b2",
+    "html_url": "https://github.com/reupen/columns_ui/commit/329f5c432b9a6ec77adeb84f5a69ca69d07e17b2",
+    "comments_url": "https://api.github.com/repos/reupen/columns_ui/commits/329f5c432b9a6ec77adeb84f5a69ca69d07e17b2/comments",
+    "author": {
+      "login": "reupen",
+      "id": 12693549,
+      "avatar_url": "https://avatars.githubusercontent.com/u/12693549?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/reupen",
+      "html_url": "https://github.com/reupen",
+      "followers_url": "https://api.github.com/users/reupen/followers",
+      "following_url": "https://api.github.com/users/reupen/following{/other_user}",
+      "gists_url": "https://api.github.com/users/reupen/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/reupen/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/reupen/subscriptions",
+      "organizations_url": "https://api.github.com/users/reupen/orgs",
+      "repos_url": "https://api.github.com/users/reupen/repos",
+      "events_url": "https://api.github.com/users/reupen/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/reupen/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "reupen",
+      "id": 12693549,
+      "avatar_url": "https://avatars.githubusercontent.com/u/12693549?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/reupen",
+      "html_url": "https://github.com/reupen",
+      "followers_url": "https://api.github.com/users/reupen/followers",
+      "following_url": "https://api.github.com/users/reupen/following{/other_user}",
+      "gists_url": "https://api.github.com/users/reupen/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/reupen/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/reupen/subscriptions",
+      "organizations_url": "https://api.github.com/users/reupen/orgs",
+      "repos_url": "https://api.github.com/users/reupen/repos",
+      "events_url": "https://api.github.com/users/reupen/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/reupen/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "37ec7f17e4ad62f9bd96bc27575c704d3b70403d",
+        "url": "https://api.github.com/repos/reupen/columns_ui/commits/37ec7f17e4ad62f9bd96bc27575c704d3b70403d",
+        "html_url": "https://github.com/reupen/columns_ui/commit/37ec7f17e4ad62f9bd96bc27575c704d3b70403d"
+      }
+    ]
+  },
+  {
+    "sha": "37ec7f17e4ad62f9bd96bc27575c704d3b70403d",
+    "commit": {
+      "author": {
+        "name": "Reupen Shah",
+        "email": "reupen@users.noreply.github.com",
+        "date": "2016-07-01T21:10:50Z"
+      },
+      "committer": {
+        "name": "Reupen Shah",
+        "email": "reupen@users.noreply.github.com",
+        "date": "2016-07-01T21:10:50Z"
+      },
+      "message": "Update version to 0.5.1-dev",
+      "tree": {
+        "sha": "5d5639435687ad94fa9e94e1ea4c08961b6855c3",
+        "url": "https://api.github.com/repos/reupen/columns_ui/git/trees/5d5639435687ad94fa9e94e1ea4c08961b6855c3"
+      },
+      "url": "https://api.github.com/repos/reupen/columns_ui/git/commits/37ec7f17e4ad62f9bd96bc27575c704d3b70403d",
+      "comment_count": 0
+    },
+    "url": "https://api.github.com/repos/reupen/columns_ui/commits/37ec7f17e4ad62f9bd96bc27575c704d3b70403d",
+    "html_url": "https://github.com/reupen/columns_ui/commit/37ec7f17e4ad62f9bd96bc27575c704d3b70403d",
+    "comments_url": "https://api.github.com/repos/reupen/columns_ui/commits/37ec7f17e4ad62f9bd96bc27575c704d3b70403d/comments",
+    "author": {
+      "login": "reupen",
+      "id": 12693549,
+      "avatar_url": "https://avatars.githubusercontent.com/u/12693549?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/reupen",
+      "html_url": "https://github.com/reupen",
+      "followers_url": "https://api.github.com/users/reupen/followers",
+      "following_url": "https://api.github.com/users/reupen/following{/other_user}",
+      "gists_url": "https://api.github.com/users/reupen/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/reupen/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/reupen/subscriptions",
+      "organizations_url": "https://api.github.com/users/reupen/orgs",
+      "repos_url": "https://api.github.com/users/reupen/repos",
+      "events_url": "https://api.github.com/users/reupen/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/reupen/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "reupen",
+      "id": 12693549,
+      "avatar_url": "https://avatars.githubusercontent.com/u/12693549?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/reupen",
+      "html_url": "https://github.com/reupen",
+      "followers_url": "https://api.github.com/users/reupen/followers",
+      "following_url": "https://api.github.com/users/reupen/following{/other_user}",
+      "gists_url": "https://api.github.com/users/reupen/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/reupen/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/reupen/subscriptions",
+      "organizations_url": "https://api.github.com/users/reupen/orgs",
+      "repos_url": "https://api.github.com/users/reupen/repos",
+      "events_url": "https://api.github.com/users/reupen/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/reupen/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "b38c8022354b3e6d3e9e2a0ec4413103b4ed18a0",
+        "url": "https://api.github.com/repos/reupen/columns_ui/commits/b38c8022354b3e6d3e9e2a0ec4413103b4ed18a0",
+        "html_url": "https://github.com/reupen/columns_ui/commit/b38c8022354b3e6d3e9e2a0ec4413103b4ed18a0"
+      }
+    ]
+  },
+  {
+    "sha": "b38c8022354b3e6d3e9e2a0ec4413103b4ed18a0",
+    "commit": {
+      "author": {
+        "name": "Reupen Shah",
+        "email": "reupen@users.noreply.github.com",
+        "date": "2016-07-01T21:09:52Z"
+      },
+      "committer": {
+        "name": "Reupen Shah",
+        "email": "reupen@users.noreply.github.com",
+        "date": "2016-07-01T21:09:52Z"
+      },
+      "message": "Fix #35: Shift low-level mouse hook to separate thread",
+      "tree": {
+        "sha": "db8d97b978e786704c0a93e0538751264cb82ab8",
+        "url": "https://api.github.com/repos/reupen/columns_ui/git/trees/db8d97b978e786704c0a93e0538751264cb82ab8"
+      },
+      "url": "https://api.github.com/repos/reupen/columns_ui/git/commits/b38c8022354b3e6d3e9e2a0ec4413103b4ed18a0",
+      "comment_count": 0
+    },
+    "url": "https://api.github.com/repos/reupen/columns_ui/commits/b38c8022354b3e6d3e9e2a0ec4413103b4ed18a0",
+    "html_url": "https://github.com/reupen/columns_ui/commit/b38c8022354b3e6d3e9e2a0ec4413103b4ed18a0",
+    "comments_url": "https://api.github.com/repos/reupen/columns_ui/commits/b38c8022354b3e6d3e9e2a0ec4413103b4ed18a0/comments",
+    "author": {
+      "login": "reupen",
+      "id": 12693549,
+      "avatar_url": "https://avatars.githubusercontent.com/u/12693549?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/reupen",
+      "html_url": "https://github.com/reupen",
+      "followers_url": "https://api.github.com/users/reupen/followers",
+      "following_url": "https://api.github.com/users/reupen/following{/other_user}",
+      "gists_url": "https://api.github.com/users/reupen/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/reupen/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/reupen/subscriptions",
+      "organizations_url": "https://api.github.com/users/reupen/orgs",
+      "repos_url": "https://api.github.com/users/reupen/repos",
+      "events_url": "https://api.github.com/users/reupen/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/reupen/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "reupen",
+      "id": 12693549,
+      "avatar_url": "https://avatars.githubusercontent.com/u/12693549?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/reupen",
+      "html_url": "https://github.com/reupen",
+      "followers_url": "https://api.github.com/users/reupen/followers",
+      "following_url": "https://api.github.com/users/reupen/following{/other_user}",
+      "gists_url": "https://api.github.com/users/reupen/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/reupen/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/reupen/subscriptions",
+      "organizations_url": "https://api.github.com/users/reupen/orgs",
+      "repos_url": "https://api.github.com/users/reupen/repos",
+      "events_url": "https://api.github.com/users/reupen/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/reupen/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "18ec1b3fc52b1a064699ed968a51d1c3c8748874",
+        "url": "https://api.github.com/repos/reupen/columns_ui/commits/18ec1b3fc52b1a064699ed968a51d1c3c8748874",
+        "html_url": "https://github.com/reupen/columns_ui/commit/18ec1b3fc52b1a064699ed968a51d1c3c8748874"
+      }
+    ]
+  },
+  {
+    "sha": "18ec1b3fc52b1a064699ed968a51d1c3c8748874",
+    "commit": {
+      "author": {
+        "name": "Reupen Shah",
+        "email": "reupen@users.noreply.github.com",
+        "date": "2016-06-24T20:00:22Z"
+      },
+      "committer": {
+        "name": "Reupen Shah",
+        "email": "reupen@users.noreply.github.com",
+        "date": "2016-06-24T20:00:22Z"
+      },
+      "message": "use std::vector for splitter_window_tabs_impl::g_windows",
+      "tree": {
+        "sha": "b000f448c14a970d16884fe957f46cc265762932",
+        "url": "https://api.github.com/repos/reupen/columns_ui/git/trees/b000f448c14a970d16884fe957f46cc265762932"
+      },
+      "url": "https://api.github.com/repos/reupen/columns_ui/git/commits/18ec1b3fc52b1a064699ed968a51d1c3c8748874",
+      "comment_count": 0
+    },
+    "url": "https://api.github.com/repos/reupen/columns_ui/commits/18ec1b3fc52b1a064699ed968a51d1c3c8748874",
+    "html_url": "https://github.com/reupen/columns_ui/commit/18ec1b3fc52b1a064699ed968a51d1c3c8748874",
+    "comments_url": "https://api.github.com/repos/reupen/columns_ui/commits/18ec1b3fc52b1a064699ed968a51d1c3c8748874/comments",
+    "author": {
+      "login": "reupen",
+      "id": 12693549,
+      "avatar_url": "https://avatars.githubusercontent.com/u/12693549?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/reupen",
+      "html_url": "https://github.com/reupen",
+      "followers_url": "https://api.github.com/users/reupen/followers",
+      "following_url": "https://api.github.com/users/reupen/following{/other_user}",
+      "gists_url": "https://api.github.com/users/reupen/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/reupen/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/reupen/subscriptions",
+      "organizations_url": "https://api.github.com/users/reupen/orgs",
+      "repos_url": "https://api.github.com/users/reupen/repos",
+      "events_url": "https://api.github.com/users/reupen/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/reupen/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "reupen",
+      "id": 12693549,
+      "avatar_url": "https://avatars.githubusercontent.com/u/12693549?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/reupen",
+      "html_url": "https://github.com/reupen",
+      "followers_url": "https://api.github.com/users/reupen/followers",
+      "following_url": "https://api.github.com/users/reupen/following{/other_user}",
+      "gists_url": "https://api.github.com/users/reupen/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/reupen/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/reupen/subscriptions",
+      "organizations_url": "https://api.github.com/users/reupen/orgs",
+      "repos_url": "https://api.github.com/users/reupen/repos",
+      "events_url": "https://api.github.com/users/reupen/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/reupen/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "c454feac96f56eb5ead7f92effbe2e75aad4f51a",
+        "url": "https://api.github.com/repos/reupen/columns_ui/commits/c454feac96f56eb5ead7f92effbe2e75aad4f51a",
+        "html_url": "https://github.com/reupen/columns_ui/commit/c454feac96f56eb5ead7f92effbe2e75aad4f51a"
+      }
+    ]
+  },
+  {
+    "sha": "c454feac96f56eb5ead7f92effbe2e75aad4f51a",
+    "commit": {
+      "author": {
+        "name": "Reupen Shah",
+        "email": "reupen@users.noreply.github.com",
+        "date": "2016-06-24T19:49:43Z"
+      },
+      "committer": {
+        "name": "Reupen Shah",
+        "email": "reupen@users.noreply.github.com",
+        "date": "2016-06-24T19:49:43Z"
+      },
+      "message": "switch playlist_switcher_t::g_windows to std::vector",
+      "tree": {
+        "sha": "d3efc91c220b99946cb62d1690c5f1113c910cdd",
+        "url": "https://api.github.com/repos/reupen/columns_ui/git/trees/d3efc91c220b99946cb62d1690c5f1113c910cdd"
+      },
+      "url": "https://api.github.com/repos/reupen/columns_ui/git/commits/c454feac96f56eb5ead7f92effbe2e75aad4f51a",
+      "comment_count": 0
+    },
+    "url": "https://api.github.com/repos/reupen/columns_ui/commits/c454feac96f56eb5ead7f92effbe2e75aad4f51a",
+    "html_url": "https://github.com/reupen/columns_ui/commit/c454feac96f56eb5ead7f92effbe2e75aad4f51a",
+    "comments_url": "https://api.github.com/repos/reupen/columns_ui/commits/c454feac96f56eb5ead7f92effbe2e75aad4f51a/comments",
+    "author": {
+      "login": "reupen",
+      "id": 12693549,
+      "avatar_url": "https://avatars.githubusercontent.com/u/12693549?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/reupen",
+      "html_url": "https://github.com/reupen",
+      "followers_url": "https://api.github.com/users/reupen/followers",
+      "following_url": "https://api.github.com/users/reupen/following{/other_user}",
+      "gists_url": "https://api.github.com/users/reupen/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/reupen/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/reupen/subscriptions",
+      "organizations_url": "https://api.github.com/users/reupen/orgs",
+      "repos_url": "https://api.github.com/users/reupen/repos",
+      "events_url": "https://api.github.com/users/reupen/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/reupen/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "reupen",
+      "id": 12693549,
+      "avatar_url": "https://avatars.githubusercontent.com/u/12693549?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/reupen",
+      "html_url": "https://github.com/reupen",
+      "followers_url": "https://api.github.com/users/reupen/followers",
+      "following_url": "https://api.github.com/users/reupen/following{/other_user}",
+      "gists_url": "https://api.github.com/users/reupen/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/reupen/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/reupen/subscriptions",
+      "organizations_url": "https://api.github.com/users/reupen/orgs",
+      "repos_url": "https://api.github.com/users/reupen/repos",
+      "events_url": "https://api.github.com/users/reupen/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/reupen/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "65e49d11827181b0db62e022ab96aeb5425dfecc",
+        "url": "https://api.github.com/repos/reupen/columns_ui/commits/65e49d11827181b0db62e022ab96aeb5425dfecc",
+        "html_url": "https://github.com/reupen/columns_ui/commit/65e49d11827181b0db62e022ab96aeb5425dfecc"
+      }
+    ]
+  },
+  {
+    "sha": "65e49d11827181b0db62e022ab96aeb5425dfecc",
+    "commit": {
+      "author": {
+        "name": "Reupen Shah",
+        "email": "reupen@users.noreply.github.com",
+        "date": "2016-06-24T19:38:27Z"
+      },
+      "committer": {
+        "name": "Reupen Shah",
+        "email": "reupen@users.noreply.github.com",
+        "date": "2016-06-24T19:38:27Z"
+      },
+      "message": "switch selection_properties_t::g_windows to std::vector",
+      "tree": {
+        "sha": "d3c08031cc685adc21026c78a64ca8d2b6427df9",
+        "url": "https://api.github.com/repos/reupen/columns_ui/git/trees/d3c08031cc685adc21026c78a64ca8d2b6427df9"
+      },
+      "url": "https://api.github.com/repos/reupen/columns_ui/git/commits/65e49d11827181b0db62e022ab96aeb5425dfecc",
+      "comment_count": 0
+    },
+    "url": "https://api.github.com/repos/reupen/columns_ui/commits/65e49d11827181b0db62e022ab96aeb5425dfecc",
+    "html_url": "https://github.com/reupen/columns_ui/commit/65e49d11827181b0db62e022ab96aeb5425dfecc",
+    "comments_url": "https://api.github.com/repos/reupen/columns_ui/commits/65e49d11827181b0db62e022ab96aeb5425dfecc/comments",
+    "author": {
+      "login": "reupen",
+      "id": 12693549,
+      "avatar_url": "https://avatars.githubusercontent.com/u/12693549?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/reupen",
+      "html_url": "https://github.com/reupen",
+      "followers_url": "https://api.github.com/users/reupen/followers",
+      "following_url": "https://api.github.com/users/reupen/following{/other_user}",
+      "gists_url": "https://api.github.com/users/reupen/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/reupen/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/reupen/subscriptions",
+      "organizations_url": "https://api.github.com/users/reupen/orgs",
+      "repos_url": "https://api.github.com/users/reupen/repos",
+      "events_url": "https://api.github.com/users/reupen/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/reupen/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "reupen",
+      "id": 12693549,
+      "avatar_url": "https://avatars.githubusercontent.com/u/12693549?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/reupen",
+      "html_url": "https://github.com/reupen",
+      "followers_url": "https://api.github.com/users/reupen/followers",
+      "following_url": "https://api.github.com/users/reupen/following{/other_user}",
+      "gists_url": "https://api.github.com/users/reupen/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/reupen/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/reupen/subscriptions",
+      "organizations_url": "https://api.github.com/users/reupen/orgs",
+      "repos_url": "https://api.github.com/users/reupen/repos",
+      "events_url": "https://api.github.com/users/reupen/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/reupen/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "597462ae357112e6407a01ed88d869f8755e582c",
+        "url": "https://api.github.com/repos/reupen/columns_ui/commits/597462ae357112e6407a01ed88d869f8755e582c",
+        "html_url": "https://github.com/reupen/columns_ui/commit/597462ae357112e6407a01ed88d869f8755e582c"
+      }
+    ]
+  },
+  {
+    "sha": "597462ae357112e6407a01ed88d869f8755e582c",
+    "commit": {
+      "author": {
+        "name": "Reupen Shah",
+        "email": "reupen@users.noreply.github.com",
+        "date": "2016-06-24T19:33:45Z"
+      },
+      "committer": {
+        "name": "Reupen Shah",
+        "email": "reupen@users.noreply.github.com",
+        "date": "2016-06-24T19:33:45Z"
+      },
+      "message": "item_details_t::g_windows - switch to std::vector",
+      "tree": {
+        "sha": "eadee37efa61e0514e7b017958b36e11e59c2413",
+        "url": "https://api.github.com/repos/reupen/columns_ui/git/trees/eadee37efa61e0514e7b017958b36e11e59c2413"
+      },
+      "url": "https://api.github.com/repos/reupen/columns_ui/git/commits/597462ae357112e6407a01ed88d869f8755e582c",
+      "comment_count": 0
+    },
+    "url": "https://api.github.com/repos/reupen/columns_ui/commits/597462ae357112e6407a01ed88d869f8755e582c",
+    "html_url": "https://github.com/reupen/columns_ui/commit/597462ae357112e6407a01ed88d869f8755e582c",
+    "comments_url": "https://api.github.com/repos/reupen/columns_ui/commits/597462ae357112e6407a01ed88d869f8755e582c/comments",
+    "author": {
+      "login": "reupen",
+      "id": 12693549,
+      "avatar_url": "https://avatars.githubusercontent.com/u/12693549?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/reupen",
+      "html_url": "https://github.com/reupen",
+      "followers_url": "https://api.github.com/users/reupen/followers",
+      "following_url": "https://api.github.com/users/reupen/following{/other_user}",
+      "gists_url": "https://api.github.com/users/reupen/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/reupen/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/reupen/subscriptions",
+      "organizations_url": "https://api.github.com/users/reupen/orgs",
+      "repos_url": "https://api.github.com/users/reupen/repos",
+      "events_url": "https://api.github.com/users/reupen/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/reupen/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "reupen",
+      "id": 12693549,
+      "avatar_url": "https://avatars.githubusercontent.com/u/12693549?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/reupen",
+      "html_url": "https://github.com/reupen",
+      "followers_url": "https://api.github.com/users/reupen/followers",
+      "following_url": "https://api.github.com/users/reupen/following{/other_user}",
+      "gists_url": "https://api.github.com/users/reupen/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/reupen/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/reupen/subscriptions",
+      "organizations_url": "https://api.github.com/users/reupen/orgs",
+      "repos_url": "https://api.github.com/users/reupen/repos",
+      "events_url": "https://api.github.com/users/reupen/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/reupen/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "88cdf9c32adb2ad969b0d03790dda3403e695f80",
+        "url": "https://api.github.com/repos/reupen/columns_ui/commits/88cdf9c32adb2ad969b0d03790dda3403e695f80",
+        "html_url": "https://github.com/reupen/columns_ui/commit/88cdf9c32adb2ad969b0d03790dda3403e695f80"
+      }
+    ]
+  },
+  {
+    "sha": "88cdf9c32adb2ad969b0d03790dda3403e695f80",
+    "commit": {
+      "author": {
+        "name": "Reupen Shah",
+        "email": "reupen@users.noreply.github.com",
+        "date": "2016-06-23T20:23:24Z"
+      },
+      "committer": {
+        "name": "Reupen Shah",
+        "email": "reupen@users.noreply.github.com",
+        "date": "2016-06-23T20:23:24Z"
+      },
+      "message": "use std::vector instead of pfc::ptr_list_t for filter_panel_t::g_windows",
+      "tree": {
+        "sha": "7e5b29bdfaf478f7223acd90977fc96881f94e4b",
+        "url": "https://api.github.com/repos/reupen/columns_ui/git/trees/7e5b29bdfaf478f7223acd90977fc96881f94e4b"
+      },
+      "url": "https://api.github.com/repos/reupen/columns_ui/git/commits/88cdf9c32adb2ad969b0d03790dda3403e695f80",
+      "comment_count": 0
+    },
+    "url": "https://api.github.com/repos/reupen/columns_ui/commits/88cdf9c32adb2ad969b0d03790dda3403e695f80",
+    "html_url": "https://github.com/reupen/columns_ui/commit/88cdf9c32adb2ad969b0d03790dda3403e695f80",
+    "comments_url": "https://api.github.com/repos/reupen/columns_ui/commits/88cdf9c32adb2ad969b0d03790dda3403e695f80/comments",
+    "author": {
+      "login": "reupen",
+      "id": 12693549,
+      "avatar_url": "https://avatars.githubusercontent.com/u/12693549?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/reupen",
+      "html_url": "https://github.com/reupen",
+      "followers_url": "https://api.github.com/users/reupen/followers",
+      "following_url": "https://api.github.com/users/reupen/following{/other_user}",
+      "gists_url": "https://api.github.com/users/reupen/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/reupen/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/reupen/subscriptions",
+      "organizations_url": "https://api.github.com/users/reupen/orgs",
+      "repos_url": "https://api.github.com/users/reupen/repos",
+      "events_url": "https://api.github.com/users/reupen/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/reupen/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "reupen",
+      "id": 12693549,
+      "avatar_url": "https://avatars.githubusercontent.com/u/12693549?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/reupen",
+      "html_url": "https://github.com/reupen",
+      "followers_url": "https://api.github.com/users/reupen/followers",
+      "following_url": "https://api.github.com/users/reupen/following{/other_user}",
+      "gists_url": "https://api.github.com/users/reupen/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/reupen/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/reupen/subscriptions",
+      "organizations_url": "https://api.github.com/users/reupen/orgs",
+      "repos_url": "https://api.github.com/users/reupen/repos",
+      "events_url": "https://api.github.com/users/reupen/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/reupen/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "6b3a8529bfd5fd2467da53ba74245e60e18e571e",
+        "url": "https://api.github.com/repos/reupen/columns_ui/commits/6b3a8529bfd5fd2467da53ba74245e60e18e571e",
+        "html_url": "https://github.com/reupen/columns_ui/commit/6b3a8529bfd5fd2467da53ba74245e60e18e571e"
+      }
+    ]
+  },
+  {
+    "sha": "6b3a8529bfd5fd2467da53ba74245e60e18e571e",
+    "commit": {
+      "author": {
+        "name": "Reupen Shah",
+        "email": "reupen@users.noreply.github.com",
+        "date": "2016-06-23T20:16:27Z"
+      },
+      "committer": {
+        "name": "Reupen Shah",
+        "email": "reupen@users.noreply.github.com",
+        "date": "2016-06-23T20:16:27Z"
+      },
+      "message": "use std::vector instead of std::set for artwork_panel_t::g_windows and ng_playlist_view_t::g_windows",
+      "tree": {
+        "sha": "377f5cfed59a136ffac674a741421d31efe38438",
+        "url": "https://api.github.com/repos/reupen/columns_ui/git/trees/377f5cfed59a136ffac674a741421d31efe38438"
+      },
+      "url": "https://api.github.com/repos/reupen/columns_ui/git/commits/6b3a8529bfd5fd2467da53ba74245e60e18e571e",
+      "comment_count": 0
+    },
+    "url": "https://api.github.com/repos/reupen/columns_ui/commits/6b3a8529bfd5fd2467da53ba74245e60e18e571e",
+    "html_url": "https://github.com/reupen/columns_ui/commit/6b3a8529bfd5fd2467da53ba74245e60e18e571e",
+    "comments_url": "https://api.github.com/repos/reupen/columns_ui/commits/6b3a8529bfd5fd2467da53ba74245e60e18e571e/comments",
+    "author": {
+      "login": "reupen",
+      "id": 12693549,
+      "avatar_url": "https://avatars.githubusercontent.com/u/12693549?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/reupen",
+      "html_url": "https://github.com/reupen",
+      "followers_url": "https://api.github.com/users/reupen/followers",
+      "following_url": "https://api.github.com/users/reupen/following{/other_user}",
+      "gists_url": "https://api.github.com/users/reupen/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/reupen/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/reupen/subscriptions",
+      "organizations_url": "https://api.github.com/users/reupen/orgs",
+      "repos_url": "https://api.github.com/users/reupen/repos",
+      "events_url": "https://api.github.com/users/reupen/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/reupen/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "reupen",
+      "id": 12693549,
+      "avatar_url": "https://avatars.githubusercontent.com/u/12693549?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/reupen",
+      "html_url": "https://github.com/reupen",
+      "followers_url": "https://api.github.com/users/reupen/followers",
+      "following_url": "https://api.github.com/users/reupen/following{/other_user}",
+      "gists_url": "https://api.github.com/users/reupen/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/reupen/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/reupen/subscriptions",
+      "organizations_url": "https://api.github.com/users/reupen/orgs",
+      "repos_url": "https://api.github.com/users/reupen/repos",
+      "events_url": "https://api.github.com/users/reupen/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/reupen/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "1315b2e606c348ffe74e1448a341d5a7ba4a70ef",
+        "url": "https://api.github.com/repos/reupen/columns_ui/commits/1315b2e606c348ffe74e1448a341d5a7ba4a70ef",
+        "html_url": "https://github.com/reupen/columns_ui/commit/1315b2e606c348ffe74e1448a341d5a7ba4a70ef"
+      }
+    ]
+  },
+  {
+    "sha": "1315b2e606c348ffe74e1448a341d5a7ba4a70ef",
+    "commit": {
+      "author": {
+        "name": "Reupen Shah",
+        "email": "reupen@users.noreply.github.com",
+        "date": "2016-06-23T19:51:34Z"
+      },
+      "committer": {
+        "name": "Reupen Shah",
+        "email": "reupen@users.noreply.github.com",
+        "date": "2016-06-23T19:51:34Z"
+      },
+      "message": "use std::set instead of pfc::ptr_list_t for artwork_panel_t::g_windows",
+      "tree": {
+        "sha": "b242de8cb6e374b6f3a4453b2cff11c02149ef2d",
+        "url": "https://api.github.com/repos/reupen/columns_ui/git/trees/b242de8cb6e374b6f3a4453b2cff11c02149ef2d"
+      },
+      "url": "https://api.github.com/repos/reupen/columns_ui/git/commits/1315b2e606c348ffe74e1448a341d5a7ba4a70ef",
+      "comment_count": 0
+    },
+    "url": "https://api.github.com/repos/reupen/columns_ui/commits/1315b2e606c348ffe74e1448a341d5a7ba4a70ef",
+    "html_url": "https://github.com/reupen/columns_ui/commit/1315b2e606c348ffe74e1448a341d5a7ba4a70ef",
+    "comments_url": "https://api.github.com/repos/reupen/columns_ui/commits/1315b2e606c348ffe74e1448a341d5a7ba4a70ef/comments",
+    "author": {
+      "login": "reupen",
+      "id": 12693549,
+      "avatar_url": "https://avatars.githubusercontent.com/u/12693549?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/reupen",
+      "html_url": "https://github.com/reupen",
+      "followers_url": "https://api.github.com/users/reupen/followers",
+      "following_url": "https://api.github.com/users/reupen/following{/other_user}",
+      "gists_url": "https://api.github.com/users/reupen/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/reupen/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/reupen/subscriptions",
+      "organizations_url": "https://api.github.com/users/reupen/orgs",
+      "repos_url": "https://api.github.com/users/reupen/repos",
+      "events_url": "https://api.github.com/users/reupen/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/reupen/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "reupen",
+      "id": 12693549,
+      "avatar_url": "https://avatars.githubusercontent.com/u/12693549?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/reupen",
+      "html_url": "https://github.com/reupen",
+      "followers_url": "https://api.github.com/users/reupen/followers",
+      "following_url": "https://api.github.com/users/reupen/following{/other_user}",
+      "gists_url": "https://api.github.com/users/reupen/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/reupen/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/reupen/subscriptions",
+      "organizations_url": "https://api.github.com/users/reupen/orgs",
+      "repos_url": "https://api.github.com/users/reupen/repos",
+      "events_url": "https://api.github.com/users/reupen/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/reupen/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "4258880adcce3eefb6886b6201d709069bc11752",
+        "url": "https://api.github.com/repos/reupen/columns_ui/commits/4258880adcce3eefb6886b6201d709069bc11752",
+        "html_url": "https://github.com/reupen/columns_ui/commit/4258880adcce3eefb6886b6201d709069bc11752"
+      }
+    ]
+  },
+  {
+    "sha": "4258880adcce3eefb6886b6201d709069bc11752",
+    "commit": {
+      "author": {
+        "name": "Reupen Shah",
+        "email": "reupen@users.noreply.github.com",
+        "date": "2016-06-23T19:43:33Z"
+      },
+      "committer": {
+        "name": "Reupen Shah",
+        "email": "reupen@users.noreply.github.com",
+        "date": "2016-06-23T19:43:33Z"
+      },
+      "message": "use std::set instead of pfc::ptr_list_t for ng_playlist_view_t::g_windows",
+      "tree": {
+        "sha": "42ce4c1483227fe26f8363adfd7e11ae72e39f4c",
+        "url": "https://api.github.com/repos/reupen/columns_ui/git/trees/42ce4c1483227fe26f8363adfd7e11ae72e39f4c"
+      },
+      "url": "https://api.github.com/repos/reupen/columns_ui/git/commits/4258880adcce3eefb6886b6201d709069bc11752",
+      "comment_count": 0
+    },
+    "url": "https://api.github.com/repos/reupen/columns_ui/commits/4258880adcce3eefb6886b6201d709069bc11752",
+    "html_url": "https://github.com/reupen/columns_ui/commit/4258880adcce3eefb6886b6201d709069bc11752",
+    "comments_url": "https://api.github.com/repos/reupen/columns_ui/commits/4258880adcce3eefb6886b6201d709069bc11752/comments",
+    "author": {
+      "login": "reupen",
+      "id": 12693549,
+      "avatar_url": "https://avatars.githubusercontent.com/u/12693549?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/reupen",
+      "html_url": "https://github.com/reupen",
+      "followers_url": "https://api.github.com/users/reupen/followers",
+      "following_url": "https://api.github.com/users/reupen/following{/other_user}",
+      "gists_url": "https://api.github.com/users/reupen/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/reupen/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/reupen/subscriptions",
+      "organizations_url": "https://api.github.com/users/reupen/orgs",
+      "repos_url": "https://api.github.com/users/reupen/repos",
+      "events_url": "https://api.github.com/users/reupen/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/reupen/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "reupen",
+      "id": 12693549,
+      "avatar_url": "https://avatars.githubusercontent.com/u/12693549?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/reupen",
+      "html_url": "https://github.com/reupen",
+      "followers_url": "https://api.github.com/users/reupen/followers",
+      "following_url": "https://api.github.com/users/reupen/following{/other_user}",
+      "gists_url": "https://api.github.com/users/reupen/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/reupen/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/reupen/subscriptions",
+      "organizations_url": "https://api.github.com/users/reupen/orgs",
+      "repos_url": "https://api.github.com/users/reupen/repos",
+      "events_url": "https://api.github.com/users/reupen/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/reupen/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "e92816356a72a668186a35bcd179c19fda271f34",
+        "url": "https://api.github.com/repos/reupen/columns_ui/commits/e92816356a72a668186a35bcd179c19fda271f34",
+        "html_url": "https://github.com/reupen/columns_ui/commit/e92816356a72a668186a35bcd179c19fda271f34"
+      }
+    ]
+  },
+  {
+    "sha": "e92816356a72a668186a35bcd179c19fda271f34",
+    "commit": {
+      "author": {
+        "name": "Reupen Shah",
+        "email": "reupen@users.noreply.github.com",
+        "date": "2016-06-14T19:24:15Z"
+      },
+      "committer": {
+        "name": "Reupen Shah",
+        "email": "reupen@users.noreply.github.com",
+        "date": "2016-06-14T19:24:15Z"
+      },
+      "message": "fix clipped 'Selected item:' in Colours and Fonts config page, and misaligned 'Element:'",
+      "tree": {
+        "sha": "fe7fa3ee525279f8d8d2028139b41152859f7e60",
+        "url": "https://api.github.com/repos/reupen/columns_ui/git/trees/fe7fa3ee525279f8d8d2028139b41152859f7e60"
+      },
+      "url": "https://api.github.com/repos/reupen/columns_ui/git/commits/e92816356a72a668186a35bcd179c19fda271f34",
+      "comment_count": 0
+    },
+    "url": "https://api.github.com/repos/reupen/columns_ui/commits/e92816356a72a668186a35bcd179c19fda271f34",
+    "html_url": "https://github.com/reupen/columns_ui/commit/e92816356a72a668186a35bcd179c19fda271f34",
+    "comments_url": "https://api.github.com/repos/reupen/columns_ui/commits/e92816356a72a668186a35bcd179c19fda271f34/comments",
+    "author": {
+      "login": "reupen",
+      "id": 12693549,
+      "avatar_url": "https://avatars.githubusercontent.com/u/12693549?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/reupen",
+      "html_url": "https://github.com/reupen",
+      "followers_url": "https://api.github.com/users/reupen/followers",
+      "following_url": "https://api.github.com/users/reupen/following{/other_user}",
+      "gists_url": "https://api.github.com/users/reupen/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/reupen/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/reupen/subscriptions",
+      "organizations_url": "https://api.github.com/users/reupen/orgs",
+      "repos_url": "https://api.github.com/users/reupen/repos",
+      "events_url": "https://api.github.com/users/reupen/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/reupen/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "reupen",
+      "id": 12693549,
+      "avatar_url": "https://avatars.githubusercontent.com/u/12693549?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/reupen",
+      "html_url": "https://github.com/reupen",
+      "followers_url": "https://api.github.com/users/reupen/followers",
+      "following_url": "https://api.github.com/users/reupen/following{/other_user}",
+      "gists_url": "https://api.github.com/users/reupen/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/reupen/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/reupen/subscriptions",
+      "organizations_url": "https://api.github.com/users/reupen/orgs",
+      "repos_url": "https://api.github.com/users/reupen/repos",
+      "events_url": "https://api.github.com/users/reupen/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/reupen/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "891b0b410520b5d984632525b74beb28de798c9e",
+        "url": "https://api.github.com/repos/reupen/columns_ui/commits/891b0b410520b5d984632525b74beb28de798c9e",
+        "html_url": "https://github.com/reupen/columns_ui/commit/891b0b410520b5d984632525b74beb28de798c9e"
+      }
+    ]
+  },
+  {
+    "sha": "891b0b410520b5d984632525b74beb28de798c9e",
+    "commit": {
+      "author": {
+        "name": "Reupen Shah",
+        "email": "reupen@users.noreply.github.com",
+        "date": "2016-06-14T19:21:30Z"
+      },
+      "committer": {
+        "name": "Reupen Shah",
+        "email": "reupen@users.noreply.github.com",
+        "date": "2016-06-14T19:21:30Z"
+      },
+      "message": "various code quality improvements in config_layout.cpp",
+      "tree": {
+        "sha": "cbdc0e39c654efff2076b336a954e2fc0c5cb133",
+        "url": "https://api.github.com/repos/reupen/columns_ui/git/trees/cbdc0e39c654efff2076b336a954e2fc0c5cb133"
+      },
+      "url": "https://api.github.com/repos/reupen/columns_ui/git/commits/891b0b410520b5d984632525b74beb28de798c9e",
+      "comment_count": 0
+    },
+    "url": "https://api.github.com/repos/reupen/columns_ui/commits/891b0b410520b5d984632525b74beb28de798c9e",
+    "html_url": "https://github.com/reupen/columns_ui/commit/891b0b410520b5d984632525b74beb28de798c9e",
+    "comments_url": "https://api.github.com/repos/reupen/columns_ui/commits/891b0b410520b5d984632525b74beb28de798c9e/comments",
+    "author": {
+      "login": "reupen",
+      "id": 12693549,
+      "avatar_url": "https://avatars.githubusercontent.com/u/12693549?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/reupen",
+      "html_url": "https://github.com/reupen",
+      "followers_url": "https://api.github.com/users/reupen/followers",
+      "following_url": "https://api.github.com/users/reupen/following{/other_user}",
+      "gists_url": "https://api.github.com/users/reupen/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/reupen/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/reupen/subscriptions",
+      "organizations_url": "https://api.github.com/users/reupen/orgs",
+      "repos_url": "https://api.github.com/users/reupen/repos",
+      "events_url": "https://api.github.com/users/reupen/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/reupen/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "reupen",
+      "id": 12693549,
+      "avatar_url": "https://avatars.githubusercontent.com/u/12693549?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/reupen",
+      "html_url": "https://github.com/reupen",
+      "followers_url": "https://api.github.com/users/reupen/followers",
+      "following_url": "https://api.github.com/users/reupen/following{/other_user}",
+      "gists_url": "https://api.github.com/users/reupen/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/reupen/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/reupen/subscriptions",
+      "organizations_url": "https://api.github.com/users/reupen/orgs",
+      "repos_url": "https://api.github.com/users/reupen/repos",
+      "events_url": "https://api.github.com/users/reupen/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/reupen/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "3f2168cfadfac22828f8970288f0212c2f5b1b97",
+        "url": "https://api.github.com/repos/reupen/columns_ui/commits/3f2168cfadfac22828f8970288f0212c2f5b1b97",
+        "html_url": "https://github.com/reupen/columns_ui/commit/3f2168cfadfac22828f8970288f0212c2f5b1b97"
+      }
+    ]
+  },
+  {
+    "sha": "3f2168cfadfac22828f8970288f0212c2f5b1b97",
+    "commit": {
+      "author": {
+        "name": "Reupen Shah",
+        "email": "reupen@users.noreply.github.com",
+        "date": "2016-06-12T18:58:15Z"
+      },
+      "committer": {
+        "name": "Reupen Shah",
+        "email": "reupen@users.noreply.github.com",
+        "date": "2016-06-12T18:58:15Z"
+      },
+      "message": "remove beta tag from 0.5.0",
+      "tree": {
+        "sha": "dffd4e35b646179e88234ea79a3831502dfdfb77",
+        "url": "https://api.github.com/repos/reupen/columns_ui/git/trees/dffd4e35b646179e88234ea79a3831502dfdfb77"
+      },
+      "url": "https://api.github.com/repos/reupen/columns_ui/git/commits/3f2168cfadfac22828f8970288f0212c2f5b1b97",
+      "comment_count": 0
+    },
+    "url": "https://api.github.com/repos/reupen/columns_ui/commits/3f2168cfadfac22828f8970288f0212c2f5b1b97",
+    "html_url": "https://github.com/reupen/columns_ui/commit/3f2168cfadfac22828f8970288f0212c2f5b1b97",
+    "comments_url": "https://api.github.com/repos/reupen/columns_ui/commits/3f2168cfadfac22828f8970288f0212c2f5b1b97/comments",
+    "author": {
+      "login": "reupen",
+      "id": 12693549,
+      "avatar_url": "https://avatars.githubusercontent.com/u/12693549?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/reupen",
+      "html_url": "https://github.com/reupen",
+      "followers_url": "https://api.github.com/users/reupen/followers",
+      "following_url": "https://api.github.com/users/reupen/following{/other_user}",
+      "gists_url": "https://api.github.com/users/reupen/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/reupen/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/reupen/subscriptions",
+      "organizations_url": "https://api.github.com/users/reupen/orgs",
+      "repos_url": "https://api.github.com/users/reupen/repos",
+      "events_url": "https://api.github.com/users/reupen/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/reupen/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "reupen",
+      "id": 12693549,
+      "avatar_url": "https://avatars.githubusercontent.com/u/12693549?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/reupen",
+      "html_url": "https://github.com/reupen",
+      "followers_url": "https://api.github.com/users/reupen/followers",
+      "following_url": "https://api.github.com/users/reupen/following{/other_user}",
+      "gists_url": "https://api.github.com/users/reupen/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/reupen/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/reupen/subscriptions",
+      "organizations_url": "https://api.github.com/users/reupen/orgs",
+      "repos_url": "https://api.github.com/users/reupen/repos",
+      "events_url": "https://api.github.com/users/reupen/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/reupen/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "a6cba256ef3ea58f44eaff5f5dce742027ceea55",
+        "url": "https://api.github.com/repos/reupen/columns_ui/commits/a6cba256ef3ea58f44eaff5f5dce742027ceea55",
+        "html_url": "https://github.com/reupen/columns_ui/commit/a6cba256ef3ea58f44eaff5f5dce742027ceea55"
+      }
+    ]
+  },
+  {
+    "sha": "a6cba256ef3ea58f44eaff5f5dce742027ceea55",
+    "commit": {
+      "author": {
+        "name": "Reupen Shah",
+        "email": "reupen@users.noreply.github.com",
+        "date": "2016-06-12T18:53:11Z"
+      },
+      "committer": {
+        "name": "Reupen Shah",
+        "email": "reupen@users.noreply.github.com",
+        "date": "2016-06-12T18:53:11Z"
+      },
+      "message": "version 0.5.0 final",
+      "tree": {
+        "sha": "9425109c216793fb298ee8d814ed18dcb7ef518b",
+        "url": "https://api.github.com/repos/reupen/columns_ui/git/trees/9425109c216793fb298ee8d814ed18dcb7ef518b"
+      },
+      "url": "https://api.github.com/repos/reupen/columns_ui/git/commits/a6cba256ef3ea58f44eaff5f5dce742027ceea55",
+      "comment_count": 0
+    },
+    "url": "https://api.github.com/repos/reupen/columns_ui/commits/a6cba256ef3ea58f44eaff5f5dce742027ceea55",
+    "html_url": "https://github.com/reupen/columns_ui/commit/a6cba256ef3ea58f44eaff5f5dce742027ceea55",
+    "comments_url": "https://api.github.com/repos/reupen/columns_ui/commits/a6cba256ef3ea58f44eaff5f5dce742027ceea55/comments",
+    "author": {
+      "login": "reupen",
+      "id": 12693549,
+      "avatar_url": "https://avatars.githubusercontent.com/u/12693549?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/reupen",
+      "html_url": "https://github.com/reupen",
+      "followers_url": "https://api.github.com/users/reupen/followers",
+      "following_url": "https://api.github.com/users/reupen/following{/other_user}",
+      "gists_url": "https://api.github.com/users/reupen/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/reupen/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/reupen/subscriptions",
+      "organizations_url": "https://api.github.com/users/reupen/orgs",
+      "repos_url": "https://api.github.com/users/reupen/repos",
+      "events_url": "https://api.github.com/users/reupen/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/reupen/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "reupen",
+      "id": 12693549,
+      "avatar_url": "https://avatars.githubusercontent.com/u/12693549?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/reupen",
+      "html_url": "https://github.com/reupen",
+      "followers_url": "https://api.github.com/users/reupen/followers",
+      "following_url": "https://api.github.com/users/reupen/following{/other_user}",
+      "gists_url": "https://api.github.com/users/reupen/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/reupen/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/reupen/subscriptions",
+      "organizations_url": "https://api.github.com/users/reupen/orgs",
+      "repos_url": "https://api.github.com/users/reupen/repos",
+      "events_url": "https://api.github.com/users/reupen/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/reupen/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "ca82e03a5014a4b385dbfdb3ce49eb8f6509c16f",
+        "url": "https://api.github.com/repos/reupen/columns_ui/commits/ca82e03a5014a4b385dbfdb3ce49eb8f6509c16f",
+        "html_url": "https://github.com/reupen/columns_ui/commit/ca82e03a5014a4b385dbfdb3ce49eb8f6509c16f"
+      }
+    ]
+  }
+]

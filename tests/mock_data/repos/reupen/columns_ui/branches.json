@@ -1,23 +1,16 @@
 [
   {
-    "name": "clang",
+    "name": "iss36-filterstats",
     "commit": {
-      "sha": "9930a787f95f694e471b89e1f45bd6e56e586dc2",
-      "url": "https://api.github.com/repos/reupen/columns_ui/commits/9930a787f95f694e471b89e1f45bd6e56e586dc2"
+      "sha": "1bee69566dae71e1406187e46ecafbeabab6567f",
+      "url": "https://api.github.com/repos/reupen/columns_ui/commits/1bee69566dae71e1406187e46ecafbeabab6567f"
     }
   },
   {
     "name": "master",
     "commit": {
-      "sha": "a410a3dec5cb496257fb2d1476f1e2e4dc9ddcf6",
-      "url": "https://api.github.com/repos/reupen/columns_ui/commits/a410a3dec5cb496257fb2d1476f1e2e4dc9ddcf6"
-    }
-  },
-  {
-    "name": "splitterdividerwidth",
-    "commit": {
-      "sha": "dfc90df54310670f9fde62f3e5abcecc9802753d",
-      "url": "https://api.github.com/repos/reupen/columns_ui/commits/dfc90df54310670f9fde62f3e5abcecc9802753d"
+      "sha": "b38f387cca973a9e35d674ecf2e5bf7dcaa5db61",
+      "url": "https://api.github.com/repos/reupen/columns_ui/commits/b38f387cca973a9e35d674ecf2e5bf7dcaa5db61"
     }
   }
 ]

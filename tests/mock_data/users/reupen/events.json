@@ -1,0 +1,1920 @@
+[
+  {
+    "id": "5307476181",
+    "type": "WatchEvent",
+    "actor": {
+      "id": 12693549,
+      "login": "reupen",
+      "display_login": "reupen",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/reupen",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12693549?"
+    },
+    "repo": {
+      "id": 81598961,
+      "name": "python/cpython",
+      "url": "https://api.github.com/repos/python/cpython"
+    },
+    "payload": {
+      "action": "started"
+    },
+    "public": true,
+    "created_at": "2017-02-11T12:26:55Z",
+    "org": {
+      "id": 1525981,
+      "login": "python",
+      "gravatar_id": "",
+      "url": "https://api.github.com/orgs/python",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1525981?"
+    }
+  },
+  {
+    "id": "5283032771",
+    "type": "PushEvent",
+    "actor": {
+      "id": 12693549,
+      "login": "reupen",
+      "display_login": "reupen",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/reupen",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12693549?"
+    },
+    "repo": {
+      "id": 29824265,
+      "name": "reupen/columns_ui",
+      "url": "https://api.github.com/repos/reupen/columns_ui"
+    },
+    "payload": {
+      "push_id": 1543762264,
+      "size": 1,
+      "distinct_size": 1,
+      "ref": "refs/heads/master",
+      "head": "b38f387cca973a9e35d674ecf2e5bf7dcaa5db61",
+      "before": "04b14230b77f2ae08242a5f4ff27337a445827b2",
+      "commits": [
+        {
+          "sha": "b38f387cca973a9e35d674ecf2e5bf7dcaa5db61",
+          "author": {
+            "email": "reupen@users.noreply.github.com",
+            "name": "Reupen Shah"
+          },
+          "message": "Fix VS2017 compilation",
+          "distinct": true,
+          "url": "https://api.github.com/repos/reupen/columns_ui/commits/b38f387cca973a9e35d674ecf2e5bf7dcaa5db61"
+        }
+      ]
+    },
+    "public": true,
+    "created_at": "2017-02-07T20:21:02Z"
+  },
+  {
+    "id": "5269410803",
+    "type": "WatchEvent",
+    "actor": {
+      "id": 12693549,
+      "login": "reupen",
+      "display_login": "reupen",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/reupen",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12693549?"
+    },
+    "repo": {
+      "id": 32476524,
+      "name": "google/yapf",
+      "url": "https://api.github.com/repos/google/yapf"
+    },
+    "payload": {
+      "action": "started"
+    },
+    "public": true,
+    "created_at": "2017-02-05T20:33:57Z",
+    "org": {
+      "id": 1342004,
+      "login": "google",
+      "gravatar_id": "",
+      "url": "https://api.github.com/orgs/google",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1342004?"
+    }
+  },
+  {
+    "id": "5266269795",
+    "type": "WatchEvent",
+    "actor": {
+      "id": 12693549,
+      "login": "reupen",
+      "display_login": "reupen",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/reupen",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12693549?"
+    },
+    "repo": {
+      "id": 54360307,
+      "name": "uWebSockets/uWebSockets",
+      "url": "https://api.github.com/repos/uWebSockets/uWebSockets"
+    },
+    "payload": {
+      "action": "started"
+    },
+    "public": true,
+    "created_at": "2017-02-04T10:32:09Z",
+    "org": {
+      "id": 20158830,
+      "login": "uWebSockets",
+      "gravatar_id": "",
+      "url": "https://api.github.com/orgs/uWebSockets",
+      "avatar_url": "https://avatars.githubusercontent.com/u/20158830?"
+    }
+  },
+  {
+    "id": "5226363433",
+    "type": "PushEvent",
+    "actor": {
+      "id": 12693549,
+      "login": "reupen",
+      "display_login": "reupen",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/reupen",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12693549?"
+    },
+    "repo": {
+      "id": 53446369,
+      "name": "reupen/aiogithub",
+      "url": "https://api.github.com/repos/reupen/aiogithub"
+    },
+    "payload": {
+      "push_id": 1525045768,
+      "size": 1,
+      "distinct_size": 1,
+      "ref": "refs/heads/master",
+      "head": "168d1dc598fe6c4a6e27106f0b721cf00da4a7ce",
+      "before": "d332797f1f061b63c538547cb304957d3cd3db86",
+      "commits": [
+        {
+          "sha": "168d1dc598fe6c4a6e27106f0b721cf00da4a7ce",
+          "author": {
+            "email": "reupen@users.noreply.github.com",
+            "name": "Reupen Shah"
+          },
+          "message": "update copyright notices",
+          "distinct": true,
+          "url": "https://api.github.com/repos/reupen/aiogithub/commits/168d1dc598fe6c4a6e27106f0b721cf00da4a7ce"
+        }
+      ]
+    },
+    "public": true,
+    "created_at": "2017-01-27T21:08:31Z"
+  },
+  {
+    "id": "5226335498",
+    "type": "PushEvent",
+    "actor": {
+      "id": 12693549,
+      "login": "reupen",
+      "display_login": "reupen",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/reupen",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12693549?"
+    },
+    "repo": {
+      "id": 53446369,
+      "name": "reupen/aiogithub",
+      "url": "https://api.github.com/repos/reupen/aiogithub"
+    },
+    "payload": {
+      "push_id": 1525037025,
+      "size": 2,
+      "distinct_size": 0,
+      "ref": "refs/heads/master",
+      "head": "d332797f1f061b63c538547cb304957d3cd3db86",
+      "before": "e54274ee0e611ccebe8b800033a6c477b604b344",
+      "commits": [
+        {
+          "sha": "1e0928cc1215f391c86ff175e27d5d0f37a75072",
+          "author": {
+            "email": "reupen@users.noreply.github.com",
+            "name": "Reupen Shah"
+          },
+          "message": "preliminary reviews support",
+          "distinct": false,
+          "url": "https://api.github.com/repos/reupen/aiogithub/commits/1e0928cc1215f391c86ff175e27d5d0f37a75072"
+        },
+        {
+          "sha": "d332797f1f061b63c538547cb304957d3cd3db86",
+          "author": {
+            "email": "reupen@users.noreply.github.com",
+            "name": "Reupen Shah"
+          },
+          "message": "remove _per_page_max_limit from response objects",
+          "distinct": false,
+          "url": "https://api.github.com/repos/reupen/aiogithub/commits/d332797f1f061b63c538547cb304957d3cd3db86"
+        }
+      ]
+    },
+    "public": true,
+    "created_at": "2017-01-27T21:02:59Z"
+  },
+  {
+    "id": "5226328032",
+    "type": "DeleteEvent",
+    "actor": {
+      "id": 12693549,
+      "login": "reupen",
+      "display_login": "reupen",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/reupen",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12693549?"
+    },
+    "repo": {
+      "id": 44201072,
+      "name": "reupen/tayberry",
+      "url": "https://api.github.com/repos/reupen/tayberry"
+    },
+    "payload": {
+      "ref": "greenkeeper/initial",
+      "ref_type": "branch",
+      "pusher_type": "user"
+    },
+    "public": true,
+    "created_at": "2017-01-27T21:01:28Z"
+  },
+  {
+    "id": "5226327887",
+    "type": "PushEvent",
+    "actor": {
+      "id": 12693549,
+      "login": "reupen",
+      "display_login": "reupen",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/reupen",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12693549?"
+    },
+    "repo": {
+      "id": 44201072,
+      "name": "reupen/tayberry",
+      "url": "https://api.github.com/repos/reupen/tayberry"
+    },
+    "payload": {
+      "push_id": 1525034689,
+      "size": 4,
+      "distinct_size": 1,
+      "ref": "refs/heads/master",
+      "head": "8b27c3f5f266ca8cc58b2901a073590b06f7d2d6",
+      "before": "ec1869165d8b135be7eead83d13ba658ab80f385",
+      "commits": [
+        {
+          "sha": "09ff94a5e8f9a6df32b815871912436f26383bb2",
+          "author": {
+            "email": "greenkeeper[bot]@users.noreply.github.com",
+            "name": "greenkeeper[bot]"
+          },
+          "message": "chore(package): update dependencies\n\nhttps://greenkeeper.io/",
+          "distinct": false,
+          "url": "https://api.github.com/repos/reupen/tayberry/commits/09ff94a5e8f9a6df32b815871912436f26383bb2"
+        },
+        {
+          "sha": "3d8f687085e3d399d7c32bfadbde4785abe0bb84",
+          "author": {
+            "email": "greenkeeper[bot]@users.noreply.github.com",
+            "name": "greenkeeper[bot]"
+          },
+          "message": "docs(readme): add Greenkeeper badge \n\nhttps://greenkeeper.io/",
+          "distinct": false,
+          "url": "https://api.github.com/repos/reupen/tayberry/commits/3d8f687085e3d399d7c32bfadbde4785abe0bb84"
+        },
+        {
+          "sha": "3750bea110240fcc100cddae5e0018527ede82e2",
+          "author": {
+            "email": "reupen@users.noreply.github.com",
+            "name": "Reupen Shah"
+          },
+          "message": "Move Greenkeeper badge",
+          "distinct": false,
+          "url": "https://api.github.com/repos/reupen/tayberry/commits/3750bea110240fcc100cddae5e0018527ede82e2"
+        },
+        {
+          "sha": "8b27c3f5f266ca8cc58b2901a073590b06f7d2d6",
+          "author": {
+            "email": "reupen@users.noreply.github.com",
+            "name": "Reupen Shah"
+          },
+          "message": "Merge pull request #36 from reupen/greenkeeper/initial\n\nUpdate dependencies to enable Greenkeeper \ud83c\udf34",
+          "distinct": true,
+          "url": "https://api.github.com/repos/reupen/tayberry/commits/8b27c3f5f266ca8cc58b2901a073590b06f7d2d6"
+        }
+      ]
+    },
+    "public": true,
+    "created_at": "2017-01-27T21:01:27Z"
+  },
+  {
+    "id": "5226327842",
+    "type": "PullRequestEvent",
+    "actor": {
+      "id": 12693549,
+      "login": "reupen",
+      "display_login": "reupen",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/reupen",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12693549?"
+    },
+    "repo": {
+      "id": 44201072,
+      "name": "reupen/tayberry",
+      "url": "https://api.github.com/repos/reupen/tayberry"
+    },
+    "payload": {
+      "action": "closed",
+      "number": 36,
+      "pull_request": {
+        "url": "https://api.github.com/repos/reupen/tayberry/pulls/36",
+        "id": 103565536,
+        "html_url": "https://github.com/reupen/tayberry/pull/36",
+        "diff_url": "https://github.com/reupen/tayberry/pull/36.diff",
+        "patch_url": "https://github.com/reupen/tayberry/pull/36.patch",
+        "issue_url": "https://api.github.com/repos/reupen/tayberry/issues/36",
+        "number": 36,
+        "state": "closed",
+        "locked": false,
+        "title": "Update dependencies to enable Greenkeeper \ud83c\udf34",
+        "user": {
+          "login": "greenkeeper[bot]",
+          "id": 23040076,
+          "avatar_url": "https://avatars.githubusercontent.com/u/13812225?v=3",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/greenkeeper%5Bbot%5D",
+          "html_url": "https://github.com/integration/greenkeeper",
+          "followers_url": "https://api.github.com/users/greenkeeper%5Bbot%5D/followers",
+          "following_url": "https://api.github.com/users/greenkeeper%5Bbot%5D/following{/other_user}",
+          "gists_url": "https://api.github.com/users/greenkeeper%5Bbot%5D/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/greenkeeper%5Bbot%5D/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/greenkeeper%5Bbot%5D/subscriptions",
+          "organizations_url": "https://api.github.com/users/greenkeeper%5Bbot%5D/orgs",
+          "repos_url": "https://api.github.com/users/greenkeeper%5Bbot%5D/repos",
+          "events_url": "https://api.github.com/users/greenkeeper%5Bbot%5D/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/greenkeeper%5Bbot%5D/received_events",
+          "type": "Bot",
+          "site_admin": false
+        },
+        "body": "Let\u2019s get started with automated dependency management for tayberry :muscle:\n\nThis pull request **updates all your dependencies to their latest version**. Having them all up to date really is the best starting point. I will look out for further dependency updates and make sure to handle them in isolation and in real-time, **as soon as you merge this pull request**.\n\n**I won\u2019t start sending you further updates, unless you have merged this very pull request**.\n\n---\n\n\n\n\n\n\n<details>\n<summary>\ud83c\udff7 How to check the status of this repository</summary>\nThere is a badge added to your README, indicating the status of this repository.\n\nThis is how your badge looks like :point_right:  ![Greenkeeper badge](https://badges.greenkeeper.io/reupen/tayberry.svg)\n</details>\n\n\n\n<details>\n<summary>\ud83d\udc69\u200d\ud83d\udcbb How to update this pull request</summary>\n\n```bash\n# change into your repository\u2019s directory\ngit fetch\ngit checkout greenkeeper/initial\nnpm install-test\n# adapt your code, so it\u2019s working again\ngit commit -m 'chore: adapt code to updated dependencies'\ngit push origin greenkeeper/initial\n```\n</details>\n\n<details>\n<summary>\ud83d\ude48 How to ignore certain dependencies</summary>\n\nIn case you can not, or do not want to update a certain dependency right now, you can of course just [change the `package.json` file back to your liking](https://github.com/reupen/tayberry/edit/greenkeeper/initial/package.json).\n\nAdd a `greenkeeper.ignore` field to your `package.json`, containing a list of dependencies you don\u2019t want to update right now.\n\n```js\n// package.json\n{\n  \u2026\n  \"greenkeeper\": {\n    \"ignore\": [\n      \"package-names\",\n      \"you-want-me-to-ignore\"\n    ]\n  }\n}\n```\n</details>\n\n<details>\n<summary>\u2728 How the updates will look like</summary>\n\nAs soon as you merge this pull request **I\u2019ll create a branch for every dependency update**, with the new version applied. The branch creation should trigger your testing services to check the new version. Using the results of these tests I\u2019ll try to open meaningful and helpful pull requests and issues, so your dependencies remain working and up-to-date.\n\n```diff\n-  \"underscore\": \"^1.6.0\"\n+  \"underscore\": \"^1.7.0\"\n```\n\nIn the above example you can see an in-range update. `1.7.0` is included in the old `^1.6.0` range, because of the [caret `^` character ](https://docs.npmjs.com/misc/semver#ranges).\nWhen the test services report success I\u2019ll delete the branch again, because no action needs to be taken \u2013 everything is fine.\nWhen there is a failure however, I\u2019ll create an issue so you know about the problem immediately.\n\nThis way every single version update of your dependencies will either continue to work with your project, or you\u2019ll get to know of potential problems immediately.\n\n```diff\n-  \"lodash\": \"^3.0.0\"\n+  \"lodash\": \"^4.0.0\"\n```\n\nIn this example the new version `4.0.0` is not included in the old `^3.0.0` range.\nFor version updates like these \u2013 let\u2019s call them \u201cout of range\u201d updates \u2013 you\u2019ll receive a pull request.\n\nNow **you no longer need to check for exciting new versions by hand** \u2013 I\u2019ll just let you know automatically.\nAnd the pull request will not only serve as a reminder to update. In case it passes your decent test suite that\u2019s a strong reason to merge right away :shipit:\n</details>\n\n<details>\n<summary>\ud83d\udc81\u200d\u2642\ufe0f Not sure how things are going to work exactly?</summary>\n\nThere is a collection of [frequently asked questions](https://greenkeeper.io/faq.html) and of course you may always [ask my humans](https://github.com/greenkeeperio/greenkeeper/issues/new).\n</details>\n\n\n---\n\n\nGood luck with your project and see you soon :sparkles:\n\nYour [Greenkeeper](https://greenkeeper.io) Bot :palm_tree:\n",
+        "created_at": "2017-01-27T20:59:12Z",
+        "updated_at": "2017-01-27T21:01:26Z",
+        "closed_at": "2017-01-27T21:01:26Z",
+        "merged_at": "2017-01-27T21:01:26Z",
+        "merge_commit_sha": "8b27c3f5f266ca8cc58b2901a073590b06f7d2d6",
+        "assignee": null,
+        "assignees": [],
+        "milestone": null,
+        "commits_url": "https://api.github.com/repos/reupen/tayberry/pulls/36/commits",
+        "review_comments_url": "https://api.github.com/repos/reupen/tayberry/pulls/36/comments",
+        "review_comment_url": "https://api.github.com/repos/reupen/tayberry/pulls/comments{/number}",
+        "comments_url": "https://api.github.com/repos/reupen/tayberry/issues/36/comments",
+        "statuses_url": "https://api.github.com/repos/reupen/tayberry/statuses/3750bea110240fcc100cddae5e0018527ede82e2",
+        "head": {
+          "label": "reupen:greenkeeper/initial",
+          "ref": "greenkeeper/initial",
+          "sha": "3750bea110240fcc100cddae5e0018527ede82e2",
+          "user": {
+            "login": "reupen",
+            "id": 12693549,
+            "avatar_url": "https://avatars.githubusercontent.com/u/12693549?v=3",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/reupen",
+            "html_url": "https://github.com/reupen",
+            "followers_url": "https://api.github.com/users/reupen/followers",
+            "following_url": "https://api.github.com/users/reupen/following{/other_user}",
+            "gists_url": "https://api.github.com/users/reupen/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/reupen/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/reupen/subscriptions",
+            "organizations_url": "https://api.github.com/users/reupen/orgs",
+            "repos_url": "https://api.github.com/users/reupen/repos",
+            "events_url": "https://api.github.com/users/reupen/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/reupen/received_events",
+            "type": "User",
+            "site_admin": false
+          },
+          "repo": {
+            "id": 44201072,
+            "name": "tayberry",
+            "full_name": "reupen/tayberry",
+            "owner": {
+              "login": "reupen",
+              "id": 12693549,
+              "avatar_url": "https://avatars.githubusercontent.com/u/12693549?v=3",
+              "gravatar_id": "",
+              "url": "https://api.github.com/users/reupen",
+              "html_url": "https://github.com/reupen",
+              "followers_url": "https://api.github.com/users/reupen/followers",
+              "following_url": "https://api.github.com/users/reupen/following{/other_user}",
+              "gists_url": "https://api.github.com/users/reupen/gists{/gist_id}",
+              "starred_url": "https://api.github.com/users/reupen/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/reupen/subscriptions",
+              "organizations_url": "https://api.github.com/users/reupen/orgs",
+              "repos_url": "https://api.github.com/users/reupen/repos",
+              "events_url": "https://api.github.com/users/reupen/events{/privacy}",
+              "received_events_url": "https://api.github.com/users/reupen/received_events",
+              "type": "User",
+              "site_admin": false
+            },
+            "private": false,
+            "html_url": "https://github.com/reupen/tayberry",
+            "description": "HTML5 canvas-based charting library",
+            "fork": false,
+            "url": "https://api.github.com/repos/reupen/tayberry",
+            "forks_url": "https://api.github.com/repos/reupen/tayberry/forks",
+            "keys_url": "https://api.github.com/repos/reupen/tayberry/keys{/key_id}",
+            "collaborators_url": "https://api.github.com/repos/reupen/tayberry/collaborators{/collaborator}",
+            "teams_url": "https://api.github.com/repos/reupen/tayberry/teams",
+            "hooks_url": "https://api.github.com/repos/reupen/tayberry/hooks",
+            "issue_events_url": "https://api.github.com/repos/reupen/tayberry/issues/events{/number}",
+            "events_url": "https://api.github.com/repos/reupen/tayberry/events",
+            "assignees_url": "https://api.github.com/repos/reupen/tayberry/assignees{/user}",
+            "branches_url": "https://api.github.com/repos/reupen/tayberry/branches{/branch}",
+            "tags_url": "https://api.github.com/repos/reupen/tayberry/tags",
+            "blobs_url": "https://api.github.com/repos/reupen/tayberry/git/blobs{/sha}",
+            "git_tags_url": "https://api.github.com/repos/reupen/tayberry/git/tags{/sha}",
+            "git_refs_url": "https://api.github.com/repos/reupen/tayberry/git/refs{/sha}",
+            "trees_url": "https://api.github.com/repos/reupen/tayberry/git/trees{/sha}",
+            "statuses_url": "https://api.github.com/repos/reupen/tayberry/statuses/{sha}",
+            "languages_url": "https://api.github.com/repos/reupen/tayberry/languages",
+            "stargazers_url": "https://api.github.com/repos/reupen/tayberry/stargazers",
+            "contributors_url": "https://api.github.com/repos/reupen/tayberry/contributors",
+            "subscribers_url": "https://api.github.com/repos/reupen/tayberry/subscribers",
+            "subscription_url": "https://api.github.com/repos/reupen/tayberry/subscription",
+            "commits_url": "https://api.github.com/repos/reupen/tayberry/commits{/sha}",
+            "git_commits_url": "https://api.github.com/repos/reupen/tayberry/git/commits{/sha}",
+            "comments_url": "https://api.github.com/repos/reupen/tayberry/comments{/number}",
+            "issue_comment_url": "https://api.github.com/repos/reupen/tayberry/issues/comments{/number}",
+            "contents_url": "https://api.github.com/repos/reupen/tayberry/contents/{+path}",
+            "compare_url": "https://api.github.com/repos/reupen/tayberry/compare/{base}...{head}",
+            "merges_url": "https://api.github.com/repos/reupen/tayberry/merges",
+            "archive_url": "https://api.github.com/repos/reupen/tayberry/{archive_format}{/ref}",
+            "downloads_url": "https://api.github.com/repos/reupen/tayberry/downloads",
+            "issues_url": "https://api.github.com/repos/reupen/tayberry/issues{/number}",
+            "pulls_url": "https://api.github.com/repos/reupen/tayberry/pulls{/number}",
+            "milestones_url": "https://api.github.com/repos/reupen/tayberry/milestones{/number}",
+            "notifications_url": "https://api.github.com/repos/reupen/tayberry/notifications{?since,all,participating}",
+            "labels_url": "https://api.github.com/repos/reupen/tayberry/labels{/name}",
+            "releases_url": "https://api.github.com/repos/reupen/tayberry/releases{/id}",
+            "deployments_url": "https://api.github.com/repos/reupen/tayberry/deployments",
+            "created_at": "2015-10-13T19:55:26Z",
+            "updated_at": "2016-12-12T20:24:45Z",
+            "pushed_at": "2017-01-27T21:01:26Z",
+            "git_url": "git://github.com/reupen/tayberry.git",
+            "ssh_url": "git@github.com:reupen/tayberry.git",
+            "clone_url": "https://github.com/reupen/tayberry.git",
+            "svn_url": "https://github.com/reupen/tayberry",
+            "homepage": "https://reupen.github.io/tayberry",
+            "size": 734,
+            "stargazers_count": 9,
+            "watchers_count": 9,
+            "language": "JavaScript",
+            "has_issues": true,
+            "has_downloads": true,
+            "has_wiki": true,
+            "has_pages": true,
+            "forks_count": 0,
+            "mirror_url": null,
+            "open_issues_count": 0,
+            "forks": 0,
+            "open_issues": 0,
+            "watchers": 9,
+            "default_branch": "master"
+          }
+        },
+        "base": {
+          "label": "reupen:master",
+          "ref": "master",
+          "sha": "ec1869165d8b135be7eead83d13ba658ab80f385",
+          "user": {
+            "login": "reupen",
+            "id": 12693549,
+            "avatar_url": "https://avatars.githubusercontent.com/u/12693549?v=3",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/reupen",
+            "html_url": "https://github.com/reupen",
+            "followers_url": "https://api.github.com/users/reupen/followers",
+            "following_url": "https://api.github.com/users/reupen/following{/other_user}",
+            "gists_url": "https://api.github.com/users/reupen/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/reupen/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/reupen/subscriptions",
+            "organizations_url": "https://api.github.com/users/reupen/orgs",
+            "repos_url": "https://api.github.com/users/reupen/repos",
+            "events_url": "https://api.github.com/users/reupen/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/reupen/received_events",
+            "type": "User",
+            "site_admin": false
+          },
+          "repo": {
+            "id": 44201072,
+            "name": "tayberry",
+            "full_name": "reupen/tayberry",
+            "owner": {
+              "login": "reupen",
+              "id": 12693549,
+              "avatar_url": "https://avatars.githubusercontent.com/u/12693549?v=3",
+              "gravatar_id": "",
+              "url": "https://api.github.com/users/reupen",
+              "html_url": "https://github.com/reupen",
+              "followers_url": "https://api.github.com/users/reupen/followers",
+              "following_url": "https://api.github.com/users/reupen/following{/other_user}",
+              "gists_url": "https://api.github.com/users/reupen/gists{/gist_id}",
+              "starred_url": "https://api.github.com/users/reupen/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/reupen/subscriptions",
+              "organizations_url": "https://api.github.com/users/reupen/orgs",
+              "repos_url": "https://api.github.com/users/reupen/repos",
+              "events_url": "https://api.github.com/users/reupen/events{/privacy}",
+              "received_events_url": "https://api.github.com/users/reupen/received_events",
+              "type": "User",
+              "site_admin": false
+            },
+            "private": false,
+            "html_url": "https://github.com/reupen/tayberry",
+            "description": "HTML5 canvas-based charting library",
+            "fork": false,
+            "url": "https://api.github.com/repos/reupen/tayberry",
+            "forks_url": "https://api.github.com/repos/reupen/tayberry/forks",
+            "keys_url": "https://api.github.com/repos/reupen/tayberry/keys{/key_id}",
+            "collaborators_url": "https://api.github.com/repos/reupen/tayberry/collaborators{/collaborator}",
+            "teams_url": "https://api.github.com/repos/reupen/tayberry/teams",
+            "hooks_url": "https://api.github.com/repos/reupen/tayberry/hooks",
+            "issue_events_url": "https://api.github.com/repos/reupen/tayberry/issues/events{/number}",
+            "events_url": "https://api.github.com/repos/reupen/tayberry/events",
+            "assignees_url": "https://api.github.com/repos/reupen/tayberry/assignees{/user}",
+            "branches_url": "https://api.github.com/repos/reupen/tayberry/branches{/branch}",
+            "tags_url": "https://api.github.com/repos/reupen/tayberry/tags",
+            "blobs_url": "https://api.github.com/repos/reupen/tayberry/git/blobs{/sha}",
+            "git_tags_url": "https://api.github.com/repos/reupen/tayberry/git/tags{/sha}",
+            "git_refs_url": "https://api.github.com/repos/reupen/tayberry/git/refs{/sha}",
+            "trees_url": "https://api.github.com/repos/reupen/tayberry/git/trees{/sha}",
+            "statuses_url": "https://api.github.com/repos/reupen/tayberry/statuses/{sha}",
+            "languages_url": "https://api.github.com/repos/reupen/tayberry/languages",
+            "stargazers_url": "https://api.github.com/repos/reupen/tayberry/stargazers",
+            "contributors_url": "https://api.github.com/repos/reupen/tayberry/contributors",
+            "subscribers_url": "https://api.github.com/repos/reupen/tayberry/subscribers",
+            "subscription_url": "https://api.github.com/repos/reupen/tayberry/subscription",
+            "commits_url": "https://api.github.com/repos/reupen/tayberry/commits{/sha}",
+            "git_commits_url": "https://api.github.com/repos/reupen/tayberry/git/commits{/sha}",
+            "comments_url": "https://api.github.com/repos/reupen/tayberry/comments{/number}",
+            "issue_comment_url": "https://api.github.com/repos/reupen/tayberry/issues/comments{/number}",
+            "contents_url": "https://api.github.com/repos/reupen/tayberry/contents/{+path}",
+            "compare_url": "https://api.github.com/repos/reupen/tayberry/compare/{base}...{head}",
+            "merges_url": "https://api.github.com/repos/reupen/tayberry/merges",
+            "archive_url": "https://api.github.com/repos/reupen/tayberry/{archive_format}{/ref}",
+            "downloads_url": "https://api.github.com/repos/reupen/tayberry/downloads",
+            "issues_url": "https://api.github.com/repos/reupen/tayberry/issues{/number}",
+            "pulls_url": "https://api.github.com/repos/reupen/tayberry/pulls{/number}",
+            "milestones_url": "https://api.github.com/repos/reupen/tayberry/milestones{/number}",
+            "notifications_url": "https://api.github.com/repos/reupen/tayberry/notifications{?since,all,participating}",
+            "labels_url": "https://api.github.com/repos/reupen/tayberry/labels{/name}",
+            "releases_url": "https://api.github.com/repos/reupen/tayberry/releases{/id}",
+            "deployments_url": "https://api.github.com/repos/reupen/tayberry/deployments",
+            "created_at": "2015-10-13T19:55:26Z",
+            "updated_at": "2016-12-12T20:24:45Z",
+            "pushed_at": "2017-01-27T21:01:26Z",
+            "git_url": "git://github.com/reupen/tayberry.git",
+            "ssh_url": "git@github.com:reupen/tayberry.git",
+            "clone_url": "https://github.com/reupen/tayberry.git",
+            "svn_url": "https://github.com/reupen/tayberry",
+            "homepage": "https://reupen.github.io/tayberry",
+            "size": 734,
+            "stargazers_count": 9,
+            "watchers_count": 9,
+            "language": "JavaScript",
+            "has_issues": true,
+            "has_downloads": true,
+            "has_wiki": true,
+            "has_pages": true,
+            "forks_count": 0,
+            "mirror_url": null,
+            "open_issues_count": 0,
+            "forks": 0,
+            "open_issues": 0,
+            "watchers": 9,
+            "default_branch": "master"
+          }
+        },
+        "_links": {
+          "self": {
+            "href": "https://api.github.com/repos/reupen/tayberry/pulls/36"
+          },
+          "html": {
+            "href": "https://github.com/reupen/tayberry/pull/36"
+          },
+          "issue": {
+            "href": "https://api.github.com/repos/reupen/tayberry/issues/36"
+          },
+          "comments": {
+            "href": "https://api.github.com/repos/reupen/tayberry/issues/36/comments"
+          },
+          "review_comments": {
+            "href": "https://api.github.com/repos/reupen/tayberry/pulls/36/comments"
+          },
+          "review_comment": {
+            "href": "https://api.github.com/repos/reupen/tayberry/pulls/comments{/number}"
+          },
+          "commits": {
+            "href": "https://api.github.com/repos/reupen/tayberry/pulls/36/commits"
+          },
+          "statuses": {
+            "href": "https://api.github.com/repos/reupen/tayberry/statuses/3750bea110240fcc100cddae5e0018527ede82e2"
+          }
+        },
+        "merged": true,
+        "mergeable": null,
+        "mergeable_state": "unknown",
+        "merged_by": {
+          "login": "reupen",
+          "id": 12693549,
+          "avatar_url": "https://avatars.githubusercontent.com/u/12693549?v=3",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/reupen",
+          "html_url": "https://github.com/reupen",
+          "followers_url": "https://api.github.com/users/reupen/followers",
+          "following_url": "https://api.github.com/users/reupen/following{/other_user}",
+          "gists_url": "https://api.github.com/users/reupen/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/reupen/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/reupen/subscriptions",
+          "organizations_url": "https://api.github.com/users/reupen/orgs",
+          "repos_url": "https://api.github.com/users/reupen/repos",
+          "events_url": "https://api.github.com/users/reupen/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/reupen/received_events",
+          "type": "User",
+          "site_admin": false
+        },
+        "comments": 0,
+        "review_comments": 0,
+        "maintainer_can_modify": false,
+        "commits": 3,
+        "additions": 3,
+        "deletions": 2,
+        "changed_files": 2
+      }
+    },
+    "public": true,
+    "created_at": "2017-01-27T21:01:26Z"
+  },
+  {
+    "id": "5226326909",
+    "type": "PushEvent",
+    "actor": {
+      "id": 12693549,
+      "login": "reupen",
+      "display_login": "reupen",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/reupen",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12693549?"
+    },
+    "repo": {
+      "id": 44201072,
+      "name": "reupen/tayberry",
+      "url": "https://api.github.com/repos/reupen/tayberry"
+    },
+    "payload": {
+      "push_id": 1525034386,
+      "size": 1,
+      "distinct_size": 1,
+      "ref": "refs/heads/greenkeeper/initial",
+      "head": "3750bea110240fcc100cddae5e0018527ede82e2",
+      "before": "3d8f687085e3d399d7c32bfadbde4785abe0bb84",
+      "commits": [
+        {
+          "sha": "3750bea110240fcc100cddae5e0018527ede82e2",
+          "author": {
+            "email": "reupen@users.noreply.github.com",
+            "name": "Reupen Shah"
+          },
+          "message": "Move Greenkeeper badge",
+          "distinct": true,
+          "url": "https://api.github.com/repos/reupen/tayberry/commits/3750bea110240fcc100cddae5e0018527ede82e2"
+        }
+      ]
+    },
+    "public": true,
+    "created_at": "2017-01-27T21:01:15Z"
+  },
+  {
+    "id": "5226315758",
+    "type": "DeleteEvent",
+    "actor": {
+      "id": 12693549,
+      "login": "reupen",
+      "display_login": "reupen",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/reupen",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12693549?"
+    },
+    "repo": {
+      "id": 44201072,
+      "name": "reupen/tayberry",
+      "url": "https://api.github.com/repos/reupen/tayberry"
+    },
+    "payload": {
+      "ref": "greenkeeper-browserify-14.0.0",
+      "ref_type": "branch",
+      "pusher_type": "user"
+    },
+    "public": true,
+    "created_at": "2017-01-27T20:59:12Z"
+  },
+  {
+    "id": "5226315441",
+    "type": "PushEvent",
+    "actor": {
+      "id": 12693549,
+      "login": "reupen",
+      "display_login": "reupen",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/reupen",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12693549?"
+    },
+    "repo": {
+      "id": 44201072,
+      "name": "reupen/tayberry",
+      "url": "https://api.github.com/repos/reupen/tayberry"
+    },
+    "payload": {
+      "push_id": 1525030618,
+      "size": 2,
+      "distinct_size": 1,
+      "ref": "refs/heads/master",
+      "head": "ec1869165d8b135be7eead83d13ba658ab80f385",
+      "before": "58c3f7b40c2e2dafe65fd6feda125a235761ea12",
+      "commits": [
+        {
+          "sha": "6ee46e86aae3b6719457e4ec53632672ec2365d8",
+          "author": {
+            "email": "support@greenkeeper.io",
+            "name": "greenkeeperio-bot"
+          },
+          "message": "chore(package): update browserify to version 14.0.0\n\nhttps://greenkeeper.io/",
+          "distinct": false,
+          "url": "https://api.github.com/repos/reupen/tayberry/commits/6ee46e86aae3b6719457e4ec53632672ec2365d8"
+        },
+        {
+          "sha": "ec1869165d8b135be7eead83d13ba658ab80f385",
+          "author": {
+            "email": "reupen@users.noreply.github.com",
+            "name": "Reupen Shah"
+          },
+          "message": "Merge pull request #34 from reupen/greenkeeper-browserify-14.0.0\n\nUpdate browserify to version 14.0.0 \ud83d\ude80",
+          "distinct": true,
+          "url": "https://api.github.com/repos/reupen/tayberry/commits/ec1869165d8b135be7eead83d13ba658ab80f385"
+        }
+      ]
+    },
+    "public": true,
+    "created_at": "2017-01-27T20:59:08Z"
+  },
+  {
+    "id": "5226315365",
+    "type": "PullRequestEvent",
+    "actor": {
+      "id": 12693549,
+      "login": "reupen",
+      "display_login": "reupen",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/reupen",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12693549?"
+    },
+    "repo": {
+      "id": 44201072,
+      "name": "reupen/tayberry",
+      "url": "https://api.github.com/repos/reupen/tayberry"
+    },
+    "payload": {
+      "action": "closed",
+      "number": 34,
+      "pull_request": {
+        "url": "https://api.github.com/repos/reupen/tayberry/pulls/34",
+        "id": 103054832,
+        "html_url": "https://github.com/reupen/tayberry/pull/34",
+        "diff_url": "https://github.com/reupen/tayberry/pull/34.diff",
+        "patch_url": "https://github.com/reupen/tayberry/pull/34.patch",
+        "issue_url": "https://api.github.com/repos/reupen/tayberry/issues/34",
+        "number": 34,
+        "state": "closed",
+        "locked": false,
+        "title": "Update browserify to version 14.0.0 \ud83d\ude80",
+        "user": {
+          "login": "greenkeeperio-bot",
+          "id": 14790466,
+          "avatar_url": "https://avatars.githubusercontent.com/u/14790466?v=3",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/greenkeeperio-bot",
+          "html_url": "https://github.com/greenkeeperio-bot",
+          "followers_url": "https://api.github.com/users/greenkeeperio-bot/followers",
+          "following_url": "https://api.github.com/users/greenkeeperio-bot/following{/other_user}",
+          "gists_url": "https://api.github.com/users/greenkeeperio-bot/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/greenkeeperio-bot/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/greenkeeperio-bot/subscriptions",
+          "organizations_url": "https://api.github.com/users/greenkeeperio-bot/orgs",
+          "repos_url": "https://api.github.com/users/greenkeeperio-bot/repos",
+          "events_url": "https://api.github.com/users/greenkeeperio-bot/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/greenkeeperio-bot/received_events",
+          "type": "User",
+          "site_admin": false
+        },
+        "body": "Hello lovely humans,\n\n[browserify](https://www.npmjs.com/package/browserify) just published its new version 14.0.0.\n\n<table>\n  <tr>\n    <th align=left>\n      State\n    </th>\n    <td>\n      Update :rocket:\n    </td>\n  </tr>\n  <tr>\n    <th align=left>\n      Dependency\n    </td>\n    <td>\n      browserify\n    </td>\n  </tr>\n  <tr>\n    <th align=left>\n      New version\n    </td>\n    <td>\n      14.0.0\n    </td>\n  </tr>\n  <tr>\n    <th align=left>\n      Type\n    </td>\n    <td>\n      devDependency\n    </td>\n  </tr>\n</table>\n\nThis version is **not covered** by your **current version range**.\n\nWithout accepting this pull request your project will work just like it did before. There might be a bunch of new features, fixes and perf improvements that the maintainers worked on for you though.\n\nI recommend you look into these changes and try to get onto the latest version of browserify.\nGiven that you have a decent test suite, a passing build is a strong indicator that you can take advantage of these changes by merging the proposed change into your project. Otherwise this branch is a great starting point for you to work on the update.\n\n\nDo you have any ideas how I could improve these pull requests? Did I report anything you think isn\u2019t right?\nAre you unsure about how things are supposed to work?\n\nThere is a collection of [frequently asked questions](https://greenkeeper.io/faq.html) and while I\u2019m just a bot, there is a group of people who are happy to teach me new things. [Let them know](https://github.com/greenkeeperio/greenkeeper/issues/new).\n\nGood luck with your project :sparkles:\n\nYou rock!\n\n:palm_tree:\n\n---\nThe new version differs by 15 commits .\n\n- [`691239d`](https://github.com/substack/node-browserify/commit/691239d48f2743e0ba5092e5cd9199a7a009e4a6) <code>14.0.0</code>\n- [`60cd894`](https://github.com/substack/node-browserify/commit/60cd89406b2a3b2a6c8ea52d201d797bd48f60fc) <code>changelog: 14.0.0</code>\n- [`d7ea3dd`](https://github.com/substack/node-browserify/commit/d7ea3ddaad30cee38a7d257775282e01843335a1) <code>Merge pull request #1678 from substack/buffer-5</code>\n- [`4f5d93b`](https://github.com/substack/node-browserify/commit/4f5d93baea51331b059120a31c9e5098565d3af0) <code>test: pass Uint8Array into vm context for buffer v5</code>\n- [`ae33350`](https://github.com/substack/node-browserify/commit/ae33350ec560f81e15d41b522550675cea32a5bf) <code>Update 'buffer' to v5.x</code>\n- [`6efcd65`](https://github.com/substack/node-browserify/commit/6efcd65b07caef7c08aa00bb42f9fdb665c2e554) <code>13.3.0</code>\n- [`cbc20ac`](https://github.com/substack/node-browserify/commit/cbc20ac14ce54666f972a4d5b8c60f51a9686d95) <code>use carat on assert package</code>\n- [`30b30ca`](https://github.com/substack/node-browserify/commit/30b30ca06193612613ad9e70f8a1de5b246e759c) <code>Merge branch 'patch-2' of https://github.com/jscissr/node-browserify</code>\n- [`1635157`](https://github.com/substack/node-browserify/commit/16351573dd752002d3c87fbdc2fd787b69194218) <code>13.2.0</code>\n- [`d2392a4`](https://github.com/substack/node-browserify/commit/d2392a4f2d7c30cb06a8fb5f2a9a71eb5a92c936) <code>Merge branch 'master' of https://github.com/laurynasl-wix/node-browserify</code>\n- [`bf061d8`](https://github.com/substack/node-browserify/commit/bf061d8d8cd7769c3a74ef4569d7adda60ef3f4f) <code>Allow configuring transformKey option for module-deps</code>\n- [`9e3b11e`](https://github.com/substack/node-browserify/commit/9e3b11e8d5325378fe2224b0e4484c074e43dbc4) <code>Merge branch 'master' of https://github.com/Abhinay077/node-browserify</code>\n- [`71240c2`](https://github.com/substack/node-browserify/commit/71240c296c2cc8c933e00d9ed2a8e639e3dc3530) <code>Update package.json</code>\n- [`5c87f47`](https://github.com/substack/node-browserify/commit/5c87f474a32081c46a0c3b2df853761927e37b33) <code>Update package.json</code>\n- [`dd9edd7`](https://github.com/substack/node-browserify/commit/dd9edd7e48aa11374865fe61c8d6338ccc80a755) <code>deps: update assert</code>\n\nSee the [full diff](https://github.com/substack/node-browserify/compare/c3a44243bff4402da96901f7cbde8f13355d05f7...691239d48f2743e0ba5092e5cd9199a7a009e4a6).\n\n---\n| \u2728 Try the all new [Greenkeeper GitHub Integration](https://git.io/uptodate) \u2728 |\n| --- |\n| With [Integrations](https://developer.github.com/early-access/integrations/) **first-class bot support** landed on GitHub and we\u2019ve rewritten Greenkeeper to take full advantage of it. **Simpler setup, fewer pull-requests, faster than ever**.<br><br> <details><summary>Screencast</summary><img src=\"https://cloud.githubusercontent.com/assets/908178/19868156/20c1c0c4-9fa7-11e6-9f17-611c51677dbd.gif\" /></details><br> [**Try it today**](https://git.io/uptodate). Free for private repositories during beta. |",
+        "created_at": "2017-01-25T04:43:50Z",
+        "updated_at": "2017-01-27T20:59:07Z",
+        "closed_at": "2017-01-27T20:59:07Z",
+        "merged_at": "2017-01-27T20:59:07Z",
+        "merge_commit_sha": "ec1869165d8b135be7eead83d13ba658ab80f385",
+        "assignee": null,
+        "assignees": [],
+        "milestone": null,
+        "commits_url": "https://api.github.com/repos/reupen/tayberry/pulls/34/commits",
+        "review_comments_url": "https://api.github.com/repos/reupen/tayberry/pulls/34/comments",
+        "review_comment_url": "https://api.github.com/repos/reupen/tayberry/pulls/comments{/number}",
+        "comments_url": "https://api.github.com/repos/reupen/tayberry/issues/34/comments",
+        "statuses_url": "https://api.github.com/repos/reupen/tayberry/statuses/6ee46e86aae3b6719457e4ec53632672ec2365d8",
+        "head": {
+          "label": "reupen:greenkeeper-browserify-14.0.0",
+          "ref": "greenkeeper-browserify-14.0.0",
+          "sha": "6ee46e86aae3b6719457e4ec53632672ec2365d8",
+          "user": {
+            "login": "reupen",
+            "id": 12693549,
+            "avatar_url": "https://avatars.githubusercontent.com/u/12693549?v=3",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/reupen",
+            "html_url": "https://github.com/reupen",
+            "followers_url": "https://api.github.com/users/reupen/followers",
+            "following_url": "https://api.github.com/users/reupen/following{/other_user}",
+            "gists_url": "https://api.github.com/users/reupen/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/reupen/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/reupen/subscriptions",
+            "organizations_url": "https://api.github.com/users/reupen/orgs",
+            "repos_url": "https://api.github.com/users/reupen/repos",
+            "events_url": "https://api.github.com/users/reupen/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/reupen/received_events",
+            "type": "User",
+            "site_admin": false
+          },
+          "repo": {
+            "id": 44201072,
+            "name": "tayberry",
+            "full_name": "reupen/tayberry",
+            "owner": {
+              "login": "reupen",
+              "id": 12693549,
+              "avatar_url": "https://avatars.githubusercontent.com/u/12693549?v=3",
+              "gravatar_id": "",
+              "url": "https://api.github.com/users/reupen",
+              "html_url": "https://github.com/reupen",
+              "followers_url": "https://api.github.com/users/reupen/followers",
+              "following_url": "https://api.github.com/users/reupen/following{/other_user}",
+              "gists_url": "https://api.github.com/users/reupen/gists{/gist_id}",
+              "starred_url": "https://api.github.com/users/reupen/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/reupen/subscriptions",
+              "organizations_url": "https://api.github.com/users/reupen/orgs",
+              "repos_url": "https://api.github.com/users/reupen/repos",
+              "events_url": "https://api.github.com/users/reupen/events{/privacy}",
+              "received_events_url": "https://api.github.com/users/reupen/received_events",
+              "type": "User",
+              "site_admin": false
+            },
+            "private": false,
+            "html_url": "https://github.com/reupen/tayberry",
+            "description": "HTML5 canvas-based charting library",
+            "fork": false,
+            "url": "https://api.github.com/repos/reupen/tayberry",
+            "forks_url": "https://api.github.com/repos/reupen/tayberry/forks",
+            "keys_url": "https://api.github.com/repos/reupen/tayberry/keys{/key_id}",
+            "collaborators_url": "https://api.github.com/repos/reupen/tayberry/collaborators{/collaborator}",
+            "teams_url": "https://api.github.com/repos/reupen/tayberry/teams",
+            "hooks_url": "https://api.github.com/repos/reupen/tayberry/hooks",
+            "issue_events_url": "https://api.github.com/repos/reupen/tayberry/issues/events{/number}",
+            "events_url": "https://api.github.com/repos/reupen/tayberry/events",
+            "assignees_url": "https://api.github.com/repos/reupen/tayberry/assignees{/user}",
+            "branches_url": "https://api.github.com/repos/reupen/tayberry/branches{/branch}",
+            "tags_url": "https://api.github.com/repos/reupen/tayberry/tags",
+            "blobs_url": "https://api.github.com/repos/reupen/tayberry/git/blobs{/sha}",
+            "git_tags_url": "https://api.github.com/repos/reupen/tayberry/git/tags{/sha}",
+            "git_refs_url": "https://api.github.com/repos/reupen/tayberry/git/refs{/sha}",
+            "trees_url": "https://api.github.com/repos/reupen/tayberry/git/trees{/sha}",
+            "statuses_url": "https://api.github.com/repos/reupen/tayberry/statuses/{sha}",
+            "languages_url": "https://api.github.com/repos/reupen/tayberry/languages",
+            "stargazers_url": "https://api.github.com/repos/reupen/tayberry/stargazers",
+            "contributors_url": "https://api.github.com/repos/reupen/tayberry/contributors",
+            "subscribers_url": "https://api.github.com/repos/reupen/tayberry/subscribers",
+            "subscription_url": "https://api.github.com/repos/reupen/tayberry/subscription",
+            "commits_url": "https://api.github.com/repos/reupen/tayberry/commits{/sha}",
+            "git_commits_url": "https://api.github.com/repos/reupen/tayberry/git/commits{/sha}",
+            "comments_url": "https://api.github.com/repos/reupen/tayberry/comments{/number}",
+            "issue_comment_url": "https://api.github.com/repos/reupen/tayberry/issues/comments{/number}",
+            "contents_url": "https://api.github.com/repos/reupen/tayberry/contents/{+path}",
+            "compare_url": "https://api.github.com/repos/reupen/tayberry/compare/{base}...{head}",
+            "merges_url": "https://api.github.com/repos/reupen/tayberry/merges",
+            "archive_url": "https://api.github.com/repos/reupen/tayberry/{archive_format}{/ref}",
+            "downloads_url": "https://api.github.com/repos/reupen/tayberry/downloads",
+            "issues_url": "https://api.github.com/repos/reupen/tayberry/issues{/number}",
+            "pulls_url": "https://api.github.com/repos/reupen/tayberry/pulls{/number}",
+            "milestones_url": "https://api.github.com/repos/reupen/tayberry/milestones{/number}",
+            "notifications_url": "https://api.github.com/repos/reupen/tayberry/notifications{?since,all,participating}",
+            "labels_url": "https://api.github.com/repos/reupen/tayberry/labels{/name}",
+            "releases_url": "https://api.github.com/repos/reupen/tayberry/releases{/id}",
+            "deployments_url": "https://api.github.com/repos/reupen/tayberry/deployments",
+            "created_at": "2015-10-13T19:55:26Z",
+            "updated_at": "2016-12-12T20:24:45Z",
+            "pushed_at": "2017-01-27T20:59:08Z",
+            "git_url": "git://github.com/reupen/tayberry.git",
+            "ssh_url": "git@github.com:reupen/tayberry.git",
+            "clone_url": "https://github.com/reupen/tayberry.git",
+            "svn_url": "https://github.com/reupen/tayberry",
+            "homepage": "https://reupen.github.io/tayberry",
+            "size": 734,
+            "stargazers_count": 9,
+            "watchers_count": 9,
+            "language": "JavaScript",
+            "has_issues": true,
+            "has_downloads": true,
+            "has_wiki": true,
+            "has_pages": true,
+            "forks_count": 0,
+            "mirror_url": null,
+            "open_issues_count": 0,
+            "forks": 0,
+            "open_issues": 0,
+            "watchers": 9,
+            "default_branch": "master"
+          }
+        },
+        "base": {
+          "label": "reupen:master",
+          "ref": "master",
+          "sha": "58c3f7b40c2e2dafe65fd6feda125a235761ea12",
+          "user": {
+            "login": "reupen",
+            "id": 12693549,
+            "avatar_url": "https://avatars.githubusercontent.com/u/12693549?v=3",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/reupen",
+            "html_url": "https://github.com/reupen",
+            "followers_url": "https://api.github.com/users/reupen/followers",
+            "following_url": "https://api.github.com/users/reupen/following{/other_user}",
+            "gists_url": "https://api.github.com/users/reupen/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/reupen/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/reupen/subscriptions",
+            "organizations_url": "https://api.github.com/users/reupen/orgs",
+            "repos_url": "https://api.github.com/users/reupen/repos",
+            "events_url": "https://api.github.com/users/reupen/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/reupen/received_events",
+            "type": "User",
+            "site_admin": false
+          },
+          "repo": {
+            "id": 44201072,
+            "name": "tayberry",
+            "full_name": "reupen/tayberry",
+            "owner": {
+              "login": "reupen",
+              "id": 12693549,
+              "avatar_url": "https://avatars.githubusercontent.com/u/12693549?v=3",
+              "gravatar_id": "",
+              "url": "https://api.github.com/users/reupen",
+              "html_url": "https://github.com/reupen",
+              "followers_url": "https://api.github.com/users/reupen/followers",
+              "following_url": "https://api.github.com/users/reupen/following{/other_user}",
+              "gists_url": "https://api.github.com/users/reupen/gists{/gist_id}",
+              "starred_url": "https://api.github.com/users/reupen/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/reupen/subscriptions",
+              "organizations_url": "https://api.github.com/users/reupen/orgs",
+              "repos_url": "https://api.github.com/users/reupen/repos",
+              "events_url": "https://api.github.com/users/reupen/events{/privacy}",
+              "received_events_url": "https://api.github.com/users/reupen/received_events",
+              "type": "User",
+              "site_admin": false
+            },
+            "private": false,
+            "html_url": "https://github.com/reupen/tayberry",
+            "description": "HTML5 canvas-based charting library",
+            "fork": false,
+            "url": "https://api.github.com/repos/reupen/tayberry",
+            "forks_url": "https://api.github.com/repos/reupen/tayberry/forks",
+            "keys_url": "https://api.github.com/repos/reupen/tayberry/keys{/key_id}",
+            "collaborators_url": "https://api.github.com/repos/reupen/tayberry/collaborators{/collaborator}",
+            "teams_url": "https://api.github.com/repos/reupen/tayberry/teams",
+            "hooks_url": "https://api.github.com/repos/reupen/tayberry/hooks",
+            "issue_events_url": "https://api.github.com/repos/reupen/tayberry/issues/events{/number}",
+            "events_url": "https://api.github.com/repos/reupen/tayberry/events",
+            "assignees_url": "https://api.github.com/repos/reupen/tayberry/assignees{/user}",
+            "branches_url": "https://api.github.com/repos/reupen/tayberry/branches{/branch}",
+            "tags_url": "https://api.github.com/repos/reupen/tayberry/tags",
+            "blobs_url": "https://api.github.com/repos/reupen/tayberry/git/blobs{/sha}",
+            "git_tags_url": "https://api.github.com/repos/reupen/tayberry/git/tags{/sha}",
+            "git_refs_url": "https://api.github.com/repos/reupen/tayberry/git/refs{/sha}",
+            "trees_url": "https://api.github.com/repos/reupen/tayberry/git/trees{/sha}",
+            "statuses_url": "https://api.github.com/repos/reupen/tayberry/statuses/{sha}",
+            "languages_url": "https://api.github.com/repos/reupen/tayberry/languages",
+            "stargazers_url": "https://api.github.com/repos/reupen/tayberry/stargazers",
+            "contributors_url": "https://api.github.com/repos/reupen/tayberry/contributors",
+            "subscribers_url": "https://api.github.com/repos/reupen/tayberry/subscribers",
+            "subscription_url": "https://api.github.com/repos/reupen/tayberry/subscription",
+            "commits_url": "https://api.github.com/repos/reupen/tayberry/commits{/sha}",
+            "git_commits_url": "https://api.github.com/repos/reupen/tayberry/git/commits{/sha}",
+            "comments_url": "https://api.github.com/repos/reupen/tayberry/comments{/number}",
+            "issue_comment_url": "https://api.github.com/repos/reupen/tayberry/issues/comments{/number}",
+            "contents_url": "https://api.github.com/repos/reupen/tayberry/contents/{+path}",
+            "compare_url": "https://api.github.com/repos/reupen/tayberry/compare/{base}...{head}",
+            "merges_url": "https://api.github.com/repos/reupen/tayberry/merges",
+            "archive_url": "https://api.github.com/repos/reupen/tayberry/{archive_format}{/ref}",
+            "downloads_url": "https://api.github.com/repos/reupen/tayberry/downloads",
+            "issues_url": "https://api.github.com/repos/reupen/tayberry/issues{/number}",
+            "pulls_url": "https://api.github.com/repos/reupen/tayberry/pulls{/number}",
+            "milestones_url": "https://api.github.com/repos/reupen/tayberry/milestones{/number}",
+            "notifications_url": "https://api.github.com/repos/reupen/tayberry/notifications{?since,all,participating}",
+            "labels_url": "https://api.github.com/repos/reupen/tayberry/labels{/name}",
+            "releases_url": "https://api.github.com/repos/reupen/tayberry/releases{/id}",
+            "deployments_url": "https://api.github.com/repos/reupen/tayberry/deployments",
+            "created_at": "2015-10-13T19:55:26Z",
+            "updated_at": "2016-12-12T20:24:45Z",
+            "pushed_at": "2017-01-27T20:59:08Z",
+            "git_url": "git://github.com/reupen/tayberry.git",
+            "ssh_url": "git@github.com:reupen/tayberry.git",
+            "clone_url": "https://github.com/reupen/tayberry.git",
+            "svn_url": "https://github.com/reupen/tayberry",
+            "homepage": "https://reupen.github.io/tayberry",
+            "size": 734,
+            "stargazers_count": 9,
+            "watchers_count": 9,
+            "language": "JavaScript",
+            "has_issues": true,
+            "has_downloads": true,
+            "has_wiki": true,
+            "has_pages": true,
+            "forks_count": 0,
+            "mirror_url": null,
+            "open_issues_count": 0,
+            "forks": 0,
+            "open_issues": 0,
+            "watchers": 9,
+            "default_branch": "master"
+          }
+        },
+        "_links": {
+          "self": {
+            "href": "https://api.github.com/repos/reupen/tayberry/pulls/34"
+          },
+          "html": {
+            "href": "https://github.com/reupen/tayberry/pull/34"
+          },
+          "issue": {
+            "href": "https://api.github.com/repos/reupen/tayberry/issues/34"
+          },
+          "comments": {
+            "href": "https://api.github.com/repos/reupen/tayberry/issues/34/comments"
+          },
+          "review_comments": {
+            "href": "https://api.github.com/repos/reupen/tayberry/pulls/34/comments"
+          },
+          "review_comment": {
+            "href": "https://api.github.com/repos/reupen/tayberry/pulls/comments{/number}"
+          },
+          "commits": {
+            "href": "https://api.github.com/repos/reupen/tayberry/pulls/34/commits"
+          },
+          "statuses": {
+            "href": "https://api.github.com/repos/reupen/tayberry/statuses/6ee46e86aae3b6719457e4ec53632672ec2365d8"
+          }
+        },
+        "merged": true,
+        "mergeable": null,
+        "mergeable_state": "unknown",
+        "merged_by": {
+          "login": "reupen",
+          "id": 12693549,
+          "avatar_url": "https://avatars.githubusercontent.com/u/12693549?v=3",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/reupen",
+          "html_url": "https://github.com/reupen",
+          "followers_url": "https://api.github.com/users/reupen/followers",
+          "following_url": "https://api.github.com/users/reupen/following{/other_user}",
+          "gists_url": "https://api.github.com/users/reupen/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/reupen/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/reupen/subscriptions",
+          "organizations_url": "https://api.github.com/users/reupen/orgs",
+          "repos_url": "https://api.github.com/users/reupen/repos",
+          "events_url": "https://api.github.com/users/reupen/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/reupen/received_events",
+          "type": "User",
+          "site_admin": false
+        },
+        "comments": 0,
+        "review_comments": 0,
+        "maintainer_can_modify": false,
+        "commits": 1,
+        "additions": 1,
+        "deletions": 1,
+        "changed_files": 1
+      }
+    },
+    "public": true,
+    "created_at": "2017-01-27T20:59:08Z"
+  },
+  {
+    "id": "5226304669",
+    "type": "PushEvent",
+    "actor": {
+      "id": 12693549,
+      "login": "reupen",
+      "display_login": "reupen",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/reupen",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12693549?"
+    },
+    "repo": {
+      "id": 44201072,
+      "name": "reupen/tayberry",
+      "url": "https://api.github.com/repos/reupen/tayberry"
+    },
+    "payload": {
+      "push_id": 1525027187,
+      "size": 3,
+      "distinct_size": 1,
+      "ref": "refs/heads/greenkeeper-browserify-14.0.0",
+      "head": "6ee46e86aae3b6719457e4ec53632672ec2365d8",
+      "before": "c54e7ee643943de6aaa832a0bc8235af8306e8ef",
+      "commits": [
+        {
+          "sha": "5f26ae66f3447f1896ba2d526a299ff73901f060",
+          "author": {
+            "email": "support@greenkeeper.io",
+            "name": "greenkeeperio-bot"
+          },
+          "message": "chore(package): update gulp-notify to version 3.0.0\n\nhttps://greenkeeper.io/",
+          "distinct": false,
+          "url": "https://api.github.com/repos/reupen/tayberry/commits/5f26ae66f3447f1896ba2d526a299ff73901f060"
+        },
+        {
+          "sha": "58c3f7b40c2e2dafe65fd6feda125a235761ea12",
+          "author": {
+            "email": "reupen@users.noreply.github.com",
+            "name": "Reupen Shah"
+          },
+          "message": "Merge pull request #35 from reupen/greenkeeper-gulp-notify-3.0.0\n\nUpdate gulp-notify to version 3.0.0 \ud83d\ude80",
+          "distinct": false,
+          "url": "https://api.github.com/repos/reupen/tayberry/commits/58c3f7b40c2e2dafe65fd6feda125a235761ea12"
+        },
+        {
+          "sha": "6ee46e86aae3b6719457e4ec53632672ec2365d8",
+          "author": {
+            "email": "support@greenkeeper.io",
+            "name": "greenkeeperio-bot"
+          },
+          "message": "chore(package): update browserify to version 14.0.0\n\nhttps://greenkeeper.io/",
+          "distinct": true,
+          "url": "https://api.github.com/repos/reupen/tayberry/commits/6ee46e86aae3b6719457e4ec53632672ec2365d8"
+        }
+      ]
+    },
+    "public": true,
+    "created_at": "2017-01-27T20:57:03Z"
+  },
+  {
+    "id": "5226303499",
+    "type": "DeleteEvent",
+    "actor": {
+      "id": 12693549,
+      "login": "reupen",
+      "display_login": "reupen",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/reupen",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12693549?"
+    },
+    "repo": {
+      "id": 44201072,
+      "name": "reupen/tayberry",
+      "url": "https://api.github.com/repos/reupen/tayberry"
+    },
+    "payload": {
+      "ref": "greenkeeper-gulp-notify-3.0.0",
+      "ref_type": "branch",
+      "pusher_type": "user"
+    },
+    "public": true,
+    "created_at": "2017-01-27T20:56:49Z"
+  },
+  {
+    "id": "5226303358",
+    "type": "PushEvent",
+    "actor": {
+      "id": 12693549,
+      "login": "reupen",
+      "display_login": "reupen",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/reupen",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12693549?"
+    },
+    "repo": {
+      "id": 44201072,
+      "name": "reupen/tayberry",
+      "url": "https://api.github.com/repos/reupen/tayberry"
+    },
+    "payload": {
+      "push_id": 1525026787,
+      "size": 2,
+      "distinct_size": 1,
+      "ref": "refs/heads/master",
+      "head": "58c3f7b40c2e2dafe65fd6feda125a235761ea12",
+      "before": "3adbea7dac6a5b35d03576d215a1a05b7235572c",
+      "commits": [
+        {
+          "sha": "5f26ae66f3447f1896ba2d526a299ff73901f060",
+          "author": {
+            "email": "support@greenkeeper.io",
+            "name": "greenkeeperio-bot"
+          },
+          "message": "chore(package): update gulp-notify to version 3.0.0\n\nhttps://greenkeeper.io/",
+          "distinct": false,
+          "url": "https://api.github.com/repos/reupen/tayberry/commits/5f26ae66f3447f1896ba2d526a299ff73901f060"
+        },
+        {
+          "sha": "58c3f7b40c2e2dafe65fd6feda125a235761ea12",
+          "author": {
+            "email": "reupen@users.noreply.github.com",
+            "name": "Reupen Shah"
+          },
+          "message": "Merge pull request #35 from reupen/greenkeeper-gulp-notify-3.0.0\n\nUpdate gulp-notify to version 3.0.0 \ud83d\ude80",
+          "distinct": true,
+          "url": "https://api.github.com/repos/reupen/tayberry/commits/58c3f7b40c2e2dafe65fd6feda125a235761ea12"
+        }
+      ]
+    },
+    "public": true,
+    "created_at": "2017-01-27T20:56:47Z"
+  },
+  {
+    "id": "5226303286",
+    "type": "PullRequestEvent",
+    "actor": {
+      "id": 12693549,
+      "login": "reupen",
+      "display_login": "reupen",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/reupen",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12693549?"
+    },
+    "repo": {
+      "id": 44201072,
+      "name": "reupen/tayberry",
+      "url": "https://api.github.com/repos/reupen/tayberry"
+    },
+    "payload": {
+      "action": "closed",
+      "number": 35,
+      "pull_request": {
+        "url": "https://api.github.com/repos/reupen/tayberry/pulls/35",
+        "id": 103562980,
+        "html_url": "https://github.com/reupen/tayberry/pull/35",
+        "diff_url": "https://github.com/reupen/tayberry/pull/35.diff",
+        "patch_url": "https://github.com/reupen/tayberry/pull/35.patch",
+        "issue_url": "https://api.github.com/repos/reupen/tayberry/issues/35",
+        "number": 35,
+        "state": "closed",
+        "locked": false,
+        "title": "Update gulp-notify to version 3.0.0 \ud83d\ude80",
+        "user": {
+          "login": "greenkeeperio-bot",
+          "id": 14790466,
+          "avatar_url": "https://avatars.githubusercontent.com/u/14790466?v=3",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/greenkeeperio-bot",
+          "html_url": "https://github.com/greenkeeperio-bot",
+          "followers_url": "https://api.github.com/users/greenkeeperio-bot/followers",
+          "following_url": "https://api.github.com/users/greenkeeperio-bot/following{/other_user}",
+          "gists_url": "https://api.github.com/users/greenkeeperio-bot/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/greenkeeperio-bot/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/greenkeeperio-bot/subscriptions",
+          "organizations_url": "https://api.github.com/users/greenkeeperio-bot/orgs",
+          "repos_url": "https://api.github.com/users/greenkeeperio-bot/repos",
+          "events_url": "https://api.github.com/users/greenkeeperio-bot/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/greenkeeperio-bot/received_events",
+          "type": "User",
+          "site_admin": false
+        },
+        "body": "Hello lovely humans,\n\n[gulp-notify](https://www.npmjs.com/package/gulp-notify) just published its new version 3.0.0.\n\n<table>\n  <tr>\n    <th align=left>\n      State\n    </th>\n    <td>\n      Update :rocket:\n    </td>\n  </tr>\n  <tr>\n    <th align=left>\n      Dependency\n    </td>\n    <td>\n      gulp-notify\n    </td>\n  </tr>\n  <tr>\n    <th align=left>\n      New version\n    </td>\n    <td>\n      3.0.0\n    </td>\n  </tr>\n  <tr>\n    <th align=left>\n      Type\n    </td>\n    <td>\n      devDependency\n    </td>\n  </tr>\n</table>\n\nThis version is **not covered** by your **current version range**.\n\nWithout accepting this pull request your project will work just like it did before. There might be a bunch of new features, fixes and perf improvements that the maintainers worked on for you though.\n\nI recommend you look into these changes and try to get onto the latest version of gulp-notify.\nGiven that you have a decent test suite, a passing build is a strong indicator that you can take advantage of these changes by merging the proposed change into your project. Otherwise this branch is a great starting point for you to work on the update.\n\n\nDo you have any ideas how I could improve these pull requests? Did I report anything you think isn\u2019t right?\nAre you unsure about how things are supposed to work?\n\nThere is a collection of [frequently asked questions](https://greenkeeper.io/faq.html) and while I\u2019m just a bot, there is a group of people who are happy to teach me new things. [Let them know](https://github.com/greenkeeperio/greenkeeper/issues/new).\n\nGood luck with your project :sparkles:\n\nYou rock!\n\n:palm_tree:\n\n---\nThe new version differs by 18 commits .\n\n- [`658efc5`](https://github.com/mikaelbr/gulp-notify/commit/658efc5d81ae0d5224a053100653d46000319373) <code>v3.0.0</code>\n- [`b1ba7a2`](https://github.com/mikaelbr/gulp-notify/commit/b1ba7a20c723dcf55a21ea3e9c631b9ed0f480d4) <code>Adds changelog for bump with node-notifier</code>\n- [`7d6944e`](https://github.com/mikaelbr/gulp-notify/commit/7d6944e91d05f9dc056b35f3d33ee8dcf9ef5607) <code>Updates all dependencies</code>\n- [`08244ea`](https://github.com/mikaelbr/gulp-notify/commit/08244eacacd8bf75891c57a86fac940be6c3144a) <code>Adds log files to ignore</code>\n- [`8df5320`](https://github.com/mikaelbr/gulp-notify/commit/8df5320233c32508e4841e11c00e7021b03c3659) <code>Bumps node-notifier dependency to latest</code>\n- [`507e21f`](https://github.com/mikaelbr/gulp-notify/commit/507e21f5bcba3cc4bf576af726af83527c2a9d78) <code>Merge pull request #105 from queicherius/patch-1</code>\n- [`f32b692`](https://github.com/mikaelbr/gulp-notify/commit/f32b6924d3a351c51b8c0b40aa2b199ac336bc2b) <code>Update node-notifier dependency</code>\n- [`f5d3f46`](https://github.com/mikaelbr/gulp-notify/commit/f5d3f46a68e9d7a3c9bcbf2eea2b887cb74a8263) <code>Merge pull request #103 from Toby-S/patch-1</code>\n- [`bbcc4d1`](https://github.com/mikaelbr/gulp-notify/commit/bbcc4d1061441f0db0fdb0798147ec4c8a6c08a2) <code>Correct indent_style in .editorconfig</code>\n- [`c0d7501`](https://github.com/mikaelbr/gulp-notify/commit/c0d75019d5d3a62b994b2747a73ea4dd171481e2) <code>Update README.md</code>\n- [`21eed88`](https://github.com/mikaelbr/gulp-notify/commit/21eed88a142e2b304821d522b7923e04732860d9) <code>Update README.md</code>\n- [`084f6a1`](https://github.com/mikaelbr/gulp-notify/commit/084f6a1f00abfda2891099396df2f77a177617f0) <code>Adds support for overriding host/port/appname onError. Fixes #91</code>\n- [`e45ef63`](https://github.com/mikaelbr/gulp-notify/commit/e45ef63203ad74f8fd9665a2fab0351caec64acd) <code>Merge pull request #85 from stevelacy/patch-1</code>\n- [`ef56795`](https://github.com/mikaelbr/gulp-notify/commit/ef5679596384dc63f5545ea1068ece6039442e29) <code>Update license attribute</code>\n- [`80a4c0d`](https://github.com/mikaelbr/gulp-notify/commit/80a4c0d913990df96f5bbb89d86b621cdd827efa) <code>Merge pull request #72 from dhruska/master</code>\n\n\nThere are 18 commits in total. See the [full diff](https://github.com/mikaelbr/gulp-notify/compare/5b44fcfa33d9b58740be3f32bdcdc7385a287768...658efc5d81ae0d5224a053100653d46000319373).\n\n---\n| \u2728 Try the all new [Greenkeeper GitHub Integration](https://git.io/uptodate) \u2728 |\n| --- |\n| With [Integrations](https://developer.github.com/early-access/integrations/) **first-class bot support** landed on GitHub and we\u2019ve rewritten Greenkeeper to take full advantage of it. **Simpler setup, fewer pull-requests, faster than ever**.<br><br> <details><summary>Screencast</summary><img src=\"https://cloud.githubusercontent.com/assets/908178/19868156/20c1c0c4-9fa7-11e6-9f17-611c51677dbd.gif\" /></details><br> [**Try it today**](https://git.io/uptodate). Free for private repositories during beta. |",
+        "created_at": "2017-01-27T20:41:59Z",
+        "updated_at": "2017-01-27T20:56:46Z",
+        "closed_at": "2017-01-27T20:56:46Z",
+        "merged_at": "2017-01-27T20:56:46Z",
+        "merge_commit_sha": "58c3f7b40c2e2dafe65fd6feda125a235761ea12",
+        "assignee": null,
+        "assignees": [],
+        "milestone": null,
+        "commits_url": "https://api.github.com/repos/reupen/tayberry/pulls/35/commits",
+        "review_comments_url": "https://api.github.com/repos/reupen/tayberry/pulls/35/comments",
+        "review_comment_url": "https://api.github.com/repos/reupen/tayberry/pulls/comments{/number}",
+        "comments_url": "https://api.github.com/repos/reupen/tayberry/issues/35/comments",
+        "statuses_url": "https://api.github.com/repos/reupen/tayberry/statuses/5f26ae66f3447f1896ba2d526a299ff73901f060",
+        "head": {
+          "label": "reupen:greenkeeper-gulp-notify-3.0.0",
+          "ref": "greenkeeper-gulp-notify-3.0.0",
+          "sha": "5f26ae66f3447f1896ba2d526a299ff73901f060",
+          "user": {
+            "login": "reupen",
+            "id": 12693549,
+            "avatar_url": "https://avatars.githubusercontent.com/u/12693549?v=3",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/reupen",
+            "html_url": "https://github.com/reupen",
+            "followers_url": "https://api.github.com/users/reupen/followers",
+            "following_url": "https://api.github.com/users/reupen/following{/other_user}",
+            "gists_url": "https://api.github.com/users/reupen/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/reupen/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/reupen/subscriptions",
+            "organizations_url": "https://api.github.com/users/reupen/orgs",
+            "repos_url": "https://api.github.com/users/reupen/repos",
+            "events_url": "https://api.github.com/users/reupen/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/reupen/received_events",
+            "type": "User",
+            "site_admin": false
+          },
+          "repo": {
+            "id": 44201072,
+            "name": "tayberry",
+            "full_name": "reupen/tayberry",
+            "owner": {
+              "login": "reupen",
+              "id": 12693549,
+              "avatar_url": "https://avatars.githubusercontent.com/u/12693549?v=3",
+              "gravatar_id": "",
+              "url": "https://api.github.com/users/reupen",
+              "html_url": "https://github.com/reupen",
+              "followers_url": "https://api.github.com/users/reupen/followers",
+              "following_url": "https://api.github.com/users/reupen/following{/other_user}",
+              "gists_url": "https://api.github.com/users/reupen/gists{/gist_id}",
+              "starred_url": "https://api.github.com/users/reupen/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/reupen/subscriptions",
+              "organizations_url": "https://api.github.com/users/reupen/orgs",
+              "repos_url": "https://api.github.com/users/reupen/repos",
+              "events_url": "https://api.github.com/users/reupen/events{/privacy}",
+              "received_events_url": "https://api.github.com/users/reupen/received_events",
+              "type": "User",
+              "site_admin": false
+            },
+            "private": false,
+            "html_url": "https://github.com/reupen/tayberry",
+            "description": "HTML5 canvas-based charting library",
+            "fork": false,
+            "url": "https://api.github.com/repos/reupen/tayberry",
+            "forks_url": "https://api.github.com/repos/reupen/tayberry/forks",
+            "keys_url": "https://api.github.com/repos/reupen/tayberry/keys{/key_id}",
+            "collaborators_url": "https://api.github.com/repos/reupen/tayberry/collaborators{/collaborator}",
+            "teams_url": "https://api.github.com/repos/reupen/tayberry/teams",
+            "hooks_url": "https://api.github.com/repos/reupen/tayberry/hooks",
+            "issue_events_url": "https://api.github.com/repos/reupen/tayberry/issues/events{/number}",
+            "events_url": "https://api.github.com/repos/reupen/tayberry/events",
+            "assignees_url": "https://api.github.com/repos/reupen/tayberry/assignees{/user}",
+            "branches_url": "https://api.github.com/repos/reupen/tayberry/branches{/branch}",
+            "tags_url": "https://api.github.com/repos/reupen/tayberry/tags",
+            "blobs_url": "https://api.github.com/repos/reupen/tayberry/git/blobs{/sha}",
+            "git_tags_url": "https://api.github.com/repos/reupen/tayberry/git/tags{/sha}",
+            "git_refs_url": "https://api.github.com/repos/reupen/tayberry/git/refs{/sha}",
+            "trees_url": "https://api.github.com/repos/reupen/tayberry/git/trees{/sha}",
+            "statuses_url": "https://api.github.com/repos/reupen/tayberry/statuses/{sha}",
+            "languages_url": "https://api.github.com/repos/reupen/tayberry/languages",
+            "stargazers_url": "https://api.github.com/repos/reupen/tayberry/stargazers",
+            "contributors_url": "https://api.github.com/repos/reupen/tayberry/contributors",
+            "subscribers_url": "https://api.github.com/repos/reupen/tayberry/subscribers",
+            "subscription_url": "https://api.github.com/repos/reupen/tayberry/subscription",
+            "commits_url": "https://api.github.com/repos/reupen/tayberry/commits{/sha}",
+            "git_commits_url": "https://api.github.com/repos/reupen/tayberry/git/commits{/sha}",
+            "comments_url": "https://api.github.com/repos/reupen/tayberry/comments{/number}",
+            "issue_comment_url": "https://api.github.com/repos/reupen/tayberry/issues/comments{/number}",
+            "contents_url": "https://api.github.com/repos/reupen/tayberry/contents/{+path}",
+            "compare_url": "https://api.github.com/repos/reupen/tayberry/compare/{base}...{head}",
+            "merges_url": "https://api.github.com/repos/reupen/tayberry/merges",
+            "archive_url": "https://api.github.com/repos/reupen/tayberry/{archive_format}{/ref}",
+            "downloads_url": "https://api.github.com/repos/reupen/tayberry/downloads",
+            "issues_url": "https://api.github.com/repos/reupen/tayberry/issues{/number}",
+            "pulls_url": "https://api.github.com/repos/reupen/tayberry/pulls{/number}",
+            "milestones_url": "https://api.github.com/repos/reupen/tayberry/milestones{/number}",
+            "notifications_url": "https://api.github.com/repos/reupen/tayberry/notifications{?since,all,participating}",
+            "labels_url": "https://api.github.com/repos/reupen/tayberry/labels{/name}",
+            "releases_url": "https://api.github.com/repos/reupen/tayberry/releases{/id}",
+            "deployments_url": "https://api.github.com/repos/reupen/tayberry/deployments",
+            "created_at": "2015-10-13T19:55:26Z",
+            "updated_at": "2016-12-12T20:24:45Z",
+            "pushed_at": "2017-01-27T20:56:46Z",
+            "git_url": "git://github.com/reupen/tayberry.git",
+            "ssh_url": "git@github.com:reupen/tayberry.git",
+            "clone_url": "https://github.com/reupen/tayberry.git",
+            "svn_url": "https://github.com/reupen/tayberry",
+            "homepage": "https://reupen.github.io/tayberry",
+            "size": 734,
+            "stargazers_count": 9,
+            "watchers_count": 9,
+            "language": "JavaScript",
+            "has_issues": true,
+            "has_downloads": true,
+            "has_wiki": true,
+            "has_pages": true,
+            "forks_count": 0,
+            "mirror_url": null,
+            "open_issues_count": 1,
+            "forks": 0,
+            "open_issues": 1,
+            "watchers": 9,
+            "default_branch": "master"
+          }
+        },
+        "base": {
+          "label": "reupen:master",
+          "ref": "master",
+          "sha": "3adbea7dac6a5b35d03576d215a1a05b7235572c",
+          "user": {
+            "login": "reupen",
+            "id": 12693549,
+            "avatar_url": "https://avatars.githubusercontent.com/u/12693549?v=3",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/reupen",
+            "html_url": "https://github.com/reupen",
+            "followers_url": "https://api.github.com/users/reupen/followers",
+            "following_url": "https://api.github.com/users/reupen/following{/other_user}",
+            "gists_url": "https://api.github.com/users/reupen/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/reupen/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/reupen/subscriptions",
+            "organizations_url": "https://api.github.com/users/reupen/orgs",
+            "repos_url": "https://api.github.com/users/reupen/repos",
+            "events_url": "https://api.github.com/users/reupen/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/reupen/received_events",
+            "type": "User",
+            "site_admin": false
+          },
+          "repo": {
+            "id": 44201072,
+            "name": "tayberry",
+            "full_name": "reupen/tayberry",
+            "owner": {
+              "login": "reupen",
+              "id": 12693549,
+              "avatar_url": "https://avatars.githubusercontent.com/u/12693549?v=3",
+              "gravatar_id": "",
+              "url": "https://api.github.com/users/reupen",
+              "html_url": "https://github.com/reupen",
+              "followers_url": "https://api.github.com/users/reupen/followers",
+              "following_url": "https://api.github.com/users/reupen/following{/other_user}",
+              "gists_url": "https://api.github.com/users/reupen/gists{/gist_id}",
+              "starred_url": "https://api.github.com/users/reupen/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/reupen/subscriptions",
+              "organizations_url": "https://api.github.com/users/reupen/orgs",
+              "repos_url": "https://api.github.com/users/reupen/repos",
+              "events_url": "https://api.github.com/users/reupen/events{/privacy}",
+              "received_events_url": "https://api.github.com/users/reupen/received_events",
+              "type": "User",
+              "site_admin": false
+            },
+            "private": false,
+            "html_url": "https://github.com/reupen/tayberry",
+            "description": "HTML5 canvas-based charting library",
+            "fork": false,
+            "url": "https://api.github.com/repos/reupen/tayberry",
+            "forks_url": "https://api.github.com/repos/reupen/tayberry/forks",
+            "keys_url": "https://api.github.com/repos/reupen/tayberry/keys{/key_id}",
+            "collaborators_url": "https://api.github.com/repos/reupen/tayberry/collaborators{/collaborator}",
+            "teams_url": "https://api.github.com/repos/reupen/tayberry/teams",
+            "hooks_url": "https://api.github.com/repos/reupen/tayberry/hooks",
+            "issue_events_url": "https://api.github.com/repos/reupen/tayberry/issues/events{/number}",
+            "events_url": "https://api.github.com/repos/reupen/tayberry/events",
+            "assignees_url": "https://api.github.com/repos/reupen/tayberry/assignees{/user}",
+            "branches_url": "https://api.github.com/repos/reupen/tayberry/branches{/branch}",
+            "tags_url": "https://api.github.com/repos/reupen/tayberry/tags",
+            "blobs_url": "https://api.github.com/repos/reupen/tayberry/git/blobs{/sha}",
+            "git_tags_url": "https://api.github.com/repos/reupen/tayberry/git/tags{/sha}",
+            "git_refs_url": "https://api.github.com/repos/reupen/tayberry/git/refs{/sha}",
+            "trees_url": "https://api.github.com/repos/reupen/tayberry/git/trees{/sha}",
+            "statuses_url": "https://api.github.com/repos/reupen/tayberry/statuses/{sha}",
+            "languages_url": "https://api.github.com/repos/reupen/tayberry/languages",
+            "stargazers_url": "https://api.github.com/repos/reupen/tayberry/stargazers",
+            "contributors_url": "https://api.github.com/repos/reupen/tayberry/contributors",
+            "subscribers_url": "https://api.github.com/repos/reupen/tayberry/subscribers",
+            "subscription_url": "https://api.github.com/repos/reupen/tayberry/subscription",
+            "commits_url": "https://api.github.com/repos/reupen/tayberry/commits{/sha}",
+            "git_commits_url": "https://api.github.com/repos/reupen/tayberry/git/commits{/sha}",
+            "comments_url": "https://api.github.com/repos/reupen/tayberry/comments{/number}",
+            "issue_comment_url": "https://api.github.com/repos/reupen/tayberry/issues/comments{/number}",
+            "contents_url": "https://api.github.com/repos/reupen/tayberry/contents/{+path}",
+            "compare_url": "https://api.github.com/repos/reupen/tayberry/compare/{base}...{head}",
+            "merges_url": "https://api.github.com/repos/reupen/tayberry/merges",
+            "archive_url": "https://api.github.com/repos/reupen/tayberry/{archive_format}{/ref}",
+            "downloads_url": "https://api.github.com/repos/reupen/tayberry/downloads",
+            "issues_url": "https://api.github.com/repos/reupen/tayberry/issues{/number}",
+            "pulls_url": "https://api.github.com/repos/reupen/tayberry/pulls{/number}",
+            "milestones_url": "https://api.github.com/repos/reupen/tayberry/milestones{/number}",
+            "notifications_url": "https://api.github.com/repos/reupen/tayberry/notifications{?since,all,participating}",
+            "labels_url": "https://api.github.com/repos/reupen/tayberry/labels{/name}",
+            "releases_url": "https://api.github.com/repos/reupen/tayberry/releases{/id}",
+            "deployments_url": "https://api.github.com/repos/reupen/tayberry/deployments",
+            "created_at": "2015-10-13T19:55:26Z",
+            "updated_at": "2016-12-12T20:24:45Z",
+            "pushed_at": "2017-01-27T20:56:46Z",
+            "git_url": "git://github.com/reupen/tayberry.git",
+            "ssh_url": "git@github.com:reupen/tayberry.git",
+            "clone_url": "https://github.com/reupen/tayberry.git",
+            "svn_url": "https://github.com/reupen/tayberry",
+            "homepage": "https://reupen.github.io/tayberry",
+            "size": 734,
+            "stargazers_count": 9,
+            "watchers_count": 9,
+            "language": "JavaScript",
+            "has_issues": true,
+            "has_downloads": true,
+            "has_wiki": true,
+            "has_pages": true,
+            "forks_count": 0,
+            "mirror_url": null,
+            "open_issues_count": 1,
+            "forks": 0,
+            "open_issues": 1,
+            "watchers": 9,
+            "default_branch": "master"
+          }
+        },
+        "_links": {
+          "self": {
+            "href": "https://api.github.com/repos/reupen/tayberry/pulls/35"
+          },
+          "html": {
+            "href": "https://github.com/reupen/tayberry/pull/35"
+          },
+          "issue": {
+            "href": "https://api.github.com/repos/reupen/tayberry/issues/35"
+          },
+          "comments": {
+            "href": "https://api.github.com/repos/reupen/tayberry/issues/35/comments"
+          },
+          "review_comments": {
+            "href": "https://api.github.com/repos/reupen/tayberry/pulls/35/comments"
+          },
+          "review_comment": {
+            "href": "https://api.github.com/repos/reupen/tayberry/pulls/comments{/number}"
+          },
+          "commits": {
+            "href": "https://api.github.com/repos/reupen/tayberry/pulls/35/commits"
+          },
+          "statuses": {
+            "href": "https://api.github.com/repos/reupen/tayberry/statuses/5f26ae66f3447f1896ba2d526a299ff73901f060"
+          }
+        },
+        "merged": true,
+        "mergeable": null,
+        "mergeable_state": "unknown",
+        "merged_by": {
+          "login": "reupen",
+          "id": 12693549,
+          "avatar_url": "https://avatars.githubusercontent.com/u/12693549?v=3",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/reupen",
+          "html_url": "https://github.com/reupen",
+          "followers_url": "https://api.github.com/users/reupen/followers",
+          "following_url": "https://api.github.com/users/reupen/following{/other_user}",
+          "gists_url": "https://api.github.com/users/reupen/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/reupen/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/reupen/subscriptions",
+          "organizations_url": "https://api.github.com/users/reupen/orgs",
+          "repos_url": "https://api.github.com/users/reupen/repos",
+          "events_url": "https://api.github.com/users/reupen/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/reupen/received_events",
+          "type": "User",
+          "site_admin": false
+        },
+        "comments": 0,
+        "review_comments": 0,
+        "maintainer_can_modify": false,
+        "commits": 1,
+        "additions": 1,
+        "deletions": 1,
+        "changed_files": 1
+      }
+    },
+    "public": true,
+    "created_at": "2017-01-27T20:56:47Z"
+  },
+  {
+    "id": "5226226934",
+    "type": "CreateEvent",
+    "actor": {
+      "id": 12693549,
+      "login": "reupen",
+      "display_login": "reupen",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/reupen",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12693549?"
+    },
+    "repo": {
+      "id": 44201072,
+      "name": "reupen/tayberry",
+      "url": "https://api.github.com/repos/reupen/tayberry"
+    },
+    "payload": {
+      "ref": "greenkeeper-gulp-notify-3.0.0",
+      "ref_type": "branch",
+      "master_branch": "master",
+      "description": "HTML5 canvas-based charting library",
+      "pusher_type": "user"
+    },
+    "public": true,
+    "created_at": "2017-01-27T20:41:57Z"
+  },
+  {
+    "id": "5212870882",
+    "type": "DeleteEvent",
+    "actor": {
+      "id": 12693549,
+      "login": "reupen",
+      "display_login": "reupen",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/reupen",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12693549?"
+    },
+    "repo": {
+      "id": 44201072,
+      "name": "reupen/tayberry",
+      "url": "https://api.github.com/repos/reupen/tayberry"
+    },
+    "payload": {
+      "ref": "greenkeeper-eslint-3.14.1",
+      "ref_type": "branch",
+      "pusher_type": "user"
+    },
+    "public": true,
+    "created_at": "2017-01-25T19:13:53Z"
+  },
+  {
+    "id": "5212831554",
+    "type": "CreateEvent",
+    "actor": {
+      "id": 12693549,
+      "login": "reupen",
+      "display_login": "reupen",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/reupen",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12693549?"
+    },
+    "repo": {
+      "id": 44201072,
+      "name": "reupen/tayberry",
+      "url": "https://api.github.com/repos/reupen/tayberry"
+    },
+    "payload": {
+      "ref": "greenkeeper-eslint-3.14.1",
+      "ref_type": "branch",
+      "master_branch": "master",
+      "description": "HTML5 canvas-based charting library",
+      "pusher_type": "user"
+    },
+    "public": true,
+    "created_at": "2017-01-25T19:07:41Z"
+  },
+  {
+    "id": "5211478899",
+    "type": "DeleteEvent",
+    "actor": {
+      "id": 12693549,
+      "login": "reupen",
+      "display_login": "reupen",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/reupen",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12693549?"
+    },
+    "repo": {
+      "id": 44201072,
+      "name": "reupen/tayberry",
+      "url": "https://api.github.com/repos/reupen/tayberry"
+    },
+    "payload": {
+      "ref": "greenkeeper-karma-browserify-5.1.1",
+      "ref_type": "branch",
+      "pusher_type": "user"
+    },
+    "public": true,
+    "created_at": "2017-01-25T15:41:36Z"
+  },
+  {
+    "id": "5211468805",
+    "type": "CreateEvent",
+    "actor": {
+      "id": 12693549,
+      "login": "reupen",
+      "display_login": "reupen",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/reupen",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12693549?"
+    },
+    "repo": {
+      "id": 44201072,
+      "name": "reupen/tayberry",
+      "url": "https://api.github.com/repos/reupen/tayberry"
+    },
+    "payload": {
+      "ref": "greenkeeper-karma-browserify-5.1.1",
+      "ref_type": "branch",
+      "master_branch": "master",
+      "description": "HTML5 canvas-based charting library",
+      "pusher_type": "user"
+    },
+    "public": true,
+    "created_at": "2017-01-25T15:40:15Z"
+  },
+  {
+    "id": "5208947216",
+    "type": "DeleteEvent",
+    "actor": {
+      "id": 12693549,
+      "login": "reupen",
+      "display_login": "reupen",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/reupen",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12693549?"
+    },
+    "repo": {
+      "id": 44201072,
+      "name": "reupen/tayberry",
+      "url": "https://api.github.com/repos/reupen/tayberry"
+    },
+    "payload": {
+      "ref": "greenkeeper-watchify-3.9.0",
+      "ref_type": "branch",
+      "pusher_type": "user"
+    },
+    "public": true,
+    "created_at": "2017-01-25T07:26:09Z"
+  },
+  {
+    "id": "5208943051",
+    "type": "CreateEvent",
+    "actor": {
+      "id": 12693549,
+      "login": "reupen",
+      "display_login": "reupen",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/reupen",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12693549?"
+    },
+    "repo": {
+      "id": 44201072,
+      "name": "reupen/tayberry",
+      "url": "https://api.github.com/repos/reupen/tayberry"
+    },
+    "payload": {
+      "ref": "greenkeeper-watchify-3.9.0",
+      "ref_type": "branch",
+      "master_branch": "master",
+      "description": "HTML5 canvas-based charting library",
+      "pusher_type": "user"
+    },
+    "public": true,
+    "created_at": "2017-01-25T07:24:54Z"
+  },
+  {
+    "id": "5208484877",
+    "type": "CreateEvent",
+    "actor": {
+      "id": 12693549,
+      "login": "reupen",
+      "display_login": "reupen",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/reupen",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12693549?"
+    },
+    "repo": {
+      "id": 44201072,
+      "name": "reupen/tayberry",
+      "url": "https://api.github.com/repos/reupen/tayberry"
+    },
+    "payload": {
+      "ref": "greenkeeper-browserify-14.0.0",
+      "ref_type": "branch",
+      "master_branch": "master",
+      "description": "HTML5 canvas-based charting library",
+      "pusher_type": "user"
+    },
+    "public": true,
+    "created_at": "2017-01-25T04:43:48Z"
+  },
+  {
+    "id": "5205611199",
+    "type": "DeleteEvent",
+    "actor": {
+      "id": 12693549,
+      "login": "reupen",
+      "display_login": "reupen",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/reupen",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12693549?"
+    },
+    "repo": {
+      "id": 44201072,
+      "name": "reupen/tayberry",
+      "url": "https://api.github.com/repos/reupen/tayberry"
+    },
+    "payload": {
+      "ref": "greenkeeper-gulp-uglify-2.0.1",
+      "ref_type": "branch",
+      "pusher_type": "user"
+    },
+    "public": true,
+    "created_at": "2017-01-24T18:24:20Z"
+  },
+  {
+    "id": "5205602224",
+    "type": "CreateEvent",
+    "actor": {
+      "id": 12693549,
+      "login": "reupen",
+      "display_login": "reupen",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/reupen",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12693549?"
+    },
+    "repo": {
+      "id": 44201072,
+      "name": "reupen/tayberry",
+      "url": "https://api.github.com/repos/reupen/tayberry"
+    },
+    "payload": {
+      "ref": "greenkeeper-gulp-uglify-2.0.1",
+      "ref_type": "branch",
+      "master_branch": "master",
+      "description": "HTML5 canvas-based charting library",
+      "pusher_type": "user"
+    },
+    "public": true,
+    "created_at": "2017-01-24T18:22:59Z"
+  },
+  {
+    "id": "5189052252",
+    "type": "DeleteEvent",
+    "actor": {
+      "id": 12693549,
+      "login": "reupen",
+      "display_login": "reupen",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/reupen",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12693549?"
+    },
+    "repo": {
+      "id": 44201072,
+      "name": "reupen/tayberry",
+      "url": "https://api.github.com/repos/reupen/tayberry"
+    },
+    "payload": {
+      "ref": "greenkeeper-eslint-3.14.0",
+      "ref_type": "branch",
+      "pusher_type": "user"
+    },
+    "public": true,
+    "created_at": "2017-01-20T21:54:50Z"
+  },
+  {
+    "id": "5189012911",
+    "type": "CreateEvent",
+    "actor": {
+      "id": 12693549,
+      "login": "reupen",
+      "display_login": "reupen",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/reupen",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12693549?"
+    },
+    "repo": {
+      "id": 44201072,
+      "name": "reupen/tayberry",
+      "url": "https://api.github.com/repos/reupen/tayberry"
+    },
+    "payload": {
+      "ref": "greenkeeper-eslint-3.14.0",
+      "ref_type": "branch",
+      "master_branch": "master",
+      "description": "HTML5 canvas-based charting library",
+      "pusher_type": "user"
+    },
+    "public": true,
+    "created_at": "2017-01-20T21:47:24Z"
+  },
+  {
+    "id": "5184837937",
+    "type": "DeleteEvent",
+    "actor": {
+      "id": 12693549,
+      "login": "reupen",
+      "display_login": "reupen",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/reupen",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12693549?"
+    },
+    "repo": {
+      "id": 44201072,
+      "name": "reupen/tayberry",
+      "url": "https://api.github.com/repos/reupen/tayberry"
+    },
+    "payload": {
+      "ref": "greenkeeper-babel-core-6.22.1",
+      "ref_type": "branch",
+      "pusher_type": "user"
+    },
+    "public": true,
+    "created_at": "2017-01-20T08:12:27Z"
+  }
+]

@@ -7,7 +7,9 @@ import pytest
 FAKE_RESPONSES = {
     '/users/reupen': 'users/reupen.json',
     '/users/reupen/repos': 'users/reupen/repos.json',
-    '/repos/reupen/columns_ui': 'repos/reupen/columns_ui.json'
+    '/repos/reupen/columns_ui': 'repos/reupen/columns_ui.json',
+    '/repos/reupen/columns_ui/branches':
+        'repos/reupen/columns_ui/branches.json'
 }
 
 

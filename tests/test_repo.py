@@ -9,10 +9,7 @@ import aiogithub.objects
 from .mocks import fake_response  # noqa
 
 
-@pytest.mark.asyncio
-async def test_get_repo():
-    with aiogithub.GitHub() as gh:
-        repo = await gh.get_repo('reupen', 'columns_ui')
+def _check_columns_ui_repo(repo):
     assert isinstance(repo.owner, aiogithub.objects.User)
     assert repo.id == 29824265
     assert repo.owner.login == 'reupen'
@@ -32,8 +29,50 @@ async def test_get_repo():
     assert repo.has_pages is False
     assert repo.has_wiki is True
     assert repo.created_at == dateutil.parser.parse('2015-01-25T18:05:12Z')
-    assert repo.updated_at == dateutil.parser.parse('2016-03-04T18:24:42Z')
-    assert repo.pushed_at == dateutil.parser.parse('2016-02-21T11:41:43Z')
+    assert repo.updated_at == dateutil.parser.parse('2017-02-06T17:31:08Z')
+    assert repo.pushed_at == dateutil.parser.parse('2017-02-07T20:21:01Z')
 
-    # Check that refetching works
+
+@pytest.mark.asyncio
+async def test_get_repo():
+    with aiogithub.GitHub() as gh:
+        repo = await gh.get_repo('reupen', 'columns_ui')
+    _check_columns_ui_repo(repo)
+
+
+@pytest.mark.asyncio
+async def test_get_repo_defer():
+    with aiogithub.GitHub() as gh:
+        repo = await gh.get_repo('reupen', 'columns_ui', defer_fetch=True)
+
     await repo.fetch_data()
+    _check_columns_ui_repo(repo)
+
+
+@pytest.mark.asyncio
+async def test_get_repo_refetch():
+    with aiogithub.GitHub() as gh:
+        repo = await gh.get_repo('reupen', 'columns_ui')
+
+    await repo.fetch_data()
+    _check_columns_ui_repo(repo)
+
+
+@pytest.mark.asyncio
+async def test_get_repo_branches():
+    with aiogithub.GitHub() as gh:
+        repo = await gh.get_repo('reupen', 'columns_ui')
+    branches = await repo.get_branches()
+    assert isinstance(branches, aiogithub.objects.BaseList)
+    branches_list = await branches.get_all()
+    assert isinstance(branches_list[0], aiogithub.objects.Branch)
+
+
+@pytest.mark.asyncio
+async def test_get_repo_branches_defer():
+    with aiogithub.GitHub() as gh:
+        repo = await gh.get_repo('reupen', 'columns_ui', defer_fetch=True)
+    branches = await repo.get_branches()
+    assert isinstance(branches, aiogithub.objects.BaseList)
+    branches_list = await branches.get_all()
+    assert isinstance(branches_list[0], aiogithub.objects.Branch)

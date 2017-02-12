@@ -22,14 +22,14 @@ async def test_get_user():
     assert user.blog is None
     assert user.location == 'London, UK'
     assert user.email is None
-    assert user.hireable is None
+    assert user.hireable is True
     assert user.bio is None
-    assert user.public_repos == 13
+    assert user.public_repos == 14
     assert user.public_gists == 0
-    assert user.followers == 1
+    assert user.followers == 10
     assert user.following == 0
     assert user.created_at == dateutil.parser.parse('2015-06-01T09:04:54Z')
-    assert user.updated_at == dateutil.parser.parse('2016-03-05T11:37:45Z')
+    assert user.updated_at == dateutil.parser.parse('2017-01-19T20:53:53Z')
 
     # Check that refetching works
     await user.fetch_data()
@@ -44,5 +44,5 @@ async def test_get_user_repos():
     repo_list = await repos.get_all()
     assert isinstance(repo_list, list)
     assert isinstance(repo_list[0], aiogithub.objects.Repo)
-    assert repo_list[0].name == 'album_list_panel'
-    assert len(repo_list) == 13
+    assert repo_list[0].name == 'aiogithub'
+    assert len(repo_list) == 14

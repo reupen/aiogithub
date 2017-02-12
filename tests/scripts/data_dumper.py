@@ -1,14 +1,25 @@
 import asyncio
-import urllib.parse
+import json
 import os.path
+import urllib.parse
+from collections import OrderedDict
 
 import aiohttp
 
 URLS = {
     '/users/reupen',
     '/users/reupen/repos',
+    '/users/reupen/events',
+    '/users/reupen/followers',
+    '/users/reupen/received_events',
+    '/users/reupen/starred',
+    '/users/reupen/subscriptions',
     '/repos/reupen/columns_ui',
-    '/repos/reupen/columns_ui/branches'
+    '/repos/reupen/columns_ui/assignees',
+    '/repos/reupen/columns_ui/commits',
+    '/repos/reupen/columns_ui/branches',
+    '/repos/reupen/columns_ui/releases',
+    '/repos/reupen/columns_ui/stargazers',
 }
 
 BASE_URL = 'https://api.github.com'
@@ -26,13 +37,15 @@ async def main():
                 assert response.status == 200
                 data = await response.text()
                 out_path = os.path.abspath(
-                    os.path.join(os.path.dirname(__file__), '..', 'mocks',
+                    os.path.join(os.path.dirname(__file__), '..', 'mock_data',
                                  url_parts.path[1:] + '.json'))
 
                 os.makedirs(os.path.dirname(out_path), exist_ok=True)
 
-                with open(out_path, 'w') as f:
-                    f.write(data)
+                parsed_data = json.loads(data, object_pairs_hook=OrderedDict)
+
+                with open(out_path, 'w', encoding='utf-8') as f:
+                    json.dump(parsed_data, f, indent=2)
 
     client.close()
 

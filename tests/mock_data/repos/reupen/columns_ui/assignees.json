@@ -1,0 +1,40 @@
+[
+  {
+    "login": "msquared2",
+    "id": 10454509,
+    "avatar_url": "https://avatars.githubusercontent.com/u/10454509?v=3",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/msquared2",
+    "html_url": "https://github.com/msquared2",
+    "followers_url": "https://api.github.com/users/msquared2/followers",
+    "following_url": "https://api.github.com/users/msquared2/following{/other_user}",
+    "gists_url": "https://api.github.com/users/msquared2/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/msquared2/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/msquared2/subscriptions",
+    "organizations_url": "https://api.github.com/users/msquared2/orgs",
+    "repos_url": "https://api.github.com/users/msquared2/repos",
+    "events_url": "https://api.github.com/users/msquared2/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/msquared2/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  {
+    "login": "reupen",
+    "id": 12693549,
+    "avatar_url": "https://avatars.githubusercontent.com/u/12693549?v=3",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/reupen",
+    "html_url": "https://github.com/reupen",
+    "followers_url": "https://api.github.com/users/reupen/followers",
+    "following_url": "https://api.github.com/users/reupen/following{/other_user}",
+    "gists_url": "https://api.github.com/users/reupen/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/reupen/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/reupen/subscriptions",
+    "organizations_url": "https://api.github.com/users/reupen/orgs",
+    "repos_url": "https://api.github.com/users/reupen/repos",
+    "events_url": "https://api.github.com/users/reupen/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/reupen/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+]
