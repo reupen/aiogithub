@@ -124,7 +124,7 @@ class BaseResponseObject(BaseObject):
             response_tuple = await self._client.get_relative_url(
                 url, element_type
             )
-        return element_type(*response_tuple)
+        return element_type(self._client, *response_tuple)
 
     @property
     def limits(self):
