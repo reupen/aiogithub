@@ -1,10 +1,11 @@
 from datetime import datetime
+from typing import List
 
 from aiogithub.objects.response import BaseResponseObject
 from aiogithub.utils import return_key
 from aiogithub import objects
 from aiogithub.objects.head_base import Head, Base
-from aiogithub.objects.user import User
+from aiogithub.objects.user import PartialUser
 
 
 class PullRequest(BaseResponseObject):
@@ -28,9 +29,11 @@ class PullRequest(BaseResponseObject):
     @staticmethod
     def _get_key_mappings():
         return {
-            'user': objects.User,
+            'user': objects.PartialUser,
             'repo': objects.Repo,
             'assignee': objects.User,
+            'assignees': List[objects.PartialUser],
+            'requested_reviewers': List[objects.PartialUser],
             'milestone': objects.Milestone,
             'head': objects.Head,
             'base': objects.Base
@@ -114,6 +117,11 @@ class PullRequest(BaseResponseObject):
 
     @property
     @return_key
+    def assignees(self) -> 'objects.BaseList[objects.PartialUser]':
+        pass
+
+    @property
+    @return_key
     def milestone(self) -> objects.Milestone:
         pass
 
@@ -154,7 +162,7 @@ class PullRequest(BaseResponseObject):
 
     @property
     @return_key
-    def user(self) -> User:
+    def user(self) -> PartialUser:
         pass
 
     @property

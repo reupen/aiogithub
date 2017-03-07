@@ -16,6 +16,12 @@ class Review(BaseResponseObject):
         'comments_url': _url + '/comments'
     }
 
+    @staticmethod
+    def _get_key_mappings():
+        return {
+            'user': objects.PartialUser
+        }
+
     async def get_pull_request(self) -> 'objects.PullRequest':
         return await self._get_related_url('pull_request_url',
                                            objects.PullRequest)
@@ -25,6 +31,13 @@ class Review(BaseResponseObject):
     def id(self) -> Optional[int]:
         """
         :type: int
+        """
+
+    @property
+    @return_key
+    def user(self) -> objects.PartialUser:
+        """
+        :type: objects.PartialUser
         """
 
     @property
