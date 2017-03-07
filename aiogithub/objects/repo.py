@@ -180,7 +180,7 @@ class PartialRepo(BaseResponseObject):
 
     def _get_related_fetch_params(self):
         return {
-            'repo': self._fetch_params
+            'repo': {**self, **self._fetch_params}
         }
 
 

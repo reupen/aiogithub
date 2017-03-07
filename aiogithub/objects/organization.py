@@ -52,6 +52,11 @@ class PartialOrganization(BaseResponseObject):
             'public_members_url', objects.PartialUser
         )
 
+    def _get_related_fetch_params(self):
+        return {
+            'owner': self._fetch_params
+        }
+
     @property
     @return_key
     def login(self) -> str:
