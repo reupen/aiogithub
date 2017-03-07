@@ -22,7 +22,7 @@ class BaseObject(dict):
     def __getattr__(self, attr):
         if attr in self:
             return self.get(attr)
-        raise AttributeError
+        raise AttributeError(attr)
 
     def _normalise_document(self, document):
         for key in document:
