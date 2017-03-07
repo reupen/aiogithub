@@ -113,13 +113,18 @@ class BaseResponseObject(BaseObject):
         if property_name in self:
             template = self[property_name]
             url = uritemplate.expand(template, kwargs)
-            return await self._client.get_absolute_url(url, element_type)
+            response_tuple = await self._client.get_absolute_url(
+                url, element_type
+            )
         else:
             template = self._default_urls[property_name].format(
                 **self._fetch_params
             )
             url = uritemplate.expand(template, kwargs)
-            return await self._client.get_relative_url(url, element_type)
+            response_tuple = await self._client.get_relative_url(
+                url, element_type
+            )
+        return element_type(*response_tuple)
 
     @property
     def limits(self):
