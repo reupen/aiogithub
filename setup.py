@@ -5,10 +5,11 @@ import os
 from setuptools import setup, find_packages
 
 setup_requires = ['setuptools_scm']
-args = set(sys.argv)
+args = frozenset(sys.argv)
 
 is_test = {'pytest', 'test'} & args
 is_sphinx = 'build_sphinx' in args
+is_flake8 = 'flake8' in args
 
 if is_test:
     setup_requires += (
@@ -21,6 +22,11 @@ if is_sphinx:
         'sphinx-rtd-theme',
         'sphinxcontrib-asyncio',
         'Sphinx~=1.4.6'
+    )
+
+if is_flake8:
+    setup_requires += (
+        'flake8~=3.3.0',
     )
 
 setup(

@@ -10,4 +10,6 @@ before_install: true
 install:
   - pip install -U pip
   - pip install -U setuptools
-script: python setup.py test
+script:
+  - python setup.py flake8
+  - python setup.py test
