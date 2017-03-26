@@ -39,8 +39,7 @@ async def test_get_user():
 async def test_get_user_repos():
     with aiogithub.GitHub() as gh:
         user = await gh.get_user('reupen', defer_fetch=False)
-        repos = await user.get_repos()
-    repo_list = await repos.all()
+        repo_list = await user.get_repos().all()
     assert isinstance(repo_list, list)
     assert isinstance(repo_list[0], aiogithub.objects.Repo)
     assert repo_list[0].name == 'aiogithub'

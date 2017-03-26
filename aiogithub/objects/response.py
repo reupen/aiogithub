@@ -1,4 +1,4 @@
-from typing import AsyncIterator, TypeVar, List, Generic
+from typing import AsyncIterator, TypeVar, List, AsyncIterable
 
 import uritemplate
 import dateutil.parser
@@ -89,11 +89,11 @@ class BaseResponseObject(BaseObject):
     def _get_related_fetch_params(self):
         return None
 
-    async def _get_related_url(self, property_name, element_type, **kwargs):
+    def _get_related_url(self, property_name, element_type, **kwargs):
         if property_name in self:
             template = self[property_name]
             url = uritemplate.expand(template, kwargs)
-            return await self._client.get_list_absolute_url(
+            return self._client.get_list_absolute_url(
                 url, element_type,
                 fetch_params=self._get_related_fetch_params()
             )
@@ -102,7 +102,7 @@ class BaseResponseObject(BaseObject):
                 **self._fetch_params, **self
             )
             url = uritemplate.expand(template, kwargs)
-            return await self._client.get_list_relative_url(
+            return self._client.get_list_relative_url(
                 url, element_type,
                 fetch_params=self._get_related_fetch_params()
             )
@@ -154,7 +154,8 @@ class PaginatedList(AsyncIterator[T]):
         return self
 
     async def __anext__(self) -> T:
-        if self._current_index >= self._max_items:
+        if (self._max_items is not None and self._current_index >=
+                self._max_items):
             raise StopAsyncIteration
         try:
             value = next(self._current_iter)
@@ -212,7 +213,7 @@ class PaginatedList(AsyncIterator[T]):
         self._item_counter += len(document)
 
 
-class PaginatedListProxy(Generic[T]):
+class PaginatedListProxy(AsyncIterable[T]):
     def __init__(self, client, url, element_type, fetch_params):
         self._client = client
         self._url = url

@@ -172,21 +172,21 @@ class GitHub:
             self, *await self.get_relative_url('user')
         )
 
-    async def get_users(self, since=None) -> \
-            objects.PaginatedList[objects.User]:
+    def get_users(self, since=None) -> \
+            objects.PaginatedListProxy[objects.User]:
         """
         Gets all users.
         """
         # FIXME: add since support
-        return await self.get_list_relative_url('users', objects.User)
+        return self.get_list_relative_url('users', objects.User)
 
-    async def get_repos(self, since=None) ->\
-            objects.PaginatedList[objects.Repo]:
+    def get_repos(self, since=None) -> \
+            objects.PaginatedListProxy[objects.Repo]:
         """
         Gets all repos.
         """
         # FIXME: add since support
-        return await self.get_list_relative_url('repos', objects.Repo)
+        return self.get_list_relative_url('repos', objects.Repo)
 
     def close(self) -> None:
         self._client.close()
@@ -228,14 +228,14 @@ class GitHub:
         else:
             return await self.get_absolute_url(url, is_paginated)
 
-    async def get_list_relative_url(self, path, element_type,
-                                    fetch_params=None):
-        return await self.get_list_absolute_url(self._base_url + '/' + path,
-                                                element_type,
-                                                fetch_params=fetch_params)
+    def get_list_relative_url(self, path, element_type,
+                              fetch_params=None):
+        return self.get_list_absolute_url(self._base_url + '/' + path,
+                                          element_type,
+                                          fetch_params=fetch_params)
 
-    async def get_list_absolute_url(self, url, element_type,
-                                    fetch_params=None):
+    def get_list_absolute_url(self, url, element_type,
+                              fetch_params=None):
         return response.PaginatedListProxy(
             self, url, element_type, fetch_params
         )

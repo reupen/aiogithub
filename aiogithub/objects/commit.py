@@ -13,8 +13,8 @@ class Commit(BaseResponseObject):
             'committer': objects.User
         }
 
-    async def get_comments(self) -> 'objects.PaginatedList[objects.Comment]':
-        return await self._get_related_url('comments_url', objects.Comment)
+    def get_comments(self) -> 'objects.PaginatedListProxy[objects.Comment]':
+        return self._get_related_url('comments_url', objects.Comment)
 
     @property
     @return_key
