@@ -172,14 +172,16 @@ class GitHub:
             self, *await self.get_relative_url('user')
         )
 
-    async def get_users(self, since=None) -> objects.BaseList[objects.User]:
+    async def get_users(self, since=None) -> \
+            objects.PaginatedList[objects.User]:
         """
         Gets all users.
         """
         # FIXME: add since support
         return await self.get_list_relative_url('users', objects.User)
 
-    async def get_repos(self, since=None) -> objects.BaseList[objects.Repo]:
+    async def get_repos(self, since=None) ->\
+            objects.PaginatedList[objects.Repo]:
         """
         Gets all repos.
         """
@@ -234,7 +236,9 @@ class GitHub:
 
     async def get_list_absolute_url(self, url, element_type,
                                     fetch_params=None):
-        return response.ListProxy(self, url, element_type, fetch_params)
+        return response.PaginatedListProxy(
+            self, url, element_type, fetch_params
+        )
 
     async def _get_object_relative_url(self, element_type,
                                        defer_fetch=False,

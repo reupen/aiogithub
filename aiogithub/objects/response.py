@@ -130,7 +130,7 @@ class BaseResponseObject(BaseObject):
         return self._limits
 
 
-class BaseList(AsyncIterator[T]):
+class PaginatedList(AsyncIterator[T]):
     def __init__(self, client, element_type, initial_document, limits, links,
                  max_items=None, fetch_params=None):
         self._client = client
@@ -140,35 +140,60 @@ class BaseList(AsyncIterator[T]):
         self._fetch_params = fetch_params
 
         self._current_iter = None
+        self._current_index = None
         self._limits = BaseObject(limits)
         self._last_raw_limits = limits
         self._max_items = max_items
         self._header_links = links
         self._item_counter = len(initial_document)
 
+    async def __aiter__(self) -> 'PaginatedList[T]':
+        self._current_index = 0
+        self._current_page_number = 0
+        self._current_iter = iter(self._pages[self._current_page_number])
+        return self
+
+    async def __anext__(self) -> T:
+        if self._current_index >= self._max_items:
+            raise StopAsyncIteration
+        try:
+            value = next(self._current_iter)
+            self._current_index += 1
+        except StopIteration:
+            if self._current_page_number + 1 < len(self._pages):
+                self._increment_page_number()
+                return await self.__anext__()
+            elif self._has_more_pages():
+                await self._get_next_page()
+                self._increment_page_number()
+                return await self.__anext__()
+            raise StopAsyncIteration
+        return self._make_element(value)
+
     @property
     def limits(self):
         return self._limits
+
+    def set_max_items(self, max_items):
+        self._max_items = max_items
+
+    async def get_all(self) -> List[T]:
+        items = []
+        for page in self._pages:
+            items += map(self._make_element, page)
+        while self._has_more_pages():
+            await self._get_next_page()
+            items += map(self._make_element, self._pages[-1])
+        return items[:self._max_items]
+
+    def _has_more_pages(self) -> bool:
+        return (self._max_items is None or self._item_counter < self._max_items
+                ) and 'next' in self._header_links
 
     def _make_element(self, document) -> T:
         return self._element_type(self._client, document,
                                   self._last_raw_limits,
                                   fetch_params=self._fetch_params)
-
-    async def get_all(self) -> List[T]:
-        ret = []
-        for page in self._pages:
-            ret += map(self._make_element, page)
-        while (self._max_items is None or self._item_counter < self._max_items
-               ) and 'next' in self._header_links:
-            await self._get_next_page()
-            ret += map(self._make_element, self._pages[-1])
-        return ret
-
-    async def __aiter__(self) -> 'BaseList[T]':
-        self._current_page_number = 0
-        self._current_iter = iter(self._pages[self._current_page_number])
-        return self
 
     def _increment_page_number(self) -> None:
         self._current_page_number += 1
@@ -186,23 +211,8 @@ class BaseList(AsyncIterator[T]):
         self._header_links = links
         self._item_counter += len(document)
 
-    async def __anext__(self) -> T:
-        try:
-            value = next(self._current_iter)
-        except StopIteration:
-            if self._current_page_number + 1 < len(self._pages):
-                self._increment_page_number()
-                return await self.__anext__()
-            elif self._item_counter < self._max_items and 'next' in \
-                    self._header_links:
-                await self._get_next_page()
-                self._increment_page_number()
-                return await self.__anext__()
-            raise StopAsyncIteration
-        return self._make_element(value)
 
-
-class ListProxy(Generic[T]):
+class PaginatedListProxy(Generic[T]):
     def __init__(self, client, url, element_type, fetch_params):
         self._client = client
         self._url = url
@@ -211,13 +221,14 @@ class ListProxy(Generic[T]):
         self._max_items = None
         self._paginator = None
 
-    async def __aiter__(self) -> 'BaseList[T]':
+    async def __aiter__(self) -> 'PaginatedList[T]':
         paginator = await self._get_paginator()
         return await paginator.__aiter__()
 
     def limit(self, max_items):
-        # FIXME
         self._max_items = max_items
+        if self._paginator:
+            self._paginator.set_max_items(self._max_items)
         return self
 
     async def all(self):
@@ -228,8 +239,8 @@ class ListProxy(Generic[T]):
         if not self._paginator:
             response_tuple = await self._client.get_absolute_url(self._url,
                                                                  True)
-            self._paginator = BaseList(self, self._element_type,
-                                       *response_tuple,
-                                       max_items=self._max_items,
-                                       fetch_params=self._fetch_params)
+            self._paginator = PaginatedList(self, self._element_type,
+                                            *response_tuple,
+                                            max_items=self._max_items,
+                                            fetch_params=self._fetch_params)
         return self._paginator

@@ -20,34 +20,35 @@ class PartialOrganization(BaseResponseObject):
         'public_members_url': 'orgs/{login}/public_members{(/member)}'
     }
 
-    async def get_followers(self) -> 'objects.BaseList[objects.User]':
+    async def get_followers(self) -> 'objects.PaginatedList[objects.User]':
         return await self._get_related_url('followers_url', objects.User)
 
-    async def get_following(self) -> 'objects.BaseList[objects.User]':
+    async def get_following(self) -> 'objects.PaginatedList[objects.User]':
         return await self._get_related_url('following_url', objects.User)
 
-    async def get_gists(self) -> 'objects.BaseList[objects.Gist]':
+    async def get_gists(self) -> 'objects.PaginatedList[objects.Gist]':
         return await self._get_related_url('gists_url', objects.Gist)
 
-    async def get_repos(self) -> 'objects.BaseList[objects.Repo]':
+    async def get_repos(self) -> 'objects.PaginatedList[objects.Repo]':
         return await self._get_related_url('repos_url', objects.Repo)
 
-    async def get_events(self) -> 'objects.BaseList[objects.Event]':
+    async def get_events(self) -> 'objects.PaginatedList[objects.Event]':
         return await self._get_related_url('events_url', objects.Event)
 
-    async def get_hooks(self) -> 'objects.BaseList[objects.BaseObject]':
+    async def get_hooks(self) -> 'objects.PaginatedList[objects.BaseObject]':
         return await self._get_related_url(
             'hooks_url', objects.BaseObject
         )
 
-    async def get_issues(self) -> 'objects.BaseList[objects.Issue]':
+    async def get_issues(self) -> 'objects.PaginatedList[objects.Issue]':
         return await self._get_related_url('issues_url', objects.Issue)
 
-    async def get_members(self) -> 'objects.BaseList[objects.PartialUser]':
+    async def get_members(self) ->\
+            'objects.PaginatedList[objects.PartialUser]':
         return await self._get_related_url('members_url', objects.PartialUser)
 
     async def get_public_members(self) -> \
-            'objects.BaseList[objects.PartialUser]':
+            'objects.PaginatedList[objects.PartialUser]':
         return await self._get_related_url(
             'public_members_url', objects.PartialUser
         )

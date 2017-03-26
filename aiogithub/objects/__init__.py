@@ -13,12 +13,12 @@ from .review_comment import ReviewComment
 from .branch import Branch
 from .rate_limit import RateLimit
 from .head_base import Head, Base
-from .response import BaseObject, BaseResponseObject, BaseList
+from .response import BaseObject, BaseResponseObject, PaginatedList
 
 __all__ = (
     'BaseObject',
     'BaseResponseObject',
-    'BaseList',
+    'PaginatedList',
     'Branch',
     'Commit',
     'Comment',

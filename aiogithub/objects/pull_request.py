@@ -42,27 +42,27 @@ class PullRequest(BaseResponseObject):
     async def get_issue(self) -> 'objects.Issue':
         return await self._get_related_object('issue_url', objects.Issue)
 
-    async def get_commits(self) -> 'objects.BaseList[objects.Commit]':
+    async def get_commits(self) -> 'objects.PaginatedList[objects.Commit]':
         return await self._get_related_url('commits_url', objects.Commit)
 
     async def get_requested_reviewers(self) \
-            -> 'objects.BaseList[objects.PartialUser]':
+            -> 'objects.PaginatedList[objects.PartialUser]':
         return await self._get_related_url('requested_reviewers_url',
                                            objects.PartialUser)
 
     async def get_review_comments(self) \
-            -> 'objects.BaseList[objects.ReviewComment]':
+            -> 'objects.PaginatedList[objects.ReviewComment]':
         return await self._get_related_url('review_comments_url',
                                            objects.ReviewComment)
 
-    async def get_reviews(self) -> 'objects.BaseList[objects.Review]':
+    async def get_reviews(self) -> 'objects.PaginatedList[objects.Review]':
         return await self._get_related_url('reviews_url', objects.Review)
 
     async def get_review_comment(self) -> 'objects.ReviewComment':
         return await self._get_related_object('review_comment_url',
                                               objects.BaseResponseObject)
 
-    async def get_comments(self) -> 'objects.BaseList[objects.Comment]':
+    async def get_comments(self) -> 'objects.PaginatedList[objects.Comment]':
         return await self._get_related_url('comments_url', objects.Comment)
 
     @property
@@ -92,7 +92,8 @@ class PullRequest(BaseResponseObject):
 
     @property
     @return_key
-    def requested_reviewers(self) -> 'objects.BaseList[objects.PartialUser]':
+    def requested_reviewers(self) -> \
+            'objects.PaginatedList[objects.PartialUser]':
         pass
 
     @property
@@ -117,7 +118,7 @@ class PullRequest(BaseResponseObject):
 
     @property
     @return_key
-    def assignees(self) -> 'objects.BaseList[objects.PartialUser]':
+    def assignees(self) -> 'objects.PaginatedList[objects.PartialUser]':
         pass
 
     @property

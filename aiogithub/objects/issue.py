@@ -33,14 +33,14 @@ class Issue(BaseResponseObject):
         return await self._get_related_object('repository_url', objects.Repo)
 
     async def get_labels(self) \
-            -> 'objects.BaseList[objects.BaseResponseObject]':
+            -> 'objects.PaginatedList[objects.BaseResponseObject]':
         return await self._get_related_url('labels_url',
                                            objects.BaseResponseObject)
 
-    async def get_events(self) -> 'objects.BaseList[objects.IssueEvent]':
+    async def get_events(self) -> 'objects.PaginatedList[objects.IssueEvent]':
         return await self._get_related_url('events_url', objects.IssueEvent)
 
-    async def get_comments(self) -> 'objects.BaseList[objects.Comment]':
+    async def get_comments(self) -> 'objects.PaginatedList[objects.Comment]':
         return await self._get_related_url('comments_url', objects.Comment)
 
     @property

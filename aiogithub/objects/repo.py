@@ -133,49 +133,49 @@ class PartialRepo(BaseResponseObject):
     def homepage(self) -> str:
         pass
 
-    async def get_assignees(self) -> 'objects.BaseList[objects.User]':
+    async def get_assignees(self) -> 'objects.PaginatedList[objects.User]':
         return await self._get_related_url('assignees_url', objects.User)
 
     async def get_blobs(
-            self) -> 'objects.BaseList[objects.BaseResponseObject]':
+            self) -> 'objects.PaginatedList[objects.BaseResponseObject]':
         return await self._get_related_url('blobs_url',
                                            objects.BaseResponseObject)
 
-    async def get_branches(self) -> 'objects.BaseList[objects.Branch]':
+    async def get_branches(self) -> 'objects.PaginatedList[objects.Branch]':
         return await self._get_related_url('branches_url', objects.Branch)
 
     async def get_branch(self, branch) -> 'objects.Branch':
         return await self._get_related_object('branches_url', objects.Branch,
                                               branch=branch)
 
-    async def get_collaborators(self) -> 'objects.BaseList[objects.User]':
+    async def get_collaborators(self) -> 'objects.PaginatedList[objects.User]':
         return await self._get_related_url('collaborators_url', objects.User)
 
-    async def get_comments(self) -> 'objects.BaseList[objects.Comment]':
+    async def get_comments(self) -> 'objects.PaginatedList[objects.Comment]':
         return await self._get_related_url('comments_url', objects.Comment)
 
-    async def get_commits(self) -> 'objects.BaseList[objects.Commit]':
+    async def get_commits(self) -> 'objects.PaginatedList[objects.Commit]':
         return await self._get_related_url('commits_url', objects.Commit)
 
     # TODO: compare, contents
 
-    async def get_contributors(self) -> 'objects.BaseList[objects.Repo]':
+    async def get_contributors(self) -> 'objects.PaginatedList[objects.Repo]':
         return await self._get_related_url('contributors_url', objects.User)
 
-    async def get_events(self) -> 'objects.BaseList[objects.Event]':
+    async def get_events(self) -> 'objects.PaginatedList[objects.Event]':
         return await self._get_related_url('events_url', objects.Event)
 
-    async def get_forks(self) -> 'objects.BaseList[objects.Repo]':
+    async def get_forks(self) -> 'objects.PaginatedList[objects.Repo]':
         return await self._get_related_url('forks_url', objects.Repo)
 
-    async def get_issues(self) -> 'objects.BaseList[objects.Issue]':
+    async def get_issues(self) -> 'objects.PaginatedList[objects.Issue]':
         return await self._get_related_url('issues_url', objects.Issue)
 
     async def get_pull_requests(self) \
-            -> 'objects.BaseList[objects.PullRequest]':
+            -> 'objects.PaginatedList[objects.PullRequest]':
         return await self._get_related_url('pulls_url', objects.PullRequest)
 
-    async def get_stargazers(self) -> 'objects.BaseList[objects.User]':
+    async def get_stargazers(self) -> 'objects.PaginatedList[objects.User]':
         return await self._get_related_url('stargazers_url', objects.User)
 
     def _get_related_fetch_params(self):
