@@ -1,5 +1,5 @@
 from collections import abc
-from typing import AsyncIterator, TypeVar, List, GenericMeta
+from typing import AsyncIterator, TypeVar, List
 
 import uritemplate
 import dateutil.parser

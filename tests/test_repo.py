@@ -1,5 +1,4 @@
 import dateutil.parser
-from copy import deepcopy
 
 import pytest
 
