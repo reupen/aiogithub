@@ -1,4 +1,4 @@
-from typing import AsyncIterator, TypeVar, List
+from typing import AsyncIterator, TypeVar, List, Generic
 
 import uritemplate
 import dateutil.parser
@@ -159,8 +159,8 @@ class BaseList(AsyncIterator[T]):
         ret = []
         for page in self._pages:
             ret += map(self._make_element, page)
-        while self._item_counter < self._max_items and 'next' in \
-                self._header_links:
+        while (self._max_items is None or self._item_counter < self._max_items
+               ) and 'next' in self._header_links:
             await self._get_next_page()
             ret += map(self._make_element, self._pages[-1])
         return ret
@@ -200,3 +200,36 @@ class BaseList(AsyncIterator[T]):
                 return await self.__anext__()
             raise StopAsyncIteration
         return self._make_element(value)
+
+
+class ListProxy(Generic[T]):
+    def __init__(self, client, url, element_type, fetch_params):
+        self._client = client
+        self._url = url
+        self._element_type = element_type
+        self._fetch_params = fetch_params
+        self._max_items = None
+        self._paginator = None
+
+    async def __aiter__(self) -> 'BaseList[T]':
+        paginator = await self._get_paginator()
+        return await paginator.__aiter__()
+
+    def limit(self, max_items):
+        # FIXME
+        self._max_items = max_items
+        return self
+
+    async def all(self):
+        paginator = await self._get_paginator()
+        return await paginator.get_all()
+
+    async def _get_paginator(self):
+        if not self._paginator:
+            response_tuple = await self._client.get_absolute_url(self._url,
+                                                                 True)
+            self._paginator = BaseList(self, self._element_type,
+                                       *response_tuple,
+                                       max_items=self._max_items,
+                                       fetch_params=self._fetch_params)
+        return self._paginator

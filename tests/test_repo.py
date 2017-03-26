@@ -62,8 +62,7 @@ async def test_get_repo_branches():
     with aiogithub.GitHub() as gh:
         repo = await gh.get_repo('reupen', 'columns_ui')
     branches = await repo.get_branches()
-    assert isinstance(branches, aiogithub.objects.BaseList)
-    branches_list = await branches.get_all()
+    branches_list = await branches.all()
     assert isinstance(branches_list[0], aiogithub.objects.Branch)
 
 
@@ -72,6 +71,5 @@ async def test_get_repo_branches_defer():
     with aiogithub.GitHub() as gh:
         repo = await gh.get_repo('reupen', 'columns_ui', defer_fetch=True)
     branches = await repo.get_branches()
-    assert isinstance(branches, aiogithub.objects.BaseList)
-    branches_list = await branches.get_all()
+    branches_list = await branches.all()
     assert isinstance(branches_list[0], aiogithub.objects.Branch)

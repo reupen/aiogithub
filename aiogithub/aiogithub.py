@@ -6,6 +6,7 @@ import link_header
 
 import aiogithub
 from aiogithub import objects
+from aiogithub.objects import response
 from aiogithub.exceptions import HttpException
 
 GITHUB_DEFAULT_CONTENT_TYPE = 'application/vnd.github.v3+json'
@@ -233,11 +234,7 @@ class GitHub:
 
     async def get_list_absolute_url(self, url, element_type,
                                     fetch_params=None):
-        response_tuple = await self.get_absolute_url(url, True)
-        return objects.BaseList(self, element_type,
-                                *response_tuple,
-                                max_items=self._max_paginated_items,
-                                fetch_params=fetch_params)
+        return response.ListProxy(self, url, element_type, fetch_params)
 
     async def _get_object_relative_url(self, element_type,
                                        defer_fetch=False,
