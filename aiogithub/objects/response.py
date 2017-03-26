@@ -1,4 +1,3 @@
-from collections import abc
 from typing import AsyncIterator, TypeVar, List
 
 import uritemplate
@@ -131,7 +130,7 @@ class BaseResponseObject(BaseObject):
         return self._limits
 
 
-class BaseList(AsyncIterator[T], abc.AsyncIterator):
+class BaseList(AsyncIterator[T]):
     def __init__(self, client, element_type, initial_document, limits, links,
                  max_items=None, fetch_params=None):
         self._client = client
