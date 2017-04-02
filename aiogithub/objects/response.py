@@ -236,18 +236,20 @@ class PaginatedListProxy(AsyncIterable[T]):
         """Asynchronously iterates through all items in the collection.
         Pages are fetched as required.
 
-        Use `limit()` when listing large data sets (e.g. all public users)
-        to avoid making a large number of HTTP requests and exhausting your
-        API limits.
+        Use :func:`~aiogithub.objects.PaginatedListProxy.limit` when listing
+        large data sets (e.g. all public users) to avoid making a large
+        number of HTTP requests and exhausting your API limits.
         """
         paginator = await self._get_paginator()
         return await paginator.__aiter__()
 
     def limit(self, max_items):
-        """Limits the number of items returned by `all()` or when iterating
-        through the collection elements (using `async for`). Use when
-        listing large data sets (e.g. all public users) to avoid making a
-        large number of HTTP requests and exhausting your API limits.
+        """Limits the number of items returned by
+        :func:`~aiogithub.objects.PaginatedListProxy.all` or when iterating
+        through the collection elements (using `async for`).
+
+        Use when listing large data sets (e.g. all public users) to avoid
+        making a large number of HTTP requests and exhausting your API limits.
         """
         self._max_items = max_items
         if self._paginator:
@@ -258,9 +260,9 @@ class PaginatedListProxy(AsyncIterable[T]):
         """Returns all items in the collection. This will fetch all
         result pages that haven't already been fetched.
 
-        Use `limit()` when listing large data sets (e.g. all public users)
-        to avoid making a large number of HTTP requests and exhausting your
-        API limits.
+        Use :func:`~aiogithub.objects.PaginatedListProxy.limit` when listing
+        large data sets (e.g. all public users) to avoid making a large
+        number of HTTP requests and exhausting your API limits.
         """
         paginator = await self._get_paginator()
         return await paginator.get_all()

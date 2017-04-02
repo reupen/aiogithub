@@ -11,7 +11,7 @@ Response classes
     :undoc-members:
     :show-inheritance:
 
-.. autoclass:: aiogithub.objects.BaseList
+.. autoclass:: aiogithub.objects.PaginatedListProxy
     :members:
     :undoc-members:
     :show-inheritance:
