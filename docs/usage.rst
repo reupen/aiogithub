@@ -37,7 +37,7 @@ A simple example
                 pass # Do something with each repo here
 
             # Or you can fetch the entire list like this:
-            repos = user.get_repos().all()
+            repos = await user.get_repos().all()
             # Do something with repos
 
     asyncio.get_event_loop().run_until_complete(main())
