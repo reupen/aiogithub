@@ -9,6 +9,8 @@ T = TypeVar('T')
 
 
 class BaseObject(dict):
+    """Base class for all data objects"""
+
     @staticmethod
     def _get_key_mappings():
         return {}
@@ -27,7 +29,7 @@ class BaseObject(dict):
         for key in document:
             value = document[key]
 
-            if key[-3:] == '_at':
+            if key.endswith('_at'):
                 if isinstance(value, str):
                     document[key] = dateutil.parser.parse(value)
             elif key in self._get_key_mappings():
@@ -57,6 +59,9 @@ class BaseObject(dict):
 
 
 class BaseResponseObject(BaseObject):
+    """Base class for objects where the contained data corresponds to a
+    response payload of a particular GitHub API URL
+    """
     _url = None
     _default_urls = {}
 
@@ -131,6 +136,9 @@ class BaseResponseObject(BaseObject):
 
 
 class PaginatedList(AsyncIterator[T]):
+    """Internal class used to fetch paginated list data from a particular
+    GitHub API endpoint"""
+
     def __init__(self, client, element_type, initial_document, limits, links,
                  max_items=None, fetch_params=None):
         self._client = client
@@ -214,6 +222,8 @@ class PaginatedList(AsyncIterator[T]):
 
 
 class PaginatedListProxy(AsyncIterable[T]):
+    """Public interface to paginated objects"""
+
     def __init__(self, client, url, element_type, fetch_params):
         self._client = client
         self._url = url
@@ -223,16 +233,35 @@ class PaginatedListProxy(AsyncIterable[T]):
         self._paginator = None
 
     async def __aiter__(self) -> 'PaginatedList[T]':
+        """Asynchronously iterates through all items in the collection.
+        Pages are fetched as required.
+
+        Use `limit()` when listing large data sets (e.g. all public users)
+        to avoid making a large number of HTTP requests and exhausting your
+        API limits.
+        """
         paginator = await self._get_paginator()
         return await paginator.__aiter__()
 
     def limit(self, max_items):
+        """Limits the number of items returned by `all()` or when iterating
+        through the collection elements (using `async for`). Use when
+        listing large data sets (e.g. all public users) to avoid making a
+        large number of HTTP requests and exhausting your API limits.
+        """
         self._max_items = max_items
         if self._paginator:
             self._paginator.set_max_items(self._max_items)
         return self
 
     async def all(self):
+        """Returns all items in the collection. This will fetch all
+        result pages that haven't already been fetched.
+
+        Use `limit()` when listing large data sets (e.g. all public users)
+        to avoid making a large number of HTTP requests and exhausting your
+        API limits.
+        """
         paginator = await self._get_paginator()
         return await paginator.get_all()
 
