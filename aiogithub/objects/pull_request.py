@@ -1,7 +1,8 @@
 from datetime import datetime
 from typing import List
 
-from aiogithub.objects.response import BaseResponseObject
+from aiogithub.objects.response import (BaseResponseObject,  # noqa
+                                        PaginatedListProxy)
 from aiogithub.utils import return_key
 from aiogithub import objects
 from aiogithub.objects.head_base import Head, Base
@@ -42,28 +43,28 @@ class PullRequest(BaseResponseObject):
     async def get_issue(self) -> 'objects.Issue':
         return await self._get_related_object('issue_url', objects.Issue)
 
-    async def get_commits(self) -> 'objects.BaseList[objects.Commit]':
-        return await self._get_related_url('commits_url', objects.Commit)
+    def get_commits(self) -> 'PaginatedListProxy[objects.Commit]':
+        return self._get_related_url('commits_url', objects.Commit)
 
-    async def get_requested_reviewers(self) \
-            -> 'objects.BaseList[objects.PartialUser]':
-        return await self._get_related_url('requested_reviewers_url',
-                                           objects.PartialUser)
+    def get_requested_reviewers(self) \
+            -> 'PaginatedListProxy[objects.PartialUser]':
+        return self._get_related_url('requested_reviewers_url',
+                                     objects.PartialUser)
 
-    async def get_review_comments(self) \
-            -> 'objects.BaseList[objects.ReviewComment]':
-        return await self._get_related_url('review_comments_url',
-                                           objects.ReviewComment)
+    def get_review_comments(self) -> \
+            'PaginatedListProxy[objects.ReviewComment]':
+        return self._get_related_url('review_comments_url',
+                                     objects.ReviewComment)
 
-    async def get_reviews(self) -> 'objects.BaseList[objects.Review]':
-        return await self._get_related_url('reviews_url', objects.Review)
+    def get_reviews(self) -> 'PaginatedListProxy[objects.Review]':
+        return self._get_related_url('reviews_url', objects.Review)
 
     async def get_review_comment(self) -> 'objects.ReviewComment':
         return await self._get_related_object('review_comment_url',
                                               objects.BaseResponseObject)
 
-    async def get_comments(self) -> 'objects.BaseList[objects.Comment]':
-        return await self._get_related_url('comments_url', objects.Comment)
+    def get_comments(self) -> 'PaginatedListProxy[objects.Comment]':
+        return self._get_related_url('comments_url', objects.Comment)
 
     @property
     @return_key
@@ -92,7 +93,7 @@ class PullRequest(BaseResponseObject):
 
     @property
     @return_key
-    def requested_reviewers(self) -> 'objects.BaseList[objects.PartialUser]':
+    def requested_reviewers(self) -> List[objects.PartialUser]:
         pass
 
     @property
@@ -112,12 +113,12 @@ class PullRequest(BaseResponseObject):
 
     @property
     @return_key
-    def assignee(self) -> objects.User:
+    def assignee(self) -> objects.PartialUser:
         pass
 
     @property
     @return_key
-    def assignees(self) -> 'objects.BaseList[objects.PartialUser]':
+    def assignees(self) -> List[objects.PartialUser]:
         pass
 
     @property

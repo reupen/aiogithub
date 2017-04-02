@@ -13,13 +13,11 @@ async def main():
         user = await api.get_user('reupen')
         pprint(user)
 
-        repos = await user.get_repos()
-        async for elem in repos:
+        async for elem in user.get_repos():
             pprint(elem.name)
 
         # Or:
-        repos = await user.get_repos()
-        all_repos = await repos.get_all()
+        all_repos = await user.get_repos().all()
         pprint([elem.name for elem in all_repos])
 
 

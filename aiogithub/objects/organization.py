@@ -1,6 +1,7 @@
 from datetime import datetime
 
-from aiogithub.objects.response import BaseResponseObject
+from aiogithub.objects.response import (BaseResponseObject,  # noqa
+                                        PaginatedListProxy)
 from aiogithub.utils import return_key
 from aiogithub import objects
 
@@ -20,35 +21,34 @@ class PartialOrganization(BaseResponseObject):
         'public_members_url': 'orgs/{login}/public_members{(/member)}'
     }
 
-    async def get_followers(self) -> 'objects.BaseList[objects.User]':
-        return await self._get_related_url('followers_url', objects.User)
+    def get_followers(self) -> 'PaginatedListProxy[objects.User]':
+        return self._get_related_url('followers_url', objects.User)
 
-    async def get_following(self) -> 'objects.BaseList[objects.User]':
-        return await self._get_related_url('following_url', objects.User)
+    def get_following(self) -> 'PaginatedListProxy[objects.User]':
+        return self._get_related_url('following_url', objects.User)
 
-    async def get_gists(self) -> 'objects.BaseList[objects.Gist]':
-        return await self._get_related_url('gists_url', objects.Gist)
+    def get_gists(self) -> 'PaginatedListProxy[objects.Gist]':
+        return self._get_related_url('gists_url', objects.Gist)
 
-    async def get_repos(self) -> 'objects.BaseList[objects.Repo]':
-        return await self._get_related_url('repos_url', objects.Repo)
+    def get_repos(self) -> 'PaginatedListProxy[objects.Repo]':
+        return self._get_related_url('repos_url', objects.Repo)
 
-    async def get_events(self) -> 'objects.BaseList[objects.Event]':
-        return await self._get_related_url('events_url', objects.Event)
+    def get_events(self) -> 'PaginatedListProxy[objects.Event]':
+        return self._get_related_url('events_url', objects.Event)
 
-    async def get_hooks(self) -> 'objects.BaseList[objects.BaseObject]':
-        return await self._get_related_url(
+    def get_hooks(self) -> 'PaginatedListProxy[objects.BaseObject]':
+        return self._get_related_url(
             'hooks_url', objects.BaseObject
         )
 
-    async def get_issues(self) -> 'objects.BaseList[objects.Issue]':
-        return await self._get_related_url('issues_url', objects.Issue)
+    def get_issues(self) -> 'PaginatedListProxy[objects.Issue]':
+        return self._get_related_url('issues_url', objects.Issue)
 
-    async def get_members(self) -> 'objects.BaseList[objects.PartialUser]':
-        return await self._get_related_url('members_url', objects.PartialUser)
+    def get_members(self) -> 'PaginatedListProxy[objects.PartialUser]':
+        return self._get_related_url('members_url', objects.PartialUser)
 
-    async def get_public_members(self) -> \
-            'objects.BaseList[objects.PartialUser]':
-        return await self._get_related_url(
+    def get_public_members(self) -> 'PaginatedListProxy[objects.PartialUser]':
+        return self._get_related_url(
             'public_members_url', objects.PartialUser
         )
 

@@ -30,17 +30,15 @@ A simple example
             print(user.login)
             # user is also a dict, so you can see the underlying data via print(user)
 
-            # Get this user's repos
-            repos = await user.get_repos()
-            # There's no need to worry about pagination – you can simply iterate
-            # over list objects like this and pages will be retrieved as needed:
-            async for repo in repos:
+            # Get this user's repos. There's no need to worry about
+            # pagination – you can simply iterate over list objects like
+            # this and pages will be retrieved as needed:
+            async for repo in user.get_repos():
                 pass # Do something with each repo here
 
             # Or you can fetch the entire list like this:
-            repos = await user.get_repos()
-            all_repos = await repos.get_all()
-            # Do something with all_repos
+            repos = user.get_repos().all()
+            # Do something with repos
 
     asyncio.get_event_loop().run_until_complete(main())
 

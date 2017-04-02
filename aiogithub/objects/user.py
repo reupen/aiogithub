@@ -1,7 +1,8 @@
 from datetime import datetime
 from typing import Optional
 
-from aiogithub.objects.response import BaseResponseObject
+from aiogithub.objects.response import (BaseResponseObject,  # noqa
+                                        PaginatedListProxy)
 from aiogithub import objects
 from aiogithub.utils import return_key
 
@@ -20,27 +21,26 @@ class PartialUser(BaseResponseObject):
         'received_events_url': 'users/{login}/received_events',
     }
 
-    async def get_followers(self) -> 'objects.BaseList[objects.User]':
-        return await self._get_related_url('followers_url', objects.User)
+    def get_followers(self) -> 'PaginatedListProxy[objects.User]':
+        return self._get_related_url('followers_url', objects.User)
 
-    async def get_following(self) -> 'objects.BaseList[objects.User]':
-        return await self._get_related_url('following_url', objects.User)
+    def get_following(self) -> 'PaginatedListProxy[objects.User]':
+        return self._get_related_url('following_url', objects.User)
 
-    async def get_starred(self) -> 'objects.BaseList[objects.Repo]':
-        return await self._get_related_url('starred_url', objects.Repo)
+    def get_starred(self) -> 'PaginatedListProxy[objects.Repo]':
+        return self._get_related_url('starred_url', objects.Repo)
 
-    async def get_subscriptions(self) -> 'objects.BaseList[objects.Repo]':
-        return await self._get_related_url('subscriptions_url', objects.Repo)
+    def get_subscriptions(self) -> 'PaginatedListProxy[objects.Repo]':
+        return self._get_related_url('subscriptions_url', objects.Repo)
 
-    async def get_repos(self) -> 'objects.BaseList[objects.Repo]':
-        return await self._get_related_url('repos_url', objects.Repo)
+    def get_repos(self) -> 'PaginatedListProxy[objects.Repo]':
+        return self._get_related_url('repos_url', objects.Repo)
 
-    async def get_events(self) -> 'objects.BaseList[objects.Event]':
-        return await self._get_related_url('events_url', objects.Event)
+    def get_events(self) -> 'PaginatedListProxy[objects.Event]':
+        return self._get_related_url('events_url', objects.Event)
 
-    async def get_received_events(self) -> 'objects.BaseList[objects.Event]':
-        return await self._get_related_url('received_events_url',
-                                           objects.Event)
+    def get_received_events(self) -> 'PaginatedListProxy[objects.Event]':
+        return self._get_related_url('received_events_url', objects.Event)
 
     @property
     @return_key

@@ -2,7 +2,8 @@ from datetime import datetime
 
 from aiogithub import objects
 from aiogithub.objects.user import User
-from aiogithub.objects.response import BaseResponseObject
+from aiogithub.objects.response import (BaseResponseObject,  # noqa
+                                        PaginatedListProxy)
 from aiogithub.utils import return_key
 
 
@@ -133,50 +134,48 @@ class PartialRepo(BaseResponseObject):
     def homepage(self) -> str:
         pass
 
-    async def get_assignees(self) -> 'objects.BaseList[objects.User]':
-        return await self._get_related_url('assignees_url', objects.User)
+    def get_assignees(self) -> 'PaginatedListProxy[objects.User]':
+        return self._get_related_url('assignees_url', objects.User)
 
-    async def get_blobs(
-            self) -> 'objects.BaseList[objects.BaseResponseObject]':
-        return await self._get_related_url('blobs_url',
-                                           objects.BaseResponseObject)
+    def get_blobs(self) -> 'PaginatedListProxy[objects.BaseResponseObject]':
+        return self._get_related_url('blobs_url',
+                                     objects.BaseResponseObject)
 
-    async def get_branches(self) -> 'objects.BaseList[objects.Branch]':
-        return await self._get_related_url('branches_url', objects.Branch)
+    def get_branches(self) -> 'PaginatedListProxy[objects.Branch]':
+        return self._get_related_url('branches_url', objects.Branch)
 
     async def get_branch(self, branch) -> 'objects.Branch':
         return await self._get_related_object('branches_url', objects.Branch,
                                               branch=branch)
 
-    async def get_collaborators(self) -> 'objects.BaseList[objects.User]':
-        return await self._get_related_url('collaborators_url', objects.User)
+    def get_collaborators(self) -> 'PaginatedListProxy[objects.User]':
+        return self._get_related_url('collaborators_url', objects.User)
 
-    async def get_comments(self) -> 'objects.BaseList[objects.Comment]':
-        return await self._get_related_url('comments_url', objects.Comment)
+    def get_comments(self) -> 'PaginatedListProxy[objects.Comment]':
+        return self._get_related_url('comments_url', objects.Comment)
 
-    async def get_commits(self) -> 'objects.BaseList[objects.Commit]':
-        return await self._get_related_url('commits_url', objects.Commit)
+    def get_commits(self) -> 'PaginatedListProxy[objects.Commit]':
+        return self._get_related_url('commits_url', objects.Commit)
 
     # TODO: compare, contents
 
-    async def get_contributors(self) -> 'objects.BaseList[objects.Repo]':
-        return await self._get_related_url('contributors_url', objects.User)
+    def get_contributors(self) -> 'PaginatedListProxy[objects.Repo]':
+        return self._get_related_url('contributors_url', objects.User)
 
-    async def get_events(self) -> 'objects.BaseList[objects.Event]':
-        return await self._get_related_url('events_url', objects.Event)
+    def get_events(self) -> 'PaginatedListProxy[objects.Event]':
+        return self._get_related_url('events_url', objects.Event)
 
-    async def get_forks(self) -> 'objects.BaseList[objects.Repo]':
-        return await self._get_related_url('forks_url', objects.Repo)
+    def get_forks(self) -> 'PaginatedListProxy[objects.Repo]':
+        return self._get_related_url('forks_url', objects.Repo)
 
-    async def get_issues(self) -> 'objects.BaseList[objects.Issue]':
-        return await self._get_related_url('issues_url', objects.Issue)
+    def get_issues(self) -> 'PaginatedListProxy[objects.Issue]':
+        return self._get_related_url('issues_url', objects.Issue)
 
-    async def get_pull_requests(self) \
-            -> 'objects.BaseList[objects.PullRequest]':
-        return await self._get_related_url('pulls_url', objects.PullRequest)
+    def get_pull_requests(self) -> 'PaginatedListProxy[objects.PullRequest]':
+        return self._get_related_url('pulls_url', objects.PullRequest)
 
-    async def get_stargazers(self) -> 'objects.BaseList[objects.User]':
-        return await self._get_related_url('stargazers_url', objects.User)
+    def get_stargazers(self) -> 'PaginatedListProxy[objects.User]':
+        return self._get_related_url('stargazers_url', objects.User)
 
     def _get_related_fetch_params(self):
         return {

@@ -32,16 +32,16 @@ class Issue(BaseResponseObject):
     async def get_repo(self) -> 'objects.Repo':
         return await self._get_related_object('repository_url', objects.Repo)
 
-    async def get_labels(self) \
-            -> 'objects.BaseList[objects.BaseResponseObject]':
-        return await self._get_related_url('labels_url',
-                                           objects.BaseResponseObject)
+    def get_labels(self) -> \
+            'objects.PaginatedListProxy[objects.BaseResponseObject]':
+        return self._get_related_url('labels_url',
+                                     objects.BaseResponseObject)
 
-    async def get_events(self) -> 'objects.BaseList[objects.IssueEvent]':
-        return await self._get_related_url('events_url', objects.IssueEvent)
+    def get_events(self) -> 'objects.PaginatedListProxy[objects.IssueEvent]':
+        return self._get_related_url('events_url', objects.IssueEvent)
 
-    async def get_comments(self) -> 'objects.BaseList[objects.Comment]':
-        return await self._get_related_url('comments_url', objects.Comment)
+    def get_comments(self) -> 'objects.PaginatedListProxy[objects.Comment]':
+        return self._get_related_url('comments_url', objects.Comment)
 
     @property
     @return_key
