@@ -36,7 +36,8 @@ setup(
     },
     packages=find_packages(),
     install_requires=[
-        'aiohttp>=1.0,<3.0',
+        'aiohttp~=3.0',
+        'async-timeout',
         'LinkHeader~=0.4',
         'uritemplate~=3.0',
         'python-dateutil~=2.5'

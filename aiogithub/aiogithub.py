@@ -3,6 +3,7 @@ from typing import Optional
 
 import aiohttp
 import link_header
+from async_timeout import timeout
 
 import aiogithub
 from aiogithub import objects
@@ -198,7 +199,7 @@ class GitHub:
         self.close()
 
     async def get_absolute_url(self, url, is_paginated=False) -> tuple:
-        with aiohttp.Timeout(self._timeout):
+        with timeout(self._timeout):
             params = {}
             if is_paginated:
                 params['per_page'] = self._items_per_page
