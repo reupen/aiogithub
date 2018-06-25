@@ -20,7 +20,7 @@ from aiogithub import GitHub
 TOKEN = None
 
 async def main():
-    with GitHub(TOKEN) as api:
+    async with GitHub(TOKEN) as api:
         user = await api.get_user('reupen')
         print(user.login)
         # user is also a dict, so you can see the underlying data via

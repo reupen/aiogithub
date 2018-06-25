@@ -189,14 +189,14 @@ class GitHub:
         # FIXME: add since support
         return self.get_list_relative_url('repos', objects.Repo)
 
-    def close(self) -> None:
-        self._client.close()
+    async def close(self) -> None:
+        await self._client.close()
 
-    def __enter__(self) -> 'GitHub':
+    async def __aenter__(self) -> 'GitHub':
         return self
 
-    def __exit__(self, exc_type, exc_val, exc_tb) -> None:
-        self.close()
+    async def __aexit__(self, exc_type, exc_val, exc_tb) -> None:
+        await self.close()
 
     async def get_absolute_url(self, url, is_paginated=False) -> tuple:
         with timeout(self._timeout):
