@@ -9,7 +9,7 @@ TOKEN = None
 
 
 async def main():
-    with GitHub(token=TOKEN) as api:
+    async with GitHub(token=TOKEN) as api:
         user = await api.get_user('reupen')
         pprint(user)
 
