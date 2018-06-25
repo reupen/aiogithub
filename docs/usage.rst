@@ -25,7 +25,7 @@ A simple example
     from aiogithub import GitHub
 
     async def main():
-        with GitHub() as api:
+        async with GitHub() as api:
             user = await api.get_user('reupen')
             print(user.login)
             # user is also a dict, so you can see the underlying data via print(user)
