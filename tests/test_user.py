@@ -10,7 +10,7 @@ from .mocks import fake_response  # noqa
 
 @pytest.mark.asyncio
 async def test_get_user():
-    with aiogithub.GitHub() as gh:
+    async with aiogithub.GitHub() as gh:
         user = await gh.get_user('reupen')
     assert user.login == 'reupen'
     assert user.id == 12693549
@@ -37,7 +37,7 @@ async def test_get_user():
 
 @pytest.mark.asyncio
 async def test_get_user_repos():
-    with aiogithub.GitHub() as gh:
+    async with aiogithub.GitHub() as gh:
         user = await gh.get_user('reupen', defer_fetch=False)
         repo_list = await user.get_repos().all()
     assert isinstance(repo_list, list)
