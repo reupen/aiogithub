@@ -34,14 +34,14 @@ def _check_columns_ui_repo(repo):
 
 @pytest.mark.asyncio
 async def test_get_repo():
-    with aiogithub.GitHub() as gh:
+    async with aiogithub.GitHub() as gh:
         repo = await gh.get_repo('reupen', 'columns_ui')
     _check_columns_ui_repo(repo)
 
 
 @pytest.mark.asyncio
 async def test_get_repo_defer():
-    with aiogithub.GitHub() as gh:
+    async with aiogithub.GitHub() as gh:
         repo = await gh.get_repo('reupen', 'columns_ui', defer_fetch=True)
 
     await repo.fetch_data()
@@ -50,7 +50,7 @@ async def test_get_repo_defer():
 
 @pytest.mark.asyncio
 async def test_get_repo_refetch():
-    with aiogithub.GitHub() as gh:
+    async with aiogithub.GitHub() as gh:
         repo = await gh.get_repo('reupen', 'columns_ui')
 
     await repo.fetch_data()
@@ -59,7 +59,7 @@ async def test_get_repo_refetch():
 
 @pytest.mark.asyncio
 async def test_get_repo_branches():
-    with aiogithub.GitHub() as gh:
+    async with aiogithub.GitHub() as gh:
         repo = await gh.get_repo('reupen', 'columns_ui')
     branches_list = await repo.get_branches().all()
     assert isinstance(branches_list[0], aiogithub.objects.Branch)
@@ -67,7 +67,7 @@ async def test_get_repo_branches():
 
 @pytest.mark.asyncio
 async def test_get_repo_branches_defer():
-    with aiogithub.GitHub() as gh:
+    async with aiogithub.GitHub() as gh:
         repo = await gh.get_repo('reupen', 'columns_ui', defer_fetch=True)
     branches_list = await repo.get_branches().all()
     assert isinstance(branches_list[0], aiogithub.objects.Branch)
