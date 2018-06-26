@@ -34,7 +34,7 @@ setup(
     use_scm_version={
         'write_to': os.path.join('aiogithub', 'version.py')
     },
-    packages=['aiogithub'],
+    packages=find_packages(exclude=['tests*']),
     install_requires=[
         'aiohttp~=3.0',
         'async-timeout',
