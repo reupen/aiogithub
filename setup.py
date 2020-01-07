@@ -11,6 +11,12 @@ is_test = {'pytest', 'test'} & args
 is_sphinx = 'build_sphinx' in args
 is_flake8 = 'flake8' in args
 
+docs_requires = (
+    'sphinx-rtd-theme',
+    'sphinxcontrib-asyncio',
+    'Sphinx~=1.4'
+)
+
 if is_test:
     setup_requires += (
         'pytest-runner~=2.9',
@@ -18,11 +24,7 @@ if is_test:
     )
 
 if is_sphinx:
-    setup_requires += (
-        'sphinx-rtd-theme',
-        'sphinxcontrib-asyncio',
-        'Sphinx~=1.4'
-    )
+    setup_requires += docs_requires
 
 if is_flake8:
     setup_requires += (
@@ -48,6 +50,9 @@ setup(
     python_requires='~=3.5',
     setup_requires=setup_requires,
     tests_require=['pytest-asyncio~=0.10.0'],
+    extras_require={
+        'docs': docs_requires,
+    },
 
     author="Reupen Shah",
     description="asyncio-based GitHub API client",
