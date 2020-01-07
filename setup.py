@@ -21,12 +21,12 @@ if is_sphinx:
     setup_requires += (
         'sphinx-rtd-theme',
         'sphinxcontrib-asyncio',
-        'Sphinx~=1.4.6'
+        'Sphinx~=1.4'
     )
 
 if is_flake8:
     setup_requires += (
-        'flake8~=3.3.0',
+        'flake8~=3.7',
     )
 
 setup(
@@ -37,7 +37,7 @@ setup(
     packages=find_packages(exclude=['tests*']),
     install_requires=[
         'aiohttp~=3.0',
-        'async-timeout',
+        'async-timeout~=3.0',
         'LinkHeader~=0.4',
         'uritemplate~=3.0',
         'python-dateutil~=2.5'
@@ -47,7 +47,7 @@ setup(
 
     python_requires='~=3.5',
     setup_requires=setup_requires,
-    tests_require=['pytest-asyncio~=0.5.0'],
+    tests_require=['pytest-asyncio~=0.10.0'],
 
     author="Reupen Shah",
     description="asyncio-based GitHub API client",
@@ -56,8 +56,8 @@ setup(
     url="https://github.com/reupen/aiogithub",
 
     classifiers=[
-        'Programming Language :: Python :: 3.5',
-        'Programming Language :: Python :: 3.6',
+        'Programming Language :: Python :: 3.7',
+        'Programming Language :: Python :: 3.8',
         'Development Status :: 2 - Pre-Alpha'
     ]
 )

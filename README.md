@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/reupen/aiogithub.svg?branch=master)](https://travis-ci.org/reupen/aiogithub) [![Requirements Status](https://requires.io/github/reupen/aiogithub/requirements.svg?branch=master)](https://requires.io/github/reupen/aiogithub/requirements/?branch=master) [![Documentation Status](https://readthedocs.org/projects/aiogithub/badge/?version=latest)](http://aiogithub.readthedocs.io/en/latest/?badge=latest)
 
-asyncio- and aiohttp-based Python 3.5 GitHub API client.
+asyncio- and aiohttp-based Python 3.7 and newer GitHub API client.
 
 Note: This library is a work in progress. So far, select read operations have been implemented.
 
@@ -44,6 +44,5 @@ asyncio.get_event_loop().run_until_complete(main())
 Currently, only development versions are available. You can install the current development version by running:
 
 ```
-pip3.5 install -U setuptools
-pip3.5 install git+https://github.com/reupen/aiogithub.git#egg=aiogithub
+pip install git+https://github.com/reupen/aiogithub.git#egg=aiogithub
 ```
