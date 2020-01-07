@@ -155,7 +155,7 @@ class PaginatedList(AsyncIterator[T]):
         self._header_links = links
         self._item_counter = len(initial_document)
 
-    async def __aiter__(self) -> 'PaginatedList[T]':
+    def __aiter__(self) -> 'PaginatedList[T]':
         self._current_index = 0
         self._current_page_number = 0
         self._current_iter = iter(self._pages[self._current_page_number])
@@ -231,8 +231,9 @@ class PaginatedListProxy(AsyncIterable[T]):
         self._fetch_params = fetch_params
         self._max_items = None
         self._paginator = None
+        self._paginator_iterator = None
 
-    async def __aiter__(self) -> 'PaginatedList[T]':
+    def __aiter__(self) -> 'PaginatedListProxy[T]':
         """Asynchronously iterates through all items in the collection.
         Pages are fetched as required.
 
@@ -240,8 +241,15 @@ class PaginatedListProxy(AsyncIterable[T]):
         large data sets (e.g. all public users) to avoid making a large
         number of HTTP requests and exhausting your API limits.
         """
-        paginator = await self._get_paginator()
-        return await paginator.__aiter__()
+        self._paginator_iterator = None
+        return self
+
+    async def __anext__(self):
+        if not self._paginator_iterator:
+            paginator = await self._get_paginator()
+            self._paginator_iterator = paginator.__aiter__()
+
+        return await self._paginator_iterator.__anext__()
 
     def limit(self, max_items):
         """Limits the number of items returned by
@@ -271,7 +279,8 @@ class PaginatedListProxy(AsyncIterable[T]):
         if not self._paginator:
             response_tuple = await self._client.get_absolute_url(self._url,
                                                                  True)
-            self._paginator = PaginatedList(self, self._element_type,
+            self._paginator = PaginatedList(self._client,
+                                            self._element_type,
                                             *response_tuple,
                                             max_items=self._max_items,
                                             fetch_params=self._fetch_params)
